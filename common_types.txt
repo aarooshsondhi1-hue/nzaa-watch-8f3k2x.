@@ -1,0 +1,34 @@
+# ICAO type codes considered "normal, everyday traffic" at NZAA.
+# Anything OpenSky reports that is NOT in this list will be flagged
+# as a rare/special type and trigger a notification.
+# One code per line. Lines starting with # are ignored.
+# Edit this list to match what you personally consider "routine".
+
+# Air NZ / domestic + regional workhorses
+A320
+A20N
+A321
+A21N
+AT72
+AT76
+DH8D
+
+# Common long-haul widebodies serving NZAA regularly
+B738
+B739
+B772
+B773
+B788
+B789
+A339
+A333
+A332
+B763
+B764
+A359
+A35K
+
+# Common visiting narrowbodies
+B737
+E190
+E195
