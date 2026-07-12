@@ -1,0 +1,27 @@
+{
+  "_note": "Aircraft that ALWAYS trigger a notification, every time seen, regardless of first-seen history or common-type status. Seeded from web research as of July 2026 - verify and expand yourself, liveries get repainted/reverted often (e.g. Qantas's 'Retro Roo II' VH-VXQ and 'Mendoowoorrji' VH-XZJ were both already repainted back to standard livery). Route relevance confirmed for Qatar (DOH-ADL-AKL, so their 777 fleet does reach NZAA) and China Southern B-308T (user-confirmed NZAA visit). The Delta, Emirates A380, and Qatar PSG/F1 entries are widebody flagships that COULD appear on NZ-bound rotations but aren't confirmed - prune whatever never actually shows up for you.",
+
+  "ZK-NZE": "Air NZ 787-9, all-black 'Fern Mark' livery",
+  "ZK-OYB": "Air NZ A321neo, all-black 'Black Beauty' Star Alliance livery",
+  "ZK-OAB": "Air NZ A320, 'Black Beauty'/All Blacks livery",
+  "ZK-OJH": "Air NZ A320, Star Alliance livery",
+
+  "B-LRJ": "Cathay Pacific A350-900, 80th Anniversary special livery",
+
+  "VH-XZP": "Qantas 737-800 'Retro Roo' (James Strong), 1971-1984 retro livery",
+
+  "A6-EXR": "Emirates A350-900, UAE flag special livery",
+  "A6-EVG": "Emirates A380, UAE flag 'This Flag Will Always Fly' livery (also confirmed on NY/Brisbane routes, could extend to Emirates' other A380 destinations)",
+  "A6-EOD": "Emirates A380, NBA special livery (Official Global Airline Partner of the NBA) - cycles across Emirates' whole network, not just US/Canada",
+  "A6-EUH": "Emirates A380, 'Grand Slam' tennis livery covering all 4 majors incl. Wimbledon - current (debuted Jan 2026), meant to stay for years across the long-haul network",
+
+  "A7-BEH": "Qatar Airways 777-300ER, FIFA World Cup 2026 special livery - Qatar operates 777s on the DOH-ADL-AKL route, so this one can genuinely show up at NZAA",
+  "A7-BEG": "Qatar Airways 777-300ER, Formula 1 partnership special livery",
+  "A7-BED": "Qatar Airways 777-300ER, PSG/UEFA Champions League special livery",
+
+  "B-308T": "China Southern A350-900, 'Vitality Bay Area' special livery (15th National Games) - user-confirmed at NZAA July 2026",
+
+  "N531DN": "Delta A350-900, Team USA 'Milano Cortina 2026' Winter Olympics livery",
+  "N521DN": "Delta A350-900, Team USA Paris 2024 Olympics livery",
+  "N527DN": "Delta A350-900, '100 Years' Delta centennial livery"
+}
