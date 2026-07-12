@@ -101,6 +101,12 @@ def main():
     seen_registrations = load_seen_registrations()
 
     flights = fetch_inbound_flights()
+    print(f"[diagnostic] aviationstack returned {len(flights)} total flights inbound to AKL this run.")
+
+    active_count = 0
+    no_registration_count = 0
+    already_seen_count = 0
+    checked_count = 0
 
     for f in flights:
         status = f.get("flight_status")
@@ -108,7 +114,10 @@ def main():
 
         if status != "active":
             continue
+        active_count += 1
+
         if flight_num in daily_seen[today]:
+            already_seen_count += 1
             continue
 
         aircraft = f.get("aircraft") or {}
@@ -125,6 +134,7 @@ def main():
         airline = (f.get("airline") or {}).get("name") or "unknown operator"
 
         if registration:  # only judge flights where we actually know the tail
+            checked_count += 1
             should_notify, reason = decide_notification(
                 registration, typecode, common_types, known_specials, seen_registrations, today,
                 always_notify=always_notify,
@@ -140,8 +150,13 @@ def main():
                 )
                 print(f"NOTIFY -> {title} | {message}")
                 send_notification(title, message)
+        else:
+            no_registration_count += 1
 
         daily_seen[today].append(flight_num)
+
+    print(f"[diagnostic] active(departed)={active_count}, already logged today={already_seen_count}, "
+          f"missing registration data={no_registration_count}, newly judged this run={checked_count}")
 
     save_daily_state(daily_seen)
     save_seen_registrations(seen_registrations)
