@@ -9,7 +9,7 @@
   },
   "ZK-OXM": {
     "first_seen": "2026-07-12",
-    "count": 1
+    "count": 2
   },
   "B-1242": {
     "first_seen": "2026-07-12",
@@ -60,6 +60,18 @@
     "count": 1
   },
   "ZK-OXG": {
+    "first_seen": "2026-07-12",
+    "count": 2
+  },
+  "ZK-OXC": {
+    "first_seen": "2026-07-12",
+    "count": 1
+  },
+  "ZK-MVL": {
+    "first_seen": "2026-07-12",
+    "count": 1
+  },
+  "ZK-NZH": {
     "first_seen": "2026-07-12",
     "count": 1
   }
