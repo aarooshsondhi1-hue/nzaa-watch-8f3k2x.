@@ -3,7 +3,7 @@ name: NZAA Departure Watcher
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 */8 * * *"
+    - cron: "0 * * * *"
 
 jobs:
   departures:
@@ -21,7 +21,7 @@ jobs:
       - run: python check_departures.py
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
-          AVIATIONSTACK_KEY: ${{ secrets.AVIATIONSTACK_KEY }}
+          AIRLABS_KEY: ${{ secrets.AIRLABS_KEY }}
 
       - name: Save state
         uses: stefanzweifel/git-auto-commit-action@v5
