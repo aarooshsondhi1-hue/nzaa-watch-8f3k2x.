@@ -29,6 +29,7 @@ import requests
 from nzaa_common import (
     load_common_types,
     load_known_specials,
+    load_always_notify,
     load_seen_registrations,
     save_seen_registrations,
     decide_notification,
@@ -96,6 +97,7 @@ def main():
 
     common_types = load_common_types()
     known_specials = load_known_specials()
+    always_notify = load_always_notify()
     seen_registrations = load_seen_registrations()
 
     flights = fetch_inbound_flights()
@@ -124,7 +126,8 @@ def main():
 
         if registration:  # only judge flights where we actually know the tail
             should_notify, reason = decide_notification(
-                registration, typecode, common_types, known_specials, seen_registrations, today
+                registration, typecode, common_types, known_specials, seen_registrations, today,
+                always_notify=always_notify,
             )
             if should_notify:
                 title = f"New/unexpected plane heading to NZAA: {registration}"
