@@ -1,15 +1,21 @@
 """
 Shared helpers for the NZAA plane watcher scripts.
 
-Notification decision logic (see README for the reasoning):
-1. Registration is in known_specials.json -> SUPPRESS. You already know
-   about it and don't want repeat notifications for it.
-2. Registration has never been seen before (not in seen_registrations.json)
-   -> NOTIFY as "first time seeing this aircraft". Recorded so it won't
-   fire again next time.
-3. Otherwise, if the aircraft TYPE isn't in common_types.txt -> NOTIFY as
-   a rare type, regardless of registration history.
-4. Otherwise -> no notification (an ordinary, already-seen, common-type visitor).
+Notification decision logic (see README for the reasoning), in priority order:
+1. Registration is in always_notify.json -> ALWAYS NOTIFY, every single
+   time it's seen. For special-livery aircraft you specifically want to
+   go see whenever they show up.
+2. Registration is in known_specials.json -> SUPPRESS, never notify.
+   You already know about it and it's not worth a repeat alert.
+3. NZ-registered (ZK-...) and NOT a rare type -> no notification. Most
+   of Air NZ's fleet and every local GA plane carries this prefix, so
+   being unfamiliar isn't inherently special.
+4. Registration never seen before -> NOTIFY once, as "first time seeing
+   this aircraft". Recorded so it won't fire again for that reason.
+5. Aircraft TYPE isn't in common_types.txt -> NOTIFY as a rare type,
+   regardless of registration history (this still applies even to
+   ZK-registered or already-seen aircraft).
+6. Otherwise -> no notification (an ordinary, already-seen, common-type visitor).
 """
 
 import json
@@ -17,6 +23,7 @@ import os
 
 COMMON_TYPES_FILE = "common_types.txt"
 KNOWN_SPECIALS_FILE = "known_specials.json"
+ALWAYS_NOTIFY_FILE = "always_notify.json"
 SEEN_REGISTRATIONS_FILE = "seen_registrations.json"
 
 
@@ -44,6 +51,11 @@ def load_known_specials(path=KNOWN_SPECIALS_FILE):
     return {k: v for k, v in data.items() if not k.startswith("_")}
 
 
+def load_always_notify(path=ALWAYS_NOTIFY_FILE):
+    data = load_json(path, {})
+    return {k: v for k, v in data.items() if not k.startswith("_")}
+
+
 def load_seen_registrations(path=SEEN_REGISTRATIONS_FILE):
     return load_json(path, {})
 
@@ -52,31 +64,52 @@ def save_seen_registrations(data, path=SEEN_REGISTRATIONS_FILE):
     save_json(path, data)
 
 
-def decide_notification(registration, typecode, common_types, known_specials, seen_registrations, today):
+def _record_sighting(reg_key, seen_registrations, today):
+    if not reg_key:
+        return
+    if reg_key not in seen_registrations:
+        seen_registrations[reg_key] = {"first_seen": today, "count": 1}
+    else:
+        seen_registrations[reg_key]["count"] = seen_registrations[reg_key].get("count", 0) + 1
+
+
+def decide_notification(registration, typecode, common_types, known_specials, seen_registrations, today,
+                         always_notify=None):
     """
     Returns (should_notify: bool, reason: str or None).
     Also mutates seen_registrations in place to record this sighting
     (caller is responsible for saving it after the run).
     """
+    always_notify = always_notify or {}
     reg_key = (registration or "").upper()
     typecode = (typecode or "").upper()
 
+    always_notify_upper = {k.upper(): v for k, v in always_notify.items()}
+    if reg_key and reg_key in always_notify_upper:
+        _record_sighting(reg_key, seen_registrations, today)
+        description = always_notify_upper[reg_key]
+        return True, description or "on your always-notify list"
+
     if reg_key and reg_key in {k.upper() for k in known_specials}:
         # Known regular - make sure it's on record, but never notify.
-        if reg_key not in seen_registrations:
-            seen_registrations[reg_key] = {"first_seen": today, "count": 1}
-        else:
-            seen_registrations[reg_key]["count"] = seen_registrations[reg_key].get("count", 0) + 1
+        _record_sighting(reg_key, seen_registrations, today)
         return False, None
 
     is_first_sighting = bool(reg_key) and reg_key not in seen_registrations
     is_rare_type = bool(typecode) and typecode not in common_types
+    is_nz_registered = reg_key.startswith("ZK-") or reg_key.startswith("ZK")
 
-    if reg_key:
-        if reg_key not in seen_registrations:
-            seen_registrations[reg_key] = {"first_seen": today, "count": 1}
-        else:
-            seen_registrations[reg_key]["count"] = seen_registrations[reg_key].get("count", 0) + 1
+    _record_sighting(reg_key, seen_registrations, today)
+
+    # NZ-registered aircraft (ZK-...) are never "special" just for being a
+    # tail we haven't logged yet - that's most of Air NZ's fleet plus every
+    # local GA plane. But a rare TYPE is still notable regardless of
+    # nationality - covers warbirds, ex-military aircraft, or anything
+    # else genuinely uncommon that happens to carry a ZK- registration.
+    if is_nz_registered:
+        if is_rare_type:
+            return True, f"uncommon type for NZAA ({typecode or 'type unknown'})"
+        return False, None
 
     if is_first_sighting:
         return True, "first time this registration has been seen"
