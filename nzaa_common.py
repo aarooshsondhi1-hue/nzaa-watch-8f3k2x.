@@ -3,18 +3,17 @@ Shared helpers for the NZAA plane watcher scripts.
 
 Notification decision logic (see README for the reasoning), in priority order:
 1. Registration is in always_notify.json -> ALWAYS NOTIFY, every single
-   time it's seen. For special-livery aircraft you specifically want to
-   go see whenever they show up.
-2. Registration is in known_specials.json -> SUPPRESS, never notify.
+   time it's seen, even if it's a ZK- registration. For special-livery
+   aircraft you specifically want to go see whenever they show up.
+2. Registration starts with ZK- (NZ-registered) -> SUPPRESS entirely,
+   no notification ever, regardless of type. Most of Air NZ's fleet and
+   every local GA plane carries this prefix.
+3. Registration is in known_specials.json -> SUPPRESS, never notify.
    You already know about it and it's not worth a repeat alert.
-3. NZ-registered (ZK-...) and NOT a rare type -> no notification. Most
-   of Air NZ's fleet and every local GA plane carries this prefix, so
-   being unfamiliar isn't inherently special.
 4. Registration never seen before -> NOTIFY once, as "first time seeing
    this aircraft". Recorded so it won't fire again for that reason.
 5. Aircraft TYPE isn't in common_types.txt -> NOTIFY as a rare type,
-   regardless of registration history (this still applies even to
-   ZK-registered or already-seen aircraft).
+   regardless of registration history.
 6. Otherwise -> no notification (an ordinary, already-seen, common-type visitor).
 """
 
@@ -90,6 +89,15 @@ def decide_notification(registration, typecode, common_types, known_specials, se
         description = always_notify_upper[reg_key]
         return True, description or "on your always-notify list"
 
+    is_nz_registered = reg_key.startswith("ZK-") or reg_key.startswith("ZK")
+    if is_nz_registered:
+        # Full suppression - most of Air NZ's fleet and every local GA
+        # plane carries this prefix, so it's never inherently "special"
+        # by itself. Anything ZK- you DO want flagged should go in
+        # always_notify.json instead (checked above, takes priority).
+        _record_sighting(reg_key, seen_registrations, today)
+        return False, None
+
     if reg_key and reg_key in {k.upper() for k in known_specials}:
         # Known regular - make sure it's on record, but never notify.
         _record_sighting(reg_key, seen_registrations, today)
@@ -97,19 +105,8 @@ def decide_notification(registration, typecode, common_types, known_specials, se
 
     is_first_sighting = bool(reg_key) and reg_key not in seen_registrations
     is_rare_type = bool(typecode) and typecode not in common_types
-    is_nz_registered = reg_key.startswith("ZK-") or reg_key.startswith("ZK")
 
     _record_sighting(reg_key, seen_registrations, today)
-
-    # NZ-registered aircraft (ZK-...) are never "special" just for being a
-    # tail we haven't logged yet - that's most of Air NZ's fleet plus every
-    # local GA plane. But a rare TYPE is still notable regardless of
-    # nationality - covers warbirds, ex-military aircraft, or anything
-    # else genuinely uncommon that happens to carry a ZK- registration.
-    if is_nz_registered:
-        if is_rare_type:
-            return True, f"uncommon type for NZAA ({typecode or 'type unknown'})"
-        return False, None
 
     if is_first_sighting:
         return True, "first time this registration has been seen"
