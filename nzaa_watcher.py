@@ -1,96 +1,170 @@
+#!/usr/bin/env python3
 """
-Shared helpers for the NZAA plane watcher scripts.
+NZAA (Auckland Airport) arrival/landing confirmation watcher.
 
-Notification decision logic (see README for the reasoning):
-1. Registration is in known_specials.json -> SUPPRESS. You already know
-   about it and don't want repeat notifications for it.
-2. Registration has never been seen before (not in seen_registrations.json)
-   -> NOTIFY as "first time seeing this aircraft". Recorded so it won't
-   fire again next time.
-3. Otherwise, if the aircraft TYPE isn't in common_types.txt -> NOTIFY as
-   a rare type, regardless of registration history.
-4. Otherwise -> no notification (an ordinary, already-seen, common-type visitor).
+Uses airplanes.live's free public API (no key needed, and unlike OpenSky
+it doesn't block cloud-hosted callers like GitHub Actions runners).
+It also returns registration + aircraft type directly per aircraft, so
+no separate metadata lookup call is needed.
+
+An aircraft counts as "arrived" if EITHER:
+  - alt_baro reports "ground" (airplanes.live's on-ground indicator), OR
+  - its barometric altitude is below LOW_ALTITUDE_FT (catches short final
+    / just touched down, in case the ground flag lags).
+
+Notification logic is shared with check_departures.py - see nzaa_common.py.
 """
 
-import json
 import os
+import json
+import sys
+from datetime import datetime, timezone
+import requests
 
-COMMON_TYPES_FILE = "common_types.txt"
-KNOWN_SPECIALS_FILE = "known_specials.json"
-SEEN_REGISTRATIONS_FILE = "seen_registrations.json"
+from nzaa_common import (
+    load_common_types,
+    load_known_specials,
+    load_always_notify,
+    load_seen_registrations,
+    save_seen_registrations,
+    decide_notification,
+)
+
+# NZAA (Auckland Airport) coordinates
+NZAA_LAT = -37.008
+NZAA_LON = 174.792
+RADIUS_NM = 10  # nautical miles around NZAA to scan
+
+LOW_ALTITUDE_FT = 500  # catches "on short final / just touched down"
+
+# ADS-B emitter categories to actually consider. Excludes:
+#   A0 - no info, A1 - light GA (Cessnas etc.), B* - gliders/UAVs/balloons,
+#   C* - surface vehicles (tugs, follow-me cars, tower ops vehicles - not aircraft at all)
+RELEVANT_CATEGORIES = {"A2", "A3", "A4", "A5", "A6", "A7"}
+
+NTFY_TOPIC = os.environ.get("NTFY_TOPIC", "")
+NTFY_URL = f"https://ntfy.sh/{NTFY_TOPIC}"
+
+DAILY_STATE_FILE = "seen.json"
+
+AIRPLANES_LIVE_URL = f"https://api.airplanes.live/v2/point/{NZAA_LAT}/{NZAA_LON}/{RADIUS_NM}"
 
 
-def load_json(path, default):
-    if os.path.exists(path):
-        with open(path, "r") as f:
+def load_daily_state():
+    if os.path.exists(DAILY_STATE_FILE):
+        with open(DAILY_STATE_FILE) as f:
             return json.load(f)
-    return default
+    return {}
 
 
-def save_json(path, data):
-    with open(path, "w") as f:
+def save_daily_state(data):
+    with open(DAILY_STATE_FILE, "w") as f:
         json.dump(data, f, indent=2)
 
 
-def load_common_types(path=COMMON_TYPES_FILE):
-    if not os.path.exists(path):
-        return set()
-    with open(path) as f:
-        return {line.strip().upper() for line in f if line.strip() and not line.startswith("#")}
+def fetch_aircraft():
+    resp = requests.get(AIRPLANES_LIVE_URL, timeout=30)
+    resp.raise_for_status()
+    data = resp.json()
+    return data.get("ac") or []
 
 
-def load_known_specials(path=KNOWN_SPECIALS_FILE):
-    data = load_json(path, {})
-    return {k: v for k, v in data.items() if not k.startswith("_")}
+def send_notification(title, message):
+    if not NTFY_TOPIC:
+        print(f"[NO NTFY_TOPIC SET] Would have notified: {title} - {message}")
+        return
+    try:
+        requests.post(
+            NTFY_URL,
+            data=message.encode("utf-8"),
+            headers={"Title": title.encode("utf-8"), "Priority": "default", "Tags": "airplane"},
+            timeout=15,
+        )
+    except requests.RequestException as e:
+        print(f"Failed to send notification: {e}")
 
 
-def load_seen_registrations(path=SEEN_REGISTRATIONS_FILE):
-    return load_json(path, {})
+def main():
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    daily_seen = load_daily_state()
+    daily_seen = {today: daily_seen.get(today, [])}
 
+    common_types = load_common_types()
+    known_specials = load_known_specials()
+    always_notify = load_always_notify()
+    seen_registrations = load_seen_registrations()
 
-def save_seen_registrations(data, path=SEEN_REGISTRATIONS_FILE):
-    save_json(path, data)
+    try:
+        aircraft_list = fetch_aircraft()
+    except requests.RequestException as e:
+        print(f"Error fetching data from airplanes.live: {e}")
+        sys.exit(0)
 
+    print(f"[diagnostic] airplanes.live returned {len(aircraft_list)} aircraft total within {RADIUS_NM}nm of NZAA this run.")
 
-def decide_notification(registration, typecode, common_types, known_specials, seen_registrations, today):
-    """
-    Returns (should_notify: bool, reason: str or None).
-    Also mutates seen_registrations in place to record this sighting
-    (caller is responsible for saving it after the run).
-    """
-    reg_key = (registration or "").upper()
-    typecode = (typecode or "").upper()
+    ground_count = 0
+    low_alt_count = 0
+    checked_count = 0
+    skipped_category_count = 0
 
-    if reg_key and reg_key in {k.upper() for k in known_specials}:
-        # Known regular - make sure it's on record, but never notify.
-        if reg_key not in seen_registrations:
-            seen_registrations[reg_key] = {"first_seen": today, "count": 1}
+    for ac in aircraft_list:
+        hex_id = (ac.get("hex") or "").strip().lower()
+        alt_baro = ac.get("alt_baro")
+        category = (ac.get("category") or "").strip().upper()
+
+        is_on_ground = alt_baro == "ground"
+        is_low_alt = isinstance(alt_baro, (int, float)) and alt_baro < LOW_ALTITUDE_FT
+
+        if is_on_ground:
+            ground_count += 1
+        if is_low_alt:
+            low_alt_count += 1
+
+        if not hex_id or not (is_on_ground or is_low_alt):
+            continue
+
+        # Skip ground vehicles / light GA / gliders / unknowns - not what
+        # you're after, and this is what was causing "TWR" and Cessna
+        # false positives.
+        if category and category not in RELEVANT_CATEGORIES:
+            skipped_category_count += 1
+            continue
+
+        if hex_id in daily_seen[today]:
+            continue
+
+        checked_count += 1
+        callsign = (ac.get("flight") or "").strip() or "unknown callsign"
+        registration = (ac.get("r") or "").strip()
+        typecode = (ac.get("t") or "").strip().upper()
+        operator = ac.get("ownOp") or "unknown operator"
+        model = ac.get("desc") or typecode or "unknown type"
+
+        if registration:
+            should_notify, reason = decide_notification(
+                registration, typecode, common_types, known_specials, seen_registrations, today,
+                always_notify=always_notify,
+            )
+            if should_notify:
+                title = f"New/unexpected plane at NZAA: {registration}"
+                message = (
+                    f"{operator} {model}\n"
+                    f"Reg: {registration}  Callsign: {callsign}\n"
+                    f"Why flagged: {reason}"
+                )
+                print(f"NOTIFY -> {title} | {message}")
+                send_notification(title, message)
         else:
-            seen_registrations[reg_key]["count"] = seen_registrations[reg_key].get("count", 0) + 1
-        return False, None
+            print(f"[diagnostic] hex={hex_id} callsign={callsign} matched ground/low-alt but had no registration in the response.")
 
-    is_first_sighting = bool(reg_key) and reg_key not in seen_registrations
-    is_rare_type = bool(typecode) and typecode not in common_types
-    is_nz_registered = reg_key.startswith("ZK-") or reg_key.startswith("ZK")
+        daily_seen[today].append(hex_id)
 
-    if reg_key:
-        if reg_key not in seen_registrations:
-            seen_registrations[reg_key] = {"first_seen": today, "count": 1}
-        else:
-            seen_registrations[reg_key]["count"] = seen_registrations[reg_key].get("count", 0) + 1
+    print(f"[diagnostic] on_ground={ground_count}, low_altitude(<{LOW_ALTITUDE_FT}ft)={low_alt_count}, "
+          f"skipped as ground-vehicle/light-GA={skipped_category_count}, newly checked this run={checked_count}")
 
-    # NZ-registered aircraft (ZK-...) are never "special" just for being a
-    # tail we haven't logged yet - that's most of Air NZ's fleet plus every
-    # local GA plane. But a rare TYPE is still notable regardless of
-    # nationality - covers warbirds, ex-military aircraft, or anything
-    # else genuinely uncommon that happens to carry a ZK- registration.
-    if is_nz_registered:
-        if is_rare_type:
-            return True, f"uncommon type for NZAA ({typecode or 'type unknown'})"
-        return False, None
+    save_daily_state(daily_seen)
+    save_seen_registrations(seen_registrations)
 
-    if is_first_sighting:
-        return True, "first time this registration has been seen"
-    if is_rare_type:
-        return True, f"uncommon type for NZAA ({typecode or 'type unknown'})"
-    return False, None
+
+if __name__ == "__main__":
+    main()
