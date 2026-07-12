@@ -2,15 +2,18 @@
 """
 NZAA (Auckland Airport) arrival/landing confirmation watcher.
 
-Polls OpenSky for aircraft on the ground inside a box around NZAA, and
-applies the same notification logic as check_departures.py (see
-nzaa_common.py / README):
-  - Registration in known_specials.json -> never notified (already a
-    known regular).
-  - Registration never seen before -> notified once ("first time seeing
-    this aircraft").
-  - Otherwise, uncommon aircraft type -> notified every time.
-  - Otherwise -> silent.
+Polls OpenSky for aircraft near NZAA and applies the same notification
+logic as check_departures.py (see nzaa_common.py / README).
+
+An aircraft counts as "arrived" if EITHER:
+  - OpenSky reports on_ground = true inside the box, OR
+  - it's below LOW_ALTITUDE_M inside the box (catches aircraft on short
+    final / just landed, in case ground-level ADS-B reception near the
+    airport is patchy - on_ground alone was found to under-report at
+    NZAA in testing).
+
+Prints diagnostic counts every run so you can tell "no data at all from
+OpenSky" apart from "data received, nothing matched".
 """
 
 import os
@@ -32,6 +35,9 @@ LAMAX = -36.86
 LOMIN = 174.62
 LOMAX = 174.96
 
+LOW_ALTITUDE_M = 150  # ~500 ft - catches "on short final / just touched down"
+                       # even if on_ground hasn't been reported yet
+
 NTFY_TOPIC = os.environ.get("NTFY_TOPIC", "")
 NTFY_URL = f"https://ntfy.sh/{NTFY_TOPIC}"
 
@@ -42,6 +48,7 @@ OPENSKY_METADATA_URL = "https://opensky-network.org/api/metadata/aircraft/icao/{
 
 IDX_ICAO24 = 0
 IDX_CALLSIGN = 1
+IDX_BARO_ALT = 7
 IDX_ON_GROUND = 8
 
 
@@ -105,14 +112,29 @@ def main():
         print(f"Error fetching states from OpenSky: {e}")
         sys.exit(0)
 
+    print(f"[diagnostic] OpenSky returned {len(states)} aircraft total inside the NZAA box this run.")
+
+    on_ground_count = 0
+    low_alt_count = 0
+    checked_count = 0
+
     for s in states:
         icao24 = (s[IDX_ICAO24] or "").strip().lower()
         on_ground = s[IDX_ON_GROUND]
-        if not icao24 or not on_ground:
+        baro_alt = s[IDX_BARO_ALT]
+
+        is_low_alt = baro_alt is not None and baro_alt < LOW_ALTITUDE_M
+        if on_ground:
+            on_ground_count += 1
+        if is_low_alt:
+            low_alt_count += 1
+
+        if not icao24 or not (on_ground or is_low_alt):
             continue
         if icao24 in daily_seen[today]:
             continue
 
+        checked_count += 1
         callsign = (s[IDX_CALLSIGN] or "").strip() or "unknown callsign"
         meta = fetch_metadata(icao24)
         registration = meta.get("registration") or ""
@@ -133,8 +155,12 @@ def main():
                 )
                 print(f"NOTIFY -> {title} | {message}")
                 send_notification(title, message)
+        else:
+            print(f"[diagnostic] icao24={icao24} callsign={callsign} matched ground/low-alt but no registration found in OpenSky metadata.")
 
         daily_seen[today].append(icao24)
+
+    print(f"[diagnostic] on_ground={on_ground_count}, low_altitude(<{LOW_ALTITUDE_M}m)={low_alt_count}, newly checked this run={checked_count}")
 
     save_daily_state(daily_seen)
     save_seen_registrations(seen_registrations)
