@@ -7,17 +7,32 @@ it doesn't block cloud-hosted callers like GitHub Actions runners).
 It also returns registration + aircraft type directly per aircraft, so
 no separate metadata lookup call is needed.
 
-An aircraft counts as "arrived" if EITHER:
-  - alt_baro reports "ground" (airplanes.live's on-ground indicator), OR
-  - its barometric altitude is below LOW_ALTITUDE_FT (catches short final
-    / just touched down, in case the ground flag lags).
+Two independent detections happen each run:
 
-Notification logic is shared with check_departures.py - see nzaa_common.py.
+1. CONFIRMED arrival - an aircraft counts as "arrived" if EITHER:
+   - alt_baro reports "ground" (airplanes.live's on-ground indicator), OR
+   - its barometric altitude is below LOW_ALTITUDE_FT (catches short
+     final / just touched down, in case the ground flag lags).
+
+2. POSSIBLE/unconfirmed inbound - for aircraft that are still airborne
+   (not yet counted as arrived) but whose current heading points roughly
+   at NZAA and whose ETA at current ground speed is under
+   POSSIBLE_ETA_MAX_MINUTES. This is a geometry-based guess, not a real
+   destination field - flights merely transiting the area, or actually
+   headed to a nearby airport (Ardmore, Whenuapai, Hamilton), can
+   occasionally match by coincidence. That's why it's always labeled
+   "possible/unconfirmed" rather than treated as certain - use it as an
+   early heads-up, with the CONFIRMED notification (or its absence) as
+   the real answer once it either lands or doesn't.
+
+Notification logic (who counts as "interesting" in the first place) is
+shared with check_departures.py - see nzaa_common.py.
 """
 
 import os
 import json
 import sys
+import math
 from datetime import datetime, timezone
 import requests
 
@@ -33,32 +48,50 @@ from nzaa_common import (
 # NZAA (Auckland Airport) coordinates
 NZAA_LAT = -37.008
 NZAA_LON = 174.792
-RADIUS_NM = 10  # nautical miles around NZAA to scan
+
+# Wide net so we catch aircraft still cruising well outside NZAA's
+# immediate vicinity - needed for the "possible inbound" check below.
+# airplanes.live's point-search caps out around 250nm, so this stays
+# safely under that.
+FETCH_RADIUS_NM = 220
 
 LOW_ALTITUDE_FT = 500  # catches "on short final / just touched down"
 
+# Possible/unconfirmed inbound detection settings.
+POSSIBLE_ETA_MAX_MINUTES = 40
+HEADING_TOLERANCE_DEG = 15  # how closely track must point at NZAA
+MIN_GROUND_SPEED_KT = 50   # ignore near-stationary/taxiing-speed reports
+
 # ADS-B emitter categories to actually consider. Excludes:
-#   A0 - no info, A1 - light GA (Cessnas etc.), B* - gliders/UAVs/balloons,
+#   A1 - light GA (Cessnas etc.), B* - gliders/UAVs/balloons,
 #   C* - surface vehicles (tugs, follow-me cars, tower ops vehicles - not aircraft at all)
-RELEVANT_CATEGORIES = {"A2", "A3", "A4", "A5", "A6", "A7"}
+# NOTE: A0 (no category info) is deliberately INCLUDED, not excluded -
+# military aircraft frequently report A0 (or omit category entirely)
+# instead of a proper class code, and those are specifically what you're
+# after here. An aircraft with no category field at all also already
+# passes through fine (see the check below), this just makes sure an
+# aircraft that explicitly reports "A0" isn't wrongly treated the same
+# as a ground vehicle or light GA plane.
+RELEVANT_CATEGORIES = {"A0", "A2", "A3", "A4", "A5", "A6", "A7"}
 
 NTFY_TOPIC = os.environ.get("NTFY_TOPIC", "")
 NTFY_URL = f"https://ntfy.sh/{NTFY_TOPIC}"
 
 DAILY_STATE_FILE = "seen.json"
+POSSIBLE_STATE_FILE = "possible_seen.json"
 
-AIRPLANES_LIVE_URL = f"https://api.airplanes.live/v2/point/{NZAA_LAT}/{NZAA_LON}/{RADIUS_NM}"
+AIRPLANES_LIVE_URL = f"https://api.airplanes.live/v2/point/{NZAA_LAT}/{NZAA_LON}/{FETCH_RADIUS_NM}"
 
 
-def load_daily_state():
-    if os.path.exists(DAILY_STATE_FILE):
-        with open(DAILY_STATE_FILE) as f:
+def load_state_file(path):
+    if os.path.exists(path):
+        with open(path) as f:
             return json.load(f)
     return {}
 
 
-def save_daily_state(data):
-    with open(DAILY_STATE_FILE, "w") as f:
+def save_state_file(path, data):
+    with open(path, "w") as f:
         json.dump(data, f, indent=2)
 
 
@@ -84,10 +117,35 @@ def send_notification(title, message):
         print(f"Failed to send notification: {e}")
 
 
+def haversine_nm(lat1, lon1, lat2, lon2):
+    r_nm = 3440.065
+    phi1, phi2 = math.radians(lat1), math.radians(lat2)
+    dphi = math.radians(lat2 - lat1)
+    dlambda = math.radians(lon2 - lon1)
+    a = math.sin(dphi / 2) ** 2 + math.cos(phi1) * math.cos(phi2) * math.sin(dlambda / 2) ** 2
+    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+    return r_nm * c
+
+
+def bearing_deg(lat1, lon1, lat2, lon2):
+    phi1, phi2 = math.radians(lat1), math.radians(lat2)
+    dlambda = math.radians(lon2 - lon1)
+    x = math.sin(dlambda) * math.cos(phi2)
+    y = math.cos(phi1) * math.sin(phi2) - math.sin(phi1) * math.cos(phi2) * math.cos(dlambda)
+    return (math.degrees(math.atan2(x, y)) + 360) % 360
+
+
+def heading_diff_deg(a, b):
+    d = abs(a - b) % 360
+    return min(d, 360 - d)
+
+
 def main():
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    daily_seen = load_daily_state()
+    daily_seen = load_state_file(DAILY_STATE_FILE)
     daily_seen = {today: daily_seen.get(today, [])}
+    possible_seen = load_state_file(POSSIBLE_STATE_FILE)
+    possible_seen = {today: possible_seen.get(today, [])}
 
     common_types = load_common_types()
     known_specials = load_known_specials()
@@ -100,12 +158,13 @@ def main():
         print(f"Error fetching data from airplanes.live: {e}")
         sys.exit(0)
 
-    print(f"[diagnostic] airplanes.live returned {len(aircraft_list)} aircraft total within {RADIUS_NM}nm of NZAA this run.")
+    print(f"[diagnostic] airplanes.live returned {len(aircraft_list)} aircraft total within {FETCH_RADIUS_NM}nm of NZAA this run.")
 
     ground_count = 0
     low_alt_count = 0
     checked_count = 0
     skipped_category_count = 0
+    possible_checked_count = 0
 
     for ac in aircraft_list:
         hex_id = (ac.get("hex") or "").strip().lower()
@@ -114,55 +173,103 @@ def main():
 
         is_on_ground = alt_baro == "ground"
         is_low_alt = isinstance(alt_baro, (int, float)) and alt_baro < LOW_ALTITUDE_FT
+        is_confirmed_arrival = is_on_ground or is_low_alt
 
         if is_on_ground:
             ground_count += 1
         if is_low_alt:
             low_alt_count += 1
 
-        if not hex_id or not (is_on_ground or is_low_alt):
+        if not hex_id:
             continue
 
-        # Skip ground vehicles / light GA / gliders / unknowns - not what
-        # you're after, and this is what was causing "TWR" and Cessna
-        # false positives.
+        # Skip ground vehicles / light GA / gliders / unknowns for BOTH
+        # detections - not what you're after, and this is what was
+        # causing "TWR" and Cessna false positives before.
         if category and category not in RELEVANT_CATEGORIES:
-            skipped_category_count += 1
+            if is_confirmed_arrival:
+                skipped_category_count += 1
             continue
 
-        if hex_id in daily_seen[today]:
-            continue
-
-        checked_count += 1
         callsign = (ac.get("flight") or "").strip() or "unknown callsign"
         registration = (ac.get("r") or "").strip()
         typecode = (ac.get("t") or "").strip().upper()
         operator = ac.get("ownOp") or "unknown operator"
         model = ac.get("desc") or typecode or "unknown type"
 
-        if registration:
+        # --- CONFIRMED arrival detection (unchanged behavior) ---
+        if is_confirmed_arrival:
+            if hex_id in daily_seen[today]:
+                continue
+            checked_count += 1
+            # Registration may be blank (common for military aircraft,
+            # which often withhold it deliberately) - decide_notification
+            # still works with an empty registration, since the rare-type
+            # check only depends on typecode. Only the ZK-suppression,
+            # always-notify, and known-specials/first-seen checks need an
+            # actual registration, and simply won't match an empty one.
             should_notify, reason = decide_notification(
                 registration, typecode, common_types, known_specials, seen_registrations, today,
                 always_notify=always_notify,
             )
             if should_notify:
-                title = f"New/unexpected plane at NZAA: {registration}"
+                display_id = registration or f"hex {hex_id}"
+                title = f"New/unexpected plane at NZAA: {display_id}"
                 message = (
                     f"{operator} {model}\n"
-                    f"Reg: {registration}  Callsign: {callsign}\n"
+                    f"Reg: {registration or '(not broadcast - possibly military)'}  Callsign: {callsign}\n"
                     f"Why flagged: {reason}"
                 )
                 print(f"NOTIFY -> {title} | {message}")
                 send_notification(title, message)
-        else:
-            print(f"[diagnostic] hex={hex_id} callsign={callsign} matched ground/low-alt but had no registration in the response.")
+            daily_seen[today].append(hex_id)
+            continue
 
-        daily_seen[today].append(hex_id)
+        # --- POSSIBLE/unconfirmed inbound detection ---
+        lat, lon = ac.get("lat"), ac.get("lon")
+        gs = ac.get("gs")
+        track = ac.get("track")
+        if lat is None or lon is None or gs is None or track is None:
+            continue
+        if gs < MIN_GROUND_SPEED_KT:
+            continue
+        if hex_id in possible_seen[today]:
+            continue
+
+        distance_nm = haversine_nm(lat, lon, NZAA_LAT, NZAA_LON)
+        bearing_to_nzaa = bearing_deg(lat, lon, NZAA_LAT, NZAA_LON)
+        diff = heading_diff_deg(track, bearing_to_nzaa)
+        eta_minutes = (distance_nm / gs) * 60
+
+        if diff > HEADING_TOLERANCE_DEG or eta_minutes > POSSIBLE_ETA_MAX_MINUTES:
+            continue
+
+        possible_checked_count += 1
+        should_notify, reason = decide_notification(
+            registration, typecode, common_types, known_specials, seen_registrations, today,
+            always_notify=always_notify,
+        )
+        if should_notify:
+            display_id = registration or f"hex {hex_id}"
+            title = f"POSSIBLE/unconfirmed - {display_id} may be heading to NZAA"
+            message = (
+                f"{operator} {model}\n"
+                f"Reg: {registration or '(not broadcast - possibly military)'}  Callsign: {callsign}\n"
+                f"~{distance_nm:.0f}nm out, ETA ~{eta_minutes:.0f} min if this heading holds\n"
+                f"Why flagged: {reason}\n"
+                f"(Unconfirmed - destination not published/N/A on trackers. "
+                f"Could be transiting the area or headed elsewhere nearby instead.)"
+            )
+            print(f"POSSIBLE-NOTIFY -> {title} | {message}")
+            send_notification(title, message)
+        possible_seen[today].append(hex_id)
 
     print(f"[diagnostic] on_ground={ground_count}, low_altitude(<{LOW_ALTITUDE_FT}ft)={low_alt_count}, "
-          f"skipped as ground-vehicle/light-GA={skipped_category_count}, newly checked this run={checked_count}")
+          f"skipped as ground-vehicle/light-GA={skipped_category_count}, newly checked (confirmed)={checked_count}, "
+          f"newly checked (possible)={possible_checked_count}")
 
-    save_daily_state(daily_seen)
+    save_state_file(DAILY_STATE_FILE, daily_seen)
+    save_state_file(POSSIBLE_STATE_FILE, possible_seen)
     save_seen_registrations(seen_registrations)
 
 
