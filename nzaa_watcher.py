@@ -2,18 +2,17 @@
 """
 NZAA (Auckland Airport) arrival/landing confirmation watcher.
 
-Polls OpenSky for aircraft near NZAA and applies the same notification
-logic as check_departures.py (see nzaa_common.py / README).
+Uses airplanes.live's free public API (no key needed, and unlike OpenSky
+it doesn't block cloud-hosted callers like GitHub Actions runners).
+It also returns registration + aircraft type directly per aircraft, so
+no separate metadata lookup call is needed.
 
 An aircraft counts as "arrived" if EITHER:
-  - OpenSky reports on_ground = true inside the box, OR
-  - it's below LOW_ALTITUDE_M inside the box (catches aircraft on short
-    final / just landed, in case ground-level ADS-B reception near the
-    airport is patchy - on_ground alone was found to under-report at
-    NZAA in testing).
+  - alt_baro reports "ground" (airplanes.live's on-ground indicator), OR
+  - its barometric altitude is below LOW_ALTITUDE_FT (catches short final
+    / just touched down, in case the ground flag lags).
 
-Prints diagnostic counts every run so you can tell "no data at all from
-OpenSky" apart from "data received, nothing matched".
+Notification logic is shared with check_departures.py - see nzaa_common.py.
 """
 
 import os
@@ -30,26 +29,19 @@ from nzaa_common import (
     decide_notification,
 )
 
-LAMIN = -37.16
-LAMAX = -36.86
-LOMIN = 174.62
-LOMAX = 174.96
+# NZAA (Auckland Airport) coordinates
+NZAA_LAT = -37.008
+NZAA_LON = 174.792
+RADIUS_NM = 10  # nautical miles around NZAA to scan
 
-LOW_ALTITUDE_M = 150  # ~500 ft - catches "on short final / just touched down"
-                       # even if on_ground hasn't been reported yet
+LOW_ALTITUDE_FT = 500  # catches "on short final / just touched down"
 
 NTFY_TOPIC = os.environ.get("NTFY_TOPIC", "")
 NTFY_URL = f"https://ntfy.sh/{NTFY_TOPIC}"
 
 DAILY_STATE_FILE = "seen.json"
 
-OPENSKY_STATES_URL = "https://opensky-network.org/api/states/all"
-OPENSKY_METADATA_URL = "https://opensky-network.org/api/metadata/aircraft/icao/{icao24}"
-
-IDX_ICAO24 = 0
-IDX_CALLSIGN = 1
-IDX_BARO_ALT = 7
-IDX_ON_GROUND = 8
+AIRPLANES_LIVE_URL = f"https://api.airplanes.live/v2/point/{NZAA_LAT}/{NZAA_LON}/{RADIUS_NM}"
 
 
 def load_daily_state():
@@ -64,22 +56,11 @@ def save_daily_state(data):
         json.dump(data, f, indent=2)
 
 
-def fetch_states():
-    params = {"lamin": LAMIN, "lamax": LAMAX, "lomin": LOMIN, "lomax": LOMAX}
-    resp = requests.get(OPENSKY_STATES_URL, params=params, timeout=30)
+def fetch_aircraft():
+    resp = requests.get(AIRPLANES_LIVE_URL, timeout=30)
     resp.raise_for_status()
     data = resp.json()
-    return data.get("states") or []
-
-
-def fetch_metadata(icao24):
-    try:
-        resp = requests.get(OPENSKY_METADATA_URL.format(icao24=icao24), timeout=15)
-        if resp.status_code == 200:
-            return resp.json()
-    except requests.RequestException:
-        pass
-    return {}
+    return data.get("ac") or []
 
 
 def send_notification(title, message):
@@ -107,40 +88,40 @@ def main():
     seen_registrations = load_seen_registrations()
 
     try:
-        states = fetch_states()
+        aircraft_list = fetch_aircraft()
     except requests.RequestException as e:
-        print(f"Error fetching states from OpenSky: {e}")
+        print(f"Error fetching data from airplanes.live: {e}")
         sys.exit(0)
 
-    print(f"[diagnostic] OpenSky returned {len(states)} aircraft total inside the NZAA box this run.")
+    print(f"[diagnostic] airplanes.live returned {len(aircraft_list)} aircraft total within {RADIUS_NM}nm of NZAA this run.")
 
-    on_ground_count = 0
+    ground_count = 0
     low_alt_count = 0
     checked_count = 0
 
-    for s in states:
-        icao24 = (s[IDX_ICAO24] or "").strip().lower()
-        on_ground = s[IDX_ON_GROUND]
-        baro_alt = s[IDX_BARO_ALT]
+    for ac in aircraft_list:
+        hex_id = (ac.get("hex") or "").strip().lower()
+        alt_baro = ac.get("alt_baro")
 
-        is_low_alt = baro_alt is not None and baro_alt < LOW_ALTITUDE_M
-        if on_ground:
-            on_ground_count += 1
+        is_on_ground = alt_baro == "ground"
+        is_low_alt = isinstance(alt_baro, (int, float)) and alt_baro < LOW_ALTITUDE_FT
+
+        if is_on_ground:
+            ground_count += 1
         if is_low_alt:
             low_alt_count += 1
 
-        if not icao24 or not (on_ground or is_low_alt):
+        if not hex_id or not (is_on_ground or is_low_alt):
             continue
-        if icao24 in daily_seen[today]:
+        if hex_id in daily_seen[today]:
             continue
 
         checked_count += 1
-        callsign = (s[IDX_CALLSIGN] or "").strip() or "unknown callsign"
-        meta = fetch_metadata(icao24)
-        registration = meta.get("registration") or ""
-        typecode = (meta.get("typecode") or "").upper()
-        operator = meta.get("operator") or meta.get("owner") or "unknown operator"
-        model = meta.get("model") or typecode or "unknown type"
+        callsign = (ac.get("flight") or "").strip() or "unknown callsign"
+        registration = (ac.get("r") or "").strip()
+        typecode = (ac.get("t") or "").strip().upper()
+        operator = ac.get("ownOp") or "unknown operator"
+        model = ac.get("desc") or typecode or "unknown type"
 
         if registration:
             should_notify, reason = decide_notification(
@@ -156,11 +137,11 @@ def main():
                 print(f"NOTIFY -> {title} | {message}")
                 send_notification(title, message)
         else:
-            print(f"[diagnostic] icao24={icao24} callsign={callsign} matched ground/low-alt but no registration found in OpenSky metadata.")
+            print(f"[diagnostic] hex={hex_id} callsign={callsign} matched ground/low-alt but had no registration in the response.")
 
-        daily_seen[today].append(icao24)
+        daily_seen[today].append(hex_id)
 
-    print(f"[diagnostic] on_ground={on_ground_count}, low_altitude(<{LOW_ALTITUDE_M}m)={low_alt_count}, newly checked this run={checked_count}")
+    print(f"[diagnostic] on_ground={ground_count}, low_altitude(<{LOW_ALTITUDE_FT}ft)={low_alt_count}, newly checked this run={checked_count}")
 
     save_daily_state(daily_seen)
     save_seen_registrations(seen_registrations)
