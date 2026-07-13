@@ -137,7 +137,7 @@
   },
   "ZK-OYA": {
     "first_seen": "2026-07-12",
-    "count": 1
+    "count": 2
   },
   "ZK-NZC": {
     "first_seen": "2026-07-12",
@@ -388,6 +388,22 @@
     "count": 1
   },
   "ZK-NEA": {
+    "first_seen": "2026-07-13",
+    "count": 1
+  },
+  "ZK-MVI": {
+    "first_seen": "2026-07-13",
+    "count": 1
+  },
+  "ZK-NNA": {
+    "first_seen": "2026-07-13",
+    "count": 1
+  },
+  "VH-VGI": {
+    "first_seen": "2026-07-13",
+    "count": 1
+  },
+  "ZK-NEQ": {
     "first_seen": "2026-07-13",
     "count": 1
   }
