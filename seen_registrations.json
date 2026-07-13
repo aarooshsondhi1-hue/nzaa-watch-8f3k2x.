@@ -189,7 +189,7 @@
   },
   "ZK-OAB": {
     "first_seen": "2026-07-12",
-    "count": 3
+    "count": 4
   },
   "VH-ZNE": {
     "first_seen": "2026-07-12",
@@ -456,6 +456,10 @@
     "count": 1
   },
   "ZK-HYK": {
+    "first_seen": "2026-07-13",
+    "count": 1
+  },
+  "ZK-OXD": {
     "first_seen": "2026-07-13",
     "count": 1
   }
