@@ -22,6 +22,7 @@ month - 10x aviationstack's old 100/month limit.
 
 import os
 import json
+import math
 from datetime import datetime, timezone
 import requests
 
@@ -40,11 +41,43 @@ API_URL = "https://airlabs.co/api/v9/flights"
 NTFY_TOPIC = os.environ.get("NTFY_TOPIC", "")
 NTFY_URL = f"https://ntfy.sh/{NTFY_TOPIC}"
 
+# Custom notification icon (shown instead of ntfy's default logo).
+NTFY_ICON_URL = "https://raw.githubusercontent.com/aarooshsondhi1-hue/nzaa-watch-8f3k2x./main/file_0000000034a07207b3999d5a6465d8bc.png"
+
 DAILY_STATE_FILE = "seen_departures.json"
+
+# NZAA (Auckland Airport) coordinates - used only for the fallback ETA
+# calculation below, when AirLabs doesn't supply a scheduled/estimated
+# arrival time for a given flight.
+NZAA_LAT = -37.008
+NZAA_LON = 174.792
 
 # Statuses that mean "has already left the ground" - AirLabs uses
 # lowercase status strings like "en-route", "scheduled", "landed".
 DEPARTED_STATUSES = {"en-route", "landed"}
+
+
+def haversine_km(lat1, lon1, lat2, lon2):
+    r_km = 6371.0
+    phi1, phi2 = math.radians(lat1), math.radians(lat2)
+    dphi = math.radians(lat2 - lat1)
+    dlambda = math.radians(lon2 - lon1)
+    a = math.sin(dphi / 2) ** 2 + math.cos(phi1) * math.cos(phi2) * math.sin(dlambda / 2) ** 2
+    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+    return r_km * c
+
+
+def estimate_eta_minutes(lat, lon, speed_kmh):
+    """Rough fallback ETA using live position + speed, when AirLabs
+    doesn't provide a scheduled/estimated arrival time. speed_kmh is
+    assumed to be in km/h per AirLabs' documented flight schema - if
+    that assumption is wrong this estimate will be off by a predictable
+    ~1.85x factor (km/h vs knots), which is why it's always labeled
+    'estimated' rather than presented as exact."""
+    if not lat or not lon or not speed_kmh or speed_kmh <= 0:
+        return None
+    distance_km = haversine_km(lat, lon, NZAA_LAT, NZAA_LON)
+    return (distance_km / speed_kmh) * 60
 
 
 def load_daily_state():
@@ -89,6 +122,7 @@ def send_notification(title, message):
                 "Title": title.encode("utf-8"),
                 "Priority": "high",
                 "Tags": "airplane,departure",
+                "Icon": NTFY_ICON_URL,
             },
             timeout=15,
         )
@@ -136,11 +170,23 @@ def main():
         typecode = (f.get("aircraft_icao") or "").strip().upper()
 
         dep_airport = f.get("dep_iata") or f.get("dep_icao") or "unknown origin"
-        dep_time = f.get("dep_time_utc") or f.get("dep_time") or "unknown time"
+        dep_time = f.get("dep_time_utc") or f.get("dep_time")
 
-        eta = f.get("arr_time_utc") or f.get("arr_time") or "unknown"
+        eta = f.get("arr_time_utc") or f.get("arr_time")
+        eta_note = ""
+        if not eta:
+            # AirLabs' live-tracking endpoint doesn't always include a
+            # scheduled/estimated arrival time - fall back to estimating
+            # it ourselves from the aircraft's current position and speed.
+            estimated = estimate_eta_minutes(f.get("lat"), f.get("lng"), f.get("speed"))
+            if estimated is not None:
+                eta = f"~{estimated:.0f} min (estimated from live position, not a published schedule time)"
+            else:
+                eta = "unknown"
 
-        airline = f.get("airline_icao") or f.get("airline_iata") or "unknown operator"
+        airline = f.get("airline_icao") or f.get("airline_iata")
+        airline_note = " (not provided by data source)" if not airline else ""
+        airline = airline or "unknown operator"
 
         if registration:  # only judge flights where we actually know the tail
             checked_count += 1
@@ -151,9 +197,9 @@ def main():
             if should_notify:
                 title = f"New/unexpected plane heading to NZAA: {registration}"
                 message = (
-                    f"{airline} {flight_num} ({typecode or 'type unknown'})\n"
+                    f"{airline}{airline_note} {flight_num} ({typecode or 'type unknown'})\n"
                     f"Reg: {registration}\n"
-                    f"From: {dep_airport}  Departed: {dep_time}\n"
+                    f"From: {dep_airport}  Departed: {dep_time or 'unknown time'}\n"
                     f"ETA Auckland: {eta}\n"
                     f"Why flagged: {reason}"
                 )
@@ -173,3 +219,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
