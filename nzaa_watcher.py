@@ -74,6 +74,19 @@ MIN_GROUND_SPEED_KT = 50   # ignore near-stationary/taxiing-speed reports
 # as a ground vehicle or light GA plane.
 RELEVANT_CATEGORIES = {"A0", "A2", "A3", "A4", "A5", "A6", "A7"}
 
+# Known junk identifiers seen in practice (ground vehicles/tower ops that
+# reported no ADS-B category at all, so the category filter above didn't
+# catch them). Backup blocklist, checked on registration OR callsign.
+JUNK_IDENTIFIERS = {"TWR", "GND", "FOLLOWME", "CAR"}
+
+# Reject position data older than this for the POSSIBLE/unconfirmed
+# check specifically - a stale or ghost position report (seen once, in
+# testing, for an aircraft that was actually on the other side of the
+# world) can otherwise produce a confident-looking but wrong "heading to
+# NZAA" calculation. Confirmed on-ground detection doesn't use this,
+# since it isn't as sensitive to a slightly-stale position.
+MAX_POSITION_AGE_SECONDS = 60
+
 NTFY_TOPIC = os.environ.get("NTFY_TOPIC", "")
 NTFY_URL = f"https://ntfy.sh/{NTFY_TOPIC}"
 
@@ -165,6 +178,7 @@ def main():
     checked_count = 0
     skipped_category_count = 0
     possible_checked_count = 0
+    stale_position_count = 0
 
     for ac in aircraft_list:
         hex_id = (ac.get("hex") or "").strip().lower()
@@ -196,6 +210,12 @@ def main():
         typecode = (ac.get("t") or "").strip().upper()
         operator = ac.get("ownOp") or "unknown operator"
         model = ac.get("desc") or typecode or "unknown type"
+
+        # Backup filter for ground vehicles that don't report a category
+        # at all (so the category check above wouldn't catch them) -
+        # this is specifically what caused the "TWR" false positives.
+        if registration.upper() in JUNK_IDENTIFIERS or callsign.upper() in JUNK_IDENTIFIERS:
+            continue
 
         # --- CONFIRMED arrival detection (unchanged behavior) ---
         if is_confirmed_arrival:
@@ -236,6 +256,18 @@ def main():
         if hex_id in possible_seen[today]:
             continue
 
+        # Guard against stale/ghost position reports - airplanes.live has
+        # been observed (in testing) to occasionally serve a position
+        # that doesn't match the aircraft's actual real-world location.
+        # "seen_pos" (seconds since the last position update) lets us
+        # discard anything that isn't genuinely fresh. This can't catch
+        # every bad record (a mislabeled but freshly-updated ghost would
+        # still slip through), but it removes the most common case.
+        seen_pos = ac.get("seen_pos")
+        if seen_pos is not None and seen_pos > MAX_POSITION_AGE_SECONDS:
+            stale_position_count += 1
+            continue
+
         distance_nm = haversine_nm(lat, lon, NZAA_LAT, NZAA_LON)
         bearing_to_nzaa = bearing_deg(lat, lon, NZAA_LAT, NZAA_LON)
         diff = heading_diff_deg(track, bearing_to_nzaa)
@@ -265,8 +297,8 @@ def main():
         possible_seen[today].append(hex_id)
 
     print(f"[diagnostic] on_ground={ground_count}, low_altitude(<{LOW_ALTITUDE_FT}ft)={low_alt_count}, "
-          f"skipped as ground-vehicle/light-GA={skipped_category_count}, newly checked (confirmed)={checked_count}, "
-          f"newly checked (possible)={possible_checked_count}")
+          f"skipped as ground-vehicle/light-GA={skipped_category_count}, rejected as stale position={stale_position_count}, "
+          f"newly checked (confirmed)={checked_count}, newly checked (possible)={possible_checked_count}")
 
     save_state_file(DAILY_STATE_FILE, daily_seen)
     save_state_file(POSSIBLE_STATE_FILE, possible_seen)
