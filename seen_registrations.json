@@ -497,7 +497,7 @@
   },
   "ZK-NEZ": {
     "first_seen": "2026-07-13",
-    "count": 1
+    "count": 2
   },
   "ZK-OKW": {
     "first_seen": "2026-07-13",
@@ -540,6 +540,18 @@
     "count": 1
   },
   "ZK-HRF": {
+    "first_seen": "2026-07-13",
+    "count": 1
+  },
+  "A6-EVS": {
+    "first_seen": "2026-07-13",
+    "count": 1
+  },
+  "ZK-NEM": {
+    "first_seen": "2026-07-13",
+    "count": 1
+  },
+  "ZK-AHB": {
     "first_seen": "2026-07-13",
     "count": 1
   }
