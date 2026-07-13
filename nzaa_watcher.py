@@ -1,27 +1,37 @@
 #!/usr/bin/env python3
 """
-NZAA-bound departure watcher (early warning).
+NZAA (Auckland Airport) arrival/landing confirmation watcher.
 
-Checks all flights currently heading TO NZAA (arr_iata=AKL) and notifies
-you the moment one that matches your "special" criteria shows status
-"en-route" (already left its origin airport and is flying) - giving you
-roughly the flight's full duration as lead time.
+Uses airplanes.live's free public API (no key needed, and unlike OpenSky
+it doesn't block cloud-hosted callers like GitHub Actions runners).
+It also returns registration + aircraft type directly per aircraft, so
+no separate metadata lookup call is needed.
 
-Notification logic (see nzaa_common.py / README):
-  - Registration on always_notify.json -> notified EVERY time.
-  - Registration in known_specials.json -> never notified.
-  - NZ-registered (ZK-...) and not a rare type -> never notified.
-  - Registration never seen before -> notified once ("first time seeing
-    this aircraft"), then goes quiet on future visits.
-  - Otherwise, uncommon aircraft type -> notified every time.
-  - Otherwise -> silent.
+Two independent detections happen each run:
 
-Data source: AirLabs (https://airlabs.co). Free plan = 1,000 requests a
-month - 10x aviationstack's old 100/month limit.
+1. CONFIRMED arrival - an aircraft counts as "arrived" if EITHER:
+   - alt_baro reports "ground" (airplanes.live's on-ground indicator), OR
+   - its barometric altitude is below LOW_ALTITUDE_FT (catches short
+     final / just touched down, in case the ground flag lags).
+
+2. POSSIBLE/unconfirmed inbound - for aircraft that are still airborne
+   (not yet counted as arrived) but whose current heading points roughly
+   at NZAA and whose ETA at current ground speed is under
+   POSSIBLE_ETA_MAX_MINUTES. This is a geometry-based guess, not a real
+   destination field - flights merely transiting the area, or actually
+   headed to a nearby airport (Ardmore, Whenuapai, Hamilton), can
+   occasionally match by coincidence. That's why it's always labeled
+   "possible/unconfirmed" rather than treated as certain - use it as an
+   early heads-up, with the CONFIRMED notification (or its absence) as
+   the real answer once it either lands or doesn't.
+
+Notification logic (who counts as "interesting" in the first place) is
+shared with check_departures.py - see nzaa_common.py.
 """
 
 import os
 import json
+import sys
 import math
 from datetime import datetime, timezone
 import requests
@@ -35,76 +45,77 @@ from nzaa_common import (
     decide_notification,
 )
 
-API_KEY = os.environ.get("AIRLABS_KEY", "")
-API_URL = "https://airlabs.co/api/v9/flights"
+# NZAA (Auckland Airport) coordinates
+NZAA_LAT = -37.008
+NZAA_LON = 174.792
+
+# Wide net so we catch aircraft still cruising well outside NZAA's
+# immediate vicinity - needed for the "possible inbound" check below.
+# airplanes.live's point-search caps out around 250nm, so this stays
+# safely under that.
+FETCH_RADIUS_NM = 220
+
+LOW_ALTITUDE_FT = 500  # catches "on short final / just touched down"
+
+# Possible/unconfirmed inbound detection settings.
+POSSIBLE_ETA_MAX_MINUTES = 40
+HEADING_TOLERANCE_DEG = 15  # how closely track must point at NZAA
+MIN_GROUND_SPEED_KT = 50   # ignore near-stationary/taxiing-speed reports
+
+# ADS-B emitter categories to actually consider. Excludes:
+#   A1 - light GA (Cessnas etc.), B* - gliders/UAVs/balloons,
+#   C* - surface vehicles (tugs, follow-me cars, tower ops vehicles - not aircraft at all)
+# NOTE: A0 (no category info) is deliberately INCLUDED, not excluded -
+# military aircraft frequently report A0 (or omit category entirely)
+# instead of a proper class code, and those are specifically what you're
+# after here. An aircraft with no category field at all also already
+# passes through fine (see the check below), this just makes sure an
+# aircraft that explicitly reports "A0" isn't wrongly treated the same
+# as a ground vehicle or light GA plane.
+RELEVANT_CATEGORIES = {"A0", "A2", "A3", "A4", "A5", "A6", "A7"}
+
+# Known junk identifiers seen in practice (ground vehicles/tower ops that
+# reported no ADS-B category at all, so the category filter above didn't
+# catch them). Backup blocklist, checked on registration OR callsign.
+JUNK_IDENTIFIERS = {"TWR", "GND", "FOLLOWME", "CAR"}
+
+# Reject position data older than this for the POSSIBLE/unconfirmed
+# check specifically - a stale or ghost position report (seen once, in
+# testing, for an aircraft that was actually on the other side of the
+# world) can otherwise produce a confident-looking but wrong "heading to
+# NZAA" calculation. Confirmed on-ground detection doesn't use this,
+# since it isn't as sensitive to a slightly-stale position.
+MAX_POSITION_AGE_SECONDS = 60
 
 NTFY_TOPIC = os.environ.get("NTFY_TOPIC", "")
 NTFY_URL = f"https://ntfy.sh/{NTFY_TOPIC}"
 
-DAILY_STATE_FILE = "seen_departures.json"
+# Custom notification icon (shown instead of ntfy's default logo).
+NTFY_ICON_URL = "https://raw.githubusercontent.com/aarooshsondhi1-hue/nzaa-watch-8f3k2x./main/file_0000000034a07207b3999d5a6465d8bc.png"
 
-# NZAA (Auckland Airport) coordinates - used only for the fallback ETA
-# calculation below, when AirLabs doesn't supply a scheduled/estimated
-# arrival time for a given flight.
-NZAA_LAT = -37.008
-NZAA_LON = 174.792
+DAILY_STATE_FILE = "seen.json"
+POSSIBLE_STATE_FILE = "possible_seen.json"
 
-# Statuses that mean "has already left the ground" - AirLabs uses
-# lowercase status strings like "en-route", "scheduled", "landed".
-DEPARTED_STATUSES = {"en-route", "landed"}
+AIRPLANES_LIVE_URL = f"https://api.airplanes.live/v2/point/{NZAA_LAT}/{NZAA_LON}/{FETCH_RADIUS_NM}"
 
 
-def haversine_km(lat1, lon1, lat2, lon2):
-    r_km = 6371.0
-    phi1, phi2 = math.radians(lat1), math.radians(lat2)
-    dphi = math.radians(lat2 - lat1)
-    dlambda = math.radians(lon2 - lon1)
-    a = math.sin(dphi / 2) ** 2 + math.cos(phi1) * math.cos(phi2) * math.sin(dlambda / 2) ** 2
-    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
-    return r_km * c
-
-
-def estimate_eta_minutes(lat, lon, speed_kmh):
-    """Rough fallback ETA using live position + speed, when AirLabs
-    doesn't provide a scheduled/estimated arrival time. speed_kmh is
-    assumed to be in km/h per AirLabs' documented flight schema - if
-    that assumption is wrong this estimate will be off by a predictable
-    ~1.85x factor (km/h vs knots), which is why it's always labeled
-    'estimated' rather than presented as exact."""
-    if not lat or not lon or not speed_kmh or speed_kmh <= 0:
-        return None
-    distance_km = haversine_km(lat, lon, NZAA_LAT, NZAA_LON)
-    return (distance_km / speed_kmh) * 60
-
-
-def load_daily_state():
-    if os.path.exists(DAILY_STATE_FILE):
-        with open(DAILY_STATE_FILE) as f:
+def load_state_file(path):
+    if os.path.exists(path):
+        with open(path) as f:
             return json.load(f)
     return {}
 
 
-def save_daily_state(data):
-    with open(DAILY_STATE_FILE, "w") as f:
+def save_state_file(path, data):
+    with open(path, "w") as f:
         json.dump(data, f, indent=2)
 
 
-def fetch_inbound_flights():
-    if not API_KEY:
-        print("ERROR: AIRLABS_KEY is not set. Skipping this run.")
-        return []
-    params = {"api_key": API_KEY, "arr_iata": "AKL"}
-    resp = requests.get(API_URL, params=params, timeout=30)
+def fetch_aircraft():
+    resp = requests.get(AIRPLANES_LIVE_URL, timeout=30)
     resp.raise_for_status()
-    payload = resp.json()
-    # AirLabs typically wraps results in {"response": [...]}; be
-    # defensive in case a bare list ever comes back instead.
-    if isinstance(payload, dict):
-        if "error" in payload:
-            print(f"AirLabs API error: {payload['error']}")
-            return []
-        return payload.get("response") or []
-    return payload or []
+    data = resp.json()
+    return data.get("ac") or []
 
 
 def send_notification(title, message):
@@ -117,8 +128,9 @@ def send_notification(title, message):
             data=message.encode("utf-8"),
             headers={
                 "Title": title.encode("utf-8"),
-                "Priority": "high",
-                "Tags": "airplane,departure",
+                "Priority": "default",
+                "Tags": "airplane",
+                "Icon": NTFY_ICON_URL,
             },
             timeout=15,
         )
@@ -126,11 +138,35 @@ def send_notification(title, message):
         print(f"Failed to send notification: {e}")
 
 
+def haversine_nm(lat1, lon1, lat2, lon2):
+    r_nm = 3440.065
+    phi1, phi2 = math.radians(lat1), math.radians(lat2)
+    dphi = math.radians(lat2 - lat1)
+    dlambda = math.radians(lon2 - lon1)
+    a = math.sin(dphi / 2) ** 2 + math.cos(phi1) * math.cos(phi2) * math.sin(dlambda / 2) ** 2
+    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+    return r_nm * c
+
+
+def bearing_deg(lat1, lon1, lat2, lon2):
+    phi1, phi2 = math.radians(lat1), math.radians(lat2)
+    dlambda = math.radians(lon2 - lon1)
+    x = math.sin(dlambda) * math.cos(phi2)
+    y = math.cos(phi1) * math.sin(phi2) - math.sin(phi1) * math.cos(phi2) * math.cos(dlambda)
+    return (math.degrees(math.atan2(x, y)) + 360) % 360
+
+
+def heading_diff_deg(a, b):
+    d = abs(a - b) % 360
+    return min(d, 360 - d)
+
+
 def main():
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-
-    daily_seen = load_daily_state()
-    daily_seen = {today: daily_seen.get(today, [])}  # drop older days
+    daily_seen = load_state_file(DAILY_STATE_FILE)
+    daily_seen = {today: daily_seen.get(today, [])}
+    possible_seen = load_state_file(POSSIBLE_STATE_FILE)
+    possible_seen = {today: possible_seen.get(today, [])}
 
     common_types = load_common_types()
     known_specials = load_known_specials()
@@ -138,78 +174,142 @@ def main():
     seen_registrations = load_seen_registrations()
 
     try:
-        flights = fetch_inbound_flights()
+        aircraft_list = fetch_aircraft()
     except requests.RequestException as e:
-        print(f"Error fetching data from AirLabs: {e}")
-        return
+        print(f"Error fetching data from airplanes.live: {e}")
+        sys.exit(0)
 
-    print(f"[diagnostic] AirLabs returned {len(flights)} total flights inbound to AKL this run.")
+    print(f"[diagnostic] airplanes.live returned {len(aircraft_list)} aircraft total within {FETCH_RADIUS_NM}nm of NZAA this run.")
 
-    departed_count = 0
-    no_registration_count = 0
-    already_seen_count = 0
+    ground_count = 0
+    low_alt_count = 0
     checked_count = 0
+    skipped_category_count = 0
+    possible_checked_count = 0
+    stale_position_count = 0
 
-    for f in flights:
-        status = (f.get("status") or "").lower()
-        flight_num = f.get("flight_iata") or f.get("flight_icao") or "unknown flight"
+    for ac in aircraft_list:
+        hex_id = (ac.get("hex") or "").strip().lower()
+        alt_baro = ac.get("alt_baro")
+        category = (ac.get("category") or "").strip().upper()
 
-        if status not in DEPARTED_STATUSES:
+        is_on_ground = alt_baro == "ground"
+        is_low_alt = isinstance(alt_baro, (int, float)) and alt_baro < LOW_ALTITUDE_FT
+        is_confirmed_arrival = is_on_ground or is_low_alt
+
+        if is_on_ground:
+            ground_count += 1
+        if is_low_alt:
+            low_alt_count += 1
+
+        if not hex_id:
             continue
-        departed_count += 1
 
-        if flight_num in daily_seen[today]:
-            already_seen_count += 1
+        # Skip ground vehicles / light GA / gliders / unknowns for BOTH
+        # detections - not what you're after, and this is what was
+        # causing "TWR" and Cessna false positives before.
+        if category and category not in RELEVANT_CATEGORIES:
+            if is_confirmed_arrival:
+                skipped_category_count += 1
             continue
 
-        registration = (f.get("reg_number") or "").strip()
-        typecode = (f.get("aircraft_icao") or "").strip().upper()
+        callsign = (ac.get("flight") or "").strip() or "unknown callsign"
+        registration = (ac.get("r") or "").strip()
+        typecode = (ac.get("t") or "").strip().upper()
+        operator = ac.get("ownOp") or "unknown operator"
+        model = ac.get("desc") or typecode or "unknown type"
 
-        dep_airport = f.get("dep_iata") or f.get("dep_icao") or "unknown origin"
-        dep_time = f.get("dep_time_utc") or f.get("dep_time")
+        # Backup filter for ground vehicles that don't report a category
+        # at all (so the category check above wouldn't catch them) -
+        # this is specifically what caused the "TWR" false positives.
+        if registration.upper() in JUNK_IDENTIFIERS or callsign.upper() in JUNK_IDENTIFIERS:
+            continue
 
-        eta = f.get("arr_time_utc") or f.get("arr_time")
-        eta_note = ""
-        if not eta:
-            # AirLabs' live-tracking endpoint doesn't always include a
-            # scheduled/estimated arrival time - fall back to estimating
-            # it ourselves from the aircraft's current position and speed.
-            estimated = estimate_eta_minutes(f.get("lat"), f.get("lng"), f.get("speed"))
-            if estimated is not None:
-                eta = f"~{estimated:.0f} min (estimated from live position, not a published schedule time)"
-            else:
-                eta = "unknown"
-
-        airline = f.get("airline_icao") or f.get("airline_iata")
-        airline_note = " (not provided by data source)" if not airline else ""
-        airline = airline or "unknown operator"
-
-        if registration:  # only judge flights where we actually know the tail
+        # --- CONFIRMED arrival detection (unchanged behavior) ---
+        if is_confirmed_arrival:
+            if hex_id in daily_seen[today]:
+                continue
             checked_count += 1
+            # Registration may be blank (common for military aircraft,
+            # which often withhold it deliberately) - decide_notification
+            # still works with an empty registration, since the rare-type
+            # check only depends on typecode. Only the ZK-suppression,
+            # always-notify, and known-specials/first-seen checks need an
+            # actual registration, and simply won't match an empty one.
             should_notify, reason = decide_notification(
                 registration, typecode, common_types, known_specials, seen_registrations, today,
                 always_notify=always_notify,
             )
             if should_notify:
-                title = f"New/unexpected plane heading to NZAA: {registration}"
+                display_id = registration or f"hex {hex_id}"
+                title = f"New/unexpected plane at NZAA: {display_id}"
                 message = (
-                    f"{airline}{airline_note} {flight_num} ({typecode or 'type unknown'})\n"
-                    f"Reg: {registration}\n"
-                    f"From: {dep_airport}  Departed: {dep_time or 'unknown time'}\n"
-                    f"ETA Auckland: {eta}\n"
+                    f"{operator} {model}\n"
+                    f"Reg: {registration or '(not broadcast - possibly military)'}  Callsign: {callsign}\n"
                     f"Why flagged: {reason}"
                 )
                 print(f"NOTIFY -> {title} | {message}")
                 send_notification(title, message)
-        else:
-            no_registration_count += 1
+            daily_seen[today].append(hex_id)
+            continue
 
-        daily_seen[today].append(flight_num)
+        # --- POSSIBLE/unconfirmed inbound detection ---
+        lat, lon = ac.get("lat"), ac.get("lon")
+        gs = ac.get("gs")
+        track = ac.get("track")
+        if lat is None or lon is None or gs is None or track is None:
+            continue
+        if gs < MIN_GROUND_SPEED_KT:
+            continue
+        if hex_id in possible_seen[today]:
+            continue
 
-    print(f"[diagnostic] departed={departed_count}, already logged today={already_seen_count}, "
-          f"missing registration data={no_registration_count}, newly judged this run={checked_count}")
+        # Guard against stale/ghost position reports - airplanes.live has
+        # been observed (in testing) to occasionally serve a position
+        # that doesn't match the aircraft's actual real-world location.
+        # "seen_pos" (seconds since the last position update) lets us
+        # discard anything that isn't genuinely fresh. This can't catch
+        # every bad record (a mislabeled but freshly-updated ghost would
+        # still slip through), but it removes the most common case.
+        seen_pos = ac.get("seen_pos")
+        if seen_pos is not None and seen_pos > MAX_POSITION_AGE_SECONDS:
+            stale_position_count += 1
+            continue
 
-    save_daily_state(daily_seen)
+        distance_nm = haversine_nm(lat, lon, NZAA_LAT, NZAA_LON)
+        bearing_to_nzaa = bearing_deg(lat, lon, NZAA_LAT, NZAA_LON)
+        diff = heading_diff_deg(track, bearing_to_nzaa)
+        eta_minutes = (distance_nm / gs) * 60
+
+        if diff > HEADING_TOLERANCE_DEG or eta_minutes > POSSIBLE_ETA_MAX_MINUTES:
+            continue
+
+        possible_checked_count += 1
+        should_notify, reason = decide_notification(
+            registration, typecode, common_types, known_specials, seen_registrations, today,
+            always_notify=always_notify,
+        )
+        if should_notify:
+            display_id = registration or f"hex {hex_id}"
+            title = f"POSSIBLE/unconfirmed - {display_id} may be heading to NZAA"
+            message = (
+                f"{operator} {model}\n"
+                f"Reg: {registration or '(not broadcast - possibly military)'}  Callsign: {callsign}\n"
+                f"~{distance_nm:.0f}nm out, ETA ~{eta_minutes:.0f} min if this heading holds\n"
+                f"Why flagged: {reason}\n"
+                f"(Unconfirmed - destination not published/N/A on trackers. "
+                f"Could be transiting the area or headed elsewhere nearby instead.)"
+            )
+            print(f"POSSIBLE-NOTIFY -> {title} | {message}")
+            send_notification(title, message)
+        possible_seen[today].append(hex_id)
+
+    print(f"[diagnostic] on_ground={ground_count}, low_altitude(<{LOW_ALTITUDE_FT}ft)={low_alt_count}, "
+          f"skipped as ground-vehicle/light-GA={skipped_category_count}, rejected as stale position={stale_position_count}, "
+          f"newly checked (confirmed)={checked_count}, newly checked (possible)={possible_checked_count}")
+
+    save_state_file(DAILY_STATE_FILE, daily_seen)
+    save_state_file(POSSIBLE_STATE_FILE, possible_seen)
     save_seen_registrations(seen_registrations)
 
 
