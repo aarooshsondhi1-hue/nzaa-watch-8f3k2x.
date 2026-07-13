@@ -17,7 +17,7 @@ DH8D
 B738
 B739
 B772
-B773
+B77W
 B788
 B789
 A339
@@ -30,5 +30,3 @@ A35K
 
 # Common visiting narrowbodies
 B737
-E190
-E195
