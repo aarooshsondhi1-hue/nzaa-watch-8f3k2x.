@@ -353,7 +353,7 @@
   },
   "ZK-NFB": {
     "first_seen": "2026-07-13",
-    "count": 2
+    "count": 3
   },
   "ZK-OXA": {
     "first_seen": "2026-07-13",
@@ -380,6 +380,10 @@
     "count": 1
   },
   "ZK-NNH": {
+    "first_seen": "2026-07-13",
+    "count": 1
+  },
+  "ZK-MVO": {
     "first_seen": "2026-07-13",
     "count": 1
   }
