@@ -265,7 +265,7 @@
   },
   "VH-XZC": {
     "first_seen": "2026-07-13",
-    "count": 1
+    "count": 2
   },
   "VH-VZL": {
     "first_seen": "2026-07-13",
@@ -600,6 +600,10 @@
     "count": 1
   },
   "VH-OFY": {
+    "first_seen": "2026-07-13",
+    "count": 2
+  },
+  "ZK-IWA": {
     "first_seen": "2026-07-13",
     "count": 1
   }
