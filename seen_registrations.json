@@ -157,7 +157,7 @@
   },
   "ZK-IRB": {
     "first_seen": "2026-07-12",
-    "count": 1
+    "count": 2
   },
   "NZ4802": {
     "first_seen": "2026-07-12",
@@ -308,6 +308,10 @@
     "count": 2
   },
   "ZK-NNI": {
+    "first_seen": "2026-07-13",
+    "count": 1
+  },
+  "ZK-TXE": {
     "first_seen": "2026-07-13",
     "count": 1
   }
