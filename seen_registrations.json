@@ -337,7 +337,7 @@
   },
   "B-1591": {
     "first_seen": "2026-07-13",
-    "count": 2
+    "count": 3
   },
   "ZK-NZG": {
     "first_seen": "2026-07-13",
@@ -756,6 +756,10 @@
     "count": 1
   },
   "ZK-MDX": {
+    "first_seen": "2026-07-14",
+    "count": 1
+  },
+  "ZK-NET": {
     "first_seen": "2026-07-14",
     "count": 1
   }
