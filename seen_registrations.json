@@ -481,7 +481,7 @@
   },
   "ZK-NEJ": {
     "first_seen": "2026-07-13",
-    "count": 4
+    "count": 5
   },
   "ZK-HNN": {
     "first_seen": "2026-07-13",
@@ -900,6 +900,10 @@
     "count": 1
   },
   "ZK-HCF": {
+    "first_seen": "2026-07-14",
+    "count": 1
+  },
+  "ZK-JHF": {
     "first_seen": "2026-07-14",
     "count": 1
   }
