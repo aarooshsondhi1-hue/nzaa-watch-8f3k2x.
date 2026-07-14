@@ -109,7 +109,7 @@
   },
   "ZK-HAL": {
     "first_seen": "2026-07-12",
-    "count": 1
+    "count": 2
   },
   "ZK-HWR": {
     "first_seen": "2026-07-12",
@@ -964,6 +964,10 @@
     "count": 1
   },
   "DQ-FJT": {
+    "first_seen": "2026-07-14",
+    "count": 1
+  },
+  "9V-SWQ": {
     "first_seen": "2026-07-14",
     "count": 1
   }
