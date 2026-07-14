@@ -85,7 +85,7 @@
   },
   "H4-OTA": {
     "first_seen": "2026-07-12",
-    "count": 2
+    "count": 3
   },
   "ZK-NEH": {
     "first_seen": "2026-07-12",
@@ -789,7 +789,7 @@
   },
   "A7-BEJ": {
     "first_seen": "2026-07-14",
-    "count": 1
+    "count": 2
   },
   "A7-CHB": {
     "first_seen": "2026-07-14",
@@ -841,6 +841,6 @@
   },
   "ZK-LFW": {
     "first_seen": "2026-07-14",
-    "count": 1
+    "count": 2
   }
 }
