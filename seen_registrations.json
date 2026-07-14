@@ -277,7 +277,7 @@
   },
   "ZK-OYB": {
     "first_seen": "2026-07-13",
-    "count": 7
+    "count": 8
   },
   "ZK-NZR": {
     "first_seen": "2026-07-13",
@@ -521,7 +521,7 @@
   },
   "ZK-NNB": {
     "first_seen": "2026-07-13",
-    "count": 2
+    "count": 3
   },
   "NZ3402": {
     "first_seen": "2026-07-13",
@@ -748,6 +748,10 @@
     "count": 1
   },
   "VH-XZO": {
+    "first_seen": "2026-07-14",
+    "count": 1
+  },
+  "ZK-IKF": {
     "first_seen": "2026-07-14",
     "count": 1
   }
