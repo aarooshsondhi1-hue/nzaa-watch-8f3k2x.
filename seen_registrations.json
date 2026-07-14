@@ -113,7 +113,7 @@
   },
   "ZK-HWR": {
     "first_seen": "2026-07-12",
-    "count": 2
+    "count": 3
   },
   "ZK-MZA": {
     "first_seen": "2026-07-12",
@@ -908,6 +908,10 @@
     "count": 1
   },
   "ZK-NYM": {
+    "first_seen": "2026-07-14",
+    "count": 1
+  },
+  "ZK-SXL": {
     "first_seen": "2026-07-14",
     "count": 1
   }
