@@ -321,7 +321,7 @@
   },
   "VH-RAN": {
     "first_seen": "2026-07-13",
-    "count": 3
+    "count": 4
   },
   "ZK-OKM": {
     "first_seen": "2026-07-13",
@@ -772,6 +772,10 @@
     "count": 2
   },
   "NZ3301": {
+    "first_seen": "2026-07-14",
+    "count": 1
+  },
+  "ZK-MVG": {
     "first_seen": "2026-07-14",
     "count": 1
   }
