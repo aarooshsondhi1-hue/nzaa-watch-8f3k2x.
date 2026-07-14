@@ -101,7 +101,7 @@
   },
   "ZK-IKJ": {
     "first_seen": "2026-07-12",
-    "count": 1
+    "count": 2
   },
   "ZK-TAU": {
     "first_seen": "2026-07-12",
@@ -149,7 +149,7 @@
   },
   "ZK-OJS": {
     "first_seen": "2026-07-12",
-    "count": 8
+    "count": 9
   },
   "ZK-NEK": {
     "first_seen": "2026-07-12",
@@ -692,6 +692,14 @@
     "count": 1
   },
   "ZK-OHF": {
+    "first_seen": "2026-07-14",
+    "count": 1
+  },
+  "ZK-MZC": {
+    "first_seen": "2026-07-14",
+    "count": 1
+  },
+  "ZK-NPL": {
     "first_seen": "2026-07-14",
     "count": 1
   }
