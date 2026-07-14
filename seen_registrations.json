@@ -117,7 +117,7 @@
   },
   "ZK-MZA": {
     "first_seen": "2026-07-12",
-    "count": 2
+    "count": 3
   },
   "9V-SWI": {
     "first_seen": "2026-07-12",
@@ -453,7 +453,7 @@
   },
   "ZK-MVU": {
     "first_seen": "2026-07-13",
-    "count": 3
+    "count": 4
   },
   "ZK-HYK": {
     "first_seen": "2026-07-13",
@@ -896,6 +896,10 @@
     "count": 1
   },
   "VH-VZC": {
+    "first_seen": "2026-07-14",
+    "count": 1
+  },
+  "ZK-HCF": {
     "first_seen": "2026-07-14",
     "count": 1
   }
