@@ -46,15 +46,34 @@ NTFY_ICON_URL = "https://raw.githubusercontent.com/aarooshsondhi1-hue/nzaa-watch
 
 DAILY_STATE_FILE = "seen_departures.json"
 
-# NZAA (Auckland Airport) coordinates - used only for the fallback ETA
-# calculation below, when AirLabs doesn't supply a scheduled/estimated
-# arrival time for a given flight.
+# NZAA (Auckland Airport) coordinates - used for the ETA estimate below.
 NZAA_LAT = -37.008
 NZAA_LON = 174.792
 
 # Statuses that mean "has already left the ground" - AirLabs uses
 # lowercase status strings like "en-route", "scheduled", "landed".
 DEPARTED_STATUSES = {"en-route", "landed"}
+
+# Typical CRUISE speed in km/h per ICAO type code - deliberately NOT
+# using the aircraft's live/instantaneous speed field, since that was
+# found (in testing) to sometimes reflect taxi or initial-climb speed
+# right at the moment a flight flips to "departed", producing wildly
+# inflated ETAs (a plane doing 20 km/h over a 5,000km route "estimates"
+# at 44 days). A fixed assumed cruise speed per type avoids that
+# entirely, at the cost of being a rougher approximation for any given
+# flight (headwinds/tailwinds, routing, etc. aren't accounted for).
+CRUISE_SPEED_KMH = {
+    "A320": 830, "A20N": 830, "A321": 830, "A21N": 830,
+    "AT72": 500, "AT76": 500, "DH8D": 550,
+    "B738": 830, "B739": 830, "B737": 830,
+    "B772": 900, "B773": 905, "B77W": 905,
+    "B788": 890, "B789": 913,
+    "A332": 870, "A333": 871, "A339": 900,
+    "B763": 851, "B764": 851,
+    "A359": 903, "A35K": 903,
+    "E190": 829, "E195": 829,
+}
+DEFAULT_CRUISE_SPEED_KMH = 850  # reasonable generic jet cruise speed for any type not listed above
 
 
 def haversine_km(lat1, lon1, lat2, lon2):
@@ -67,15 +86,12 @@ def haversine_km(lat1, lon1, lat2, lon2):
     return r_km * c
 
 
-def estimate_eta_minutes(lat, lon, speed_kmh):
-    """Rough fallback ETA using live position + speed, when AirLabs
-    doesn't provide a scheduled/estimated arrival time. speed_kmh is
-    assumed to be in km/h per AirLabs' documented flight schema - if
-    that assumption is wrong this estimate will be off by a predictable
-    ~1.85x factor (km/h vs knots), which is why it's always labeled
-    'estimated' rather than presented as exact."""
-    if not lat or not lon or not speed_kmh or speed_kmh <= 0:
+def estimate_eta_minutes(lat, lon, typecode):
+    """ETA using live position + an assumed cruise speed for the type
+    (not the live speed field - see comment on CRUISE_SPEED_KMH above)."""
+    if lat is None or lon is None:
         return None
+    speed_kmh = CRUISE_SPEED_KMH.get(typecode, DEFAULT_CRUISE_SPEED_KMH)
     distance_km = haversine_km(lat, lon, NZAA_LAT, NZAA_LON)
     return (distance_km / speed_kmh) * 60
 
@@ -173,20 +189,12 @@ def main():
         dep_time = f.get("dep_time_utc") or f.get("dep_time")
 
         eta = f.get("arr_time_utc") or f.get("arr_time")
-        eta_note = ""
         if not eta:
-            # AirLabs' live-tracking endpoint doesn't always include a
-            # scheduled/estimated arrival time - fall back to estimating
-            # it ourselves from the aircraft's current position and speed.
-            estimated = estimate_eta_minutes(f.get("lat"), f.get("lng"), f.get("speed"))
+            estimated = estimate_eta_minutes(f.get("lat"), f.get("lng"), typecode)
             if estimated is not None:
-                eta = f"~{estimated:.0f} min (estimated from live position, not a published schedule time)"
-            else:
-                eta = "unknown"
+                eta = f"~{estimated:.0f} min (estimated)"
 
-        airline = f.get("airline_icao") or f.get("airline_iata")
-        airline_note = " (not provided by data source)" if not airline else ""
-        airline = airline or "unknown operator"
+        airline = f.get("airline_icao") or f.get("airline_iata") or "unknown operator"
 
         if registration:  # only judge flights where we actually know the tail
             checked_count += 1
@@ -196,13 +204,18 @@ def main():
             )
             if should_notify:
                 title = f"New/unexpected plane heading to NZAA: {registration}"
-                message = (
-                    f"{airline}{airline_note} {flight_num} ({typecode or 'type unknown'})\n"
-                    f"Reg: {registration}\n"
-                    f"From: {dep_airport}  Departed: {dep_time or 'unknown time'}\n"
-                    f"ETA Auckland: {eta}\n"
-                    f"Why flagged: {reason}"
-                )
+                dep_line = f"From: {dep_airport}"
+                if dep_time:
+                    dep_line += f"  Departed: {dep_time}"
+                lines = [
+                    f"{airline} {flight_num} ({typecode or 'type unknown'})",
+                    f"Reg: {registration}",
+                    dep_line,
+                ]
+                if eta:
+                    lines.append(f"ETA Auckland: {eta}")
+                lines.append(f"Why flagged: {reason}")
+                message = "\n".join(lines)
                 print(f"NOTIFY -> {title} | {message}")
                 send_notification(title, message)
         else:
