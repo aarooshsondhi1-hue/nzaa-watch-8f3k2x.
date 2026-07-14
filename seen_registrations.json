@@ -529,7 +529,7 @@
   },
   "VH-X3H": {
     "first_seen": "2026-07-13",
-    "count": 2
+    "count": 3
   },
   "ZK-NPK": {
     "first_seen": "2026-07-13",
@@ -676,6 +676,14 @@
     "count": 1
   },
   "ZK-OXE": {
+    "first_seen": "2026-07-14",
+    "count": 1
+  },
+  "ZK-IRL": {
+    "first_seen": "2026-07-14",
+    "count": 1
+  },
+  "ZK-IXO": {
     "first_seen": "2026-07-14",
     "count": 1
   }
