@@ -87,6 +87,14 @@ JUNK_IDENTIFIERS = {"TWR", "GND", "FOLLOWME", "CAR"}
 # since it isn't as sensitive to a slightly-stale position.
 MAX_POSITION_AGE_SECONDS = 60
 
+# Optional: used to confirm a "possible" candidate's REAL destination via
+# AirLabs' schedule data (same source as check_departures.py), instead of
+# relying purely on the heading/speed guess. Shares AirLabs' 1,000
+# req/month quota with the departures script - if that quota runs out,
+# this just fails gracefully and falls back to the geometry-only guess.
+AIRLABS_KEY = os.environ.get("AIRLABS_KEY", "")
+AIRLABS_FLIGHTS_URL = "https://airlabs.co/api/v9/flights"
+
 NTFY_TOPIC = os.environ.get("NTFY_TOPIC", "")
 NTFY_URL = f"https://ntfy.sh/{NTFY_TOPIC}"
 
@@ -136,6 +144,41 @@ def send_notification(title, message):
         )
     except requests.RequestException as e:
         print(f"Failed to send notification: {e}")
+
+
+def lookup_real_destination(callsign):
+    """
+    Best-effort check of a flight's actual published destination via
+    AirLabs, keyed by ICAO callsign (e.g. "ANZ424"). Returns:
+      - "AKL" confirmed  -> dict with the flight's real data
+      - a different arrival airport confirmed -> that IATA code (string)
+      - nothing found / lookup failed -> None (caller should fall back
+        to the geometry-only "possible" guess)
+    Only called for candidates that already passed the geometry filter,
+    to keep AirLabs usage low.
+    """
+    if not AIRLABS_KEY or not callsign:
+        return None
+    try:
+        resp = requests.get(
+            AIRLABS_FLIGHTS_URL,
+            params={"api_key": AIRLABS_KEY, "flight_icao": callsign},
+            timeout=15,
+        )
+        resp.raise_for_status()
+        payload = resp.json()
+        results = payload.get("response") if isinstance(payload, dict) else payload
+        if not results:
+            return None
+        flight = results[0]
+        arr_iata = (flight.get("arr_iata") or "").upper()
+        if arr_iata == "AKL":
+            return {"confirmed": True, "arr_iata": arr_iata, "flight": flight}
+        elif arr_iata:
+            return {"confirmed": False, "arr_iata": arr_iata, "flight": flight}
+        return None
+    except requests.RequestException:
+        return None
 
 
 def haversine_nm(lat1, lon1, lat2, lon2):
@@ -290,15 +333,33 @@ def main():
             always_notify=always_notify,
         )
         if should_notify:
+            destination_check = lookup_real_destination(callsign)
             display_id = registration or f"hex {hex_id}"
-            title = f"POSSIBLE/unconfirmed - {display_id} may be heading to NZAA"
+
+            if destination_check is not None and destination_check["confirmed"] is False:
+                # We now know for certain it's headed somewhere else -
+                # this was a false positive from the geometry guess alone,
+                # so don't notify at all.
+                possible_seen[today].append(hex_id)
+                continue
+
+            if destination_check is not None and destination_check["confirmed"] is True:
+                title = f"Heading to NZAA (confirmed via schedule): {display_id}"
+                footer = "(Confirmed against a published flight schedule, not just a heading/speed guess.)"
+            else:
+                title = f"POSSIBLE/unconfirmed - {display_id} may be heading to NZAA"
+                footer = (
+                    "(No published schedule found for this flight - early positional "
+                    "estimate based on live heading/speed only. Could be transiting the "
+                    "area or headed to a nearby airport instead of NZAA.)"
+                )
+
             message = (
                 f"{operator} {model}\n"
                 f"Reg: {registration or '(not broadcast - possibly military)'}  Callsign: {callsign}\n"
                 f"~{distance_nm:.0f}nm out, ETA ~{eta_minutes:.0f} min if this heading holds\n"
                 f"Why flagged: {reason}\n"
-                f"(Unconfirmed - destination not published/N/A on trackers. "
-                f"Could be transiting the area or headed elsewhere nearby instead.)"
+                f"{footer}"
             )
             print(f"POSSIBLE-NOTIFY -> {title} | {message}")
             send_notification(title, message)
@@ -315,3 +376,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
