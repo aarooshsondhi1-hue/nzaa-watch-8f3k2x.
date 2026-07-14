@@ -914,5 +914,13 @@
   "ZK-SXL": {
     "first_seen": "2026-07-14",
     "count": 1
+  },
+  "ZK-ATS": {
+    "first_seen": "2026-07-14",
+    "count": 1
+  },
+  "ZK-NED": {
+    "first_seen": "2026-07-14",
+    "count": 1
   }
 }
