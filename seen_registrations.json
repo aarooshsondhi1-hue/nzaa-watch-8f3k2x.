@@ -165,9 +165,21 @@
   },
   "ZK-OJR": {
     "first_seen": "2026-07-15",
-    "count": 1
+    "count": 2
   },
   "ZK-NEA": {
+    "first_seen": "2026-07-15",
+    "count": 1
+  },
+  "ZK-OXL": {
+    "first_seen": "2026-07-15",
+    "count": 1
+  },
+  "VH-VGR": {
+    "first_seen": "2026-07-15",
+    "count": 1
+  },
+  "ZK-OXB": {
     "first_seen": "2026-07-15",
     "count": 1
   }
