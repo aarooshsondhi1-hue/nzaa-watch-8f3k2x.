@@ -329,7 +329,7 @@
   },
   "VH-A5C": {
     "first_seen": "2026-07-13",
-    "count": 5
+    "count": 6
   },
   "CC-BGI": {
     "first_seen": "2026-07-13",
@@ -757,7 +757,7 @@
   },
   "ZK-MDX": {
     "first_seen": "2026-07-14",
-    "count": 1
+    "count": 2
   },
   "ZK-NET": {
     "first_seen": "2026-07-14",
@@ -1029,9 +1029,13 @@
   },
   "ZK-IJV": {
     "first_seen": "2026-07-15",
-    "count": 1
+    "count": 2
   },
   "ZK-HDT": {
+    "first_seen": "2026-07-15",
+    "count": 1
+  },
+  "ZK-ILY": {
     "first_seen": "2026-07-15",
     "count": 1
   }
