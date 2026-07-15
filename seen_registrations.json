@@ -57,7 +57,7 @@
   },
   "VH-VZL": {
     "first_seen": "2026-07-15",
-    "count": 1
+    "count": 2
   },
   "ZK-NNE": {
     "first_seen": "2026-07-15",
@@ -72,6 +72,10 @@
     "count": 1
   },
   "ZK-NZR": {
+    "first_seen": "2026-07-15",
+    "count": 1
+  },
+  "ZK-NNA": {
     "first_seen": "2026-07-15",
     "count": 1
   }
