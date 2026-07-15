@@ -181,7 +181,7 @@
   },
   "ZK-OXI": {
     "first_seen": "2026-07-12",
-    "count": 3
+    "count": 4
   },
   "VH-XZG": {
     "first_seen": "2026-07-12",
@@ -1128,6 +1128,10 @@
     "count": 2
   },
   "N77006": {
+    "first_seen": "2026-07-15",
+    "count": 1
+  },
+  "A7-BEK": {
     "first_seen": "2026-07-15",
     "count": 1
   }
