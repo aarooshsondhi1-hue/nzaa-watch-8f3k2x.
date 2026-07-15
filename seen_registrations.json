@@ -813,7 +813,7 @@
   },
   "ZK-NNG": {
     "first_seen": "2026-07-14",
-    "count": 2
+    "count": 3
   },
   "ZK-NHB": {
     "first_seen": "2026-07-14",
@@ -1072,6 +1072,14 @@
     "count": 1
   },
   "ZK-EAT": {
+    "first_seen": "2026-07-15",
+    "count": 1
+  },
+  "ZK-SWY": {
+    "first_seen": "2026-07-15",
+    "count": 1
+  },
+  "NZ7014": {
     "first_seen": "2026-07-15",
     "count": 1
   }
