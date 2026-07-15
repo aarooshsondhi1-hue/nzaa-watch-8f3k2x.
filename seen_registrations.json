@@ -286,5 +286,17 @@
   "ZK-MVL": {
     "first_seen": "2026-07-15",
     "count": 1
+  },
+  "ZK-NEP": {
+    "first_seen": "2026-07-15",
+    "count": 1
+  },
+  "ZK-NEM": {
+    "first_seen": "2026-07-15",
+    "count": 1
+  },
+  "DQ-FJN": {
+    "first_seen": "2026-07-15",
+    "count": 1
   }
 }
