@@ -254,5 +254,13 @@
   "ZK-NED": {
     "first_seen": "2026-07-15",
     "count": 1
+  },
+  "ZK-SDD": {
+    "first_seen": "2026-07-15",
+    "count": 1
+  },
+  "ZK-MVH": {
+    "first_seen": "2026-07-15",
+    "count": 1
   }
 }
