@@ -181,7 +181,7 @@
   },
   "ZK-OXI": {
     "first_seen": "2026-07-12",
-    "count": 1
+    "count": 2
   },
   "VH-XZG": {
     "first_seen": "2026-07-12",
@@ -985,7 +985,7 @@
   },
   "B-320S": {
     "first_seen": "2026-07-15",
-    "count": 2
+    "count": 3
   },
   "VH-ZNF": {
     "first_seen": "2026-07-15",
@@ -1092,6 +1092,10 @@
     "count": 1
   },
   "ZK-MVC": {
+    "first_seen": "2026-07-15",
+    "count": 1
+  },
+  "ZK-UAT": {
     "first_seen": "2026-07-15",
     "count": 1
   }
