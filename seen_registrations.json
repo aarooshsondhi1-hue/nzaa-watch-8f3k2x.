@@ -93,7 +93,7 @@
   },
   "VH-OFV": {
     "first_seen": "2026-07-15",
-    "count": 1
+    "count": 2
   },
   "VH-CYK": {
     "first_seen": "2026-07-15",
@@ -124,6 +124,10 @@
     "count": 1
   },
   "ZK-OKU": {
+    "first_seen": "2026-07-15",
+    "count": 1
+  },
+  "ZK-OKR": {
     "first_seen": "2026-07-15",
     "count": 1
   }
