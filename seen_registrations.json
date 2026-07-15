@@ -333,7 +333,7 @@
   },
   "A6-EVS": {
     "first_seen": "2026-07-15",
-    "count": 1
+    "count": 2
   },
   "ZK-MVW": {
     "first_seen": "2026-07-15",
@@ -352,6 +352,10 @@
     "count": 1
   },
   "F-ONUI": {
+    "first_seen": "2026-07-15",
+    "count": 1
+  },
+  "VH-VZE": {
     "first_seen": "2026-07-15",
     "count": 1
   }
