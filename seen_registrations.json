@@ -194,5 +194,17 @@
   "HL7209": {
     "first_seen": "2026-07-15",
     "count": 1
+  },
+  "ZK-OXD": {
+    "first_seen": "2026-07-15",
+    "count": 1
+  },
+  "ZK-OXI": {
+    "first_seen": "2026-07-15",
+    "count": 1
+  },
+  "ZK-OKO": {
+    "first_seen": "2026-07-15",
+    "count": 1
   }
 }
