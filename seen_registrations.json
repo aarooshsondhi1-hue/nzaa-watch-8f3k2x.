@@ -181,7 +181,7 @@
   },
   "ZK-OXI": {
     "first_seen": "2026-07-12",
-    "count": 2
+    "count": 3
   },
   "VH-XZG": {
     "first_seen": "2026-07-12",
@@ -845,7 +845,7 @@
   },
   "9V-SFM": {
     "first_seen": "2026-07-14",
-    "count": 2
+    "count": 3
   },
   "B-LQD": {
     "first_seen": "2026-07-14",
@@ -1113,6 +1113,6 @@
   },
   "B-2002": {
     "first_seen": "2026-07-15",
-    "count": 1
+    "count": 2
   }
 }
