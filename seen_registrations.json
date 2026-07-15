@@ -145,7 +145,7 @@
   },
   "VH-VGR": {
     "first_seen": "2026-07-12",
-    "count": 8
+    "count": 9
   },
   "ZK-OJS": {
     "first_seen": "2026-07-12",
@@ -225,7 +225,7 @@
   },
   "ZK-NNC": {
     "first_seen": "2026-07-13",
-    "count": 6
+    "count": 7
   },
   "B-7881": {
     "first_seen": "2026-07-13",
@@ -237,7 +237,7 @@
   },
   "ZK-OJQ": {
     "first_seen": "2026-07-13",
-    "count": 11
+    "count": 12
   },
   "VH-XZK": {
     "first_seen": "2026-07-13",
@@ -409,7 +409,7 @@
   },
   "VH-VFH": {
     "first_seen": "2026-07-13",
-    "count": 9
+    "count": 10
   },
   "ZK-OXJ": {
     "first_seen": "2026-07-13",
@@ -421,7 +421,7 @@
   },
   "ZK-NFI": {
     "first_seen": "2026-07-13",
-    "count": 3
+    "count": 4
   },
   "DQ-FAD": {
     "first_seen": "2026-07-13",
@@ -521,7 +521,7 @@
   },
   "ZK-NNB": {
     "first_seen": "2026-07-13",
-    "count": 5
+    "count": 6
   },
   "NZ3402": {
     "first_seen": "2026-07-13",
@@ -629,7 +629,7 @@
   },
   "VH-ZNG": {
     "first_seen": "2026-07-14",
-    "count": 3
+    "count": 4
   },
   "VH-VZM": {
     "first_seen": "2026-07-14",
@@ -661,7 +661,7 @@
   },
   "ZK-OXK": {
     "first_seen": "2026-07-14",
-    "count": 5
+    "count": 6
   },
   "ZK-IRR": {
     "first_seen": "2026-07-14",
@@ -897,7 +897,7 @@
   },
   "VH-VZC": {
     "first_seen": "2026-07-14",
-    "count": 2
+    "count": 3
   },
   "ZK-HCF": {
     "first_seen": "2026-07-14",
@@ -965,11 +965,11 @@
   },
   "DQ-FJT": {
     "first_seen": "2026-07-14",
-    "count": 1
+    "count": 2
   },
   "9V-SWQ": {
     "first_seen": "2026-07-14",
-    "count": 1
+    "count": 2
   },
   "ZK-IIX": {
     "first_seen": "2026-07-14",
@@ -977,6 +977,22 @@
   },
   "VH-A5D": {
     "first_seen": "2026-07-14",
+    "count": 1
+  },
+  "VH-VZB": {
+    "first_seen": "2026-07-15",
+    "count": 1
+  },
+  "B-320S": {
+    "first_seen": "2026-07-15",
+    "count": 1
+  },
+  "VH-ZNF": {
+    "first_seen": "2026-07-15",
+    "count": 1
+  },
+  "VH-VZG": {
+    "first_seen": "2026-07-15",
     "count": 1
   }
 }
