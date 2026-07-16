@@ -225,7 +225,7 @@
   },
   "VH-VQC": {
     "first_seen": "2026-07-15",
-    "count": 1
+    "count": 2
   },
   "ZK-NZL": {
     "first_seen": "2026-07-15",
@@ -269,7 +269,7 @@
   },
   "ZK-MVZ": {
     "first_seen": "2026-07-15",
-    "count": 1
+    "count": 2
   },
   "ZK-OYB": {
     "first_seen": "2026-07-15",
@@ -532,6 +532,10 @@
     "count": 1
   },
   "ZK-IRU": {
+    "first_seen": "2026-07-16",
+    "count": 1
+  },
+  "ZK-HQC": {
     "first_seen": "2026-07-16",
     "count": 1
   }
