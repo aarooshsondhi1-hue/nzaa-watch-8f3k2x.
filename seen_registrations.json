@@ -105,7 +105,7 @@
   },
   "ZK-OKN": {
     "first_seen": "2026-07-15",
-    "count": 2
+    "count": 3
   },
   "VH-EBS": {
     "first_seen": "2026-07-15",
@@ -800,6 +800,22 @@
     "count": 1
   },
   "ZK-NEZ": {
+    "first_seen": "2026-07-16",
+    "count": 1
+  },
+  "ZK-NEU": {
+    "first_seen": "2026-07-16",
+    "count": 1
+  },
+  "ZK-VXM": {
+    "first_seen": "2026-07-16",
+    "count": 1
+  },
+  "ZK-MZD": {
+    "first_seen": "2026-07-16",
+    "count": 1
+  },
+  "ZK-AHB": {
     "first_seen": "2026-07-16",
     "count": 1
   }
