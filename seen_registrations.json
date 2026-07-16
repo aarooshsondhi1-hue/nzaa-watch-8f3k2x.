@@ -473,7 +473,7 @@
   },
   "VH-X3H": {
     "first_seen": "2026-07-16",
-    "count": 1
+    "count": 2
   },
   "ZK-XAT": {
     "first_seen": "2026-07-16",
@@ -520,6 +520,14 @@
     "count": 1
   },
   "ZK-ILS": {
+    "first_seen": "2026-07-16",
+    "count": 2
+  },
+  "ZK-MDX": {
+    "first_seen": "2026-07-16",
+    "count": 1
+  },
+  "ZK-NYF": {
     "first_seen": "2026-07-16",
     "count": 1
   }
