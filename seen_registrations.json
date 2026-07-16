@@ -621,7 +621,7 @@
   },
   "ZK-OAB": {
     "first_seen": "2026-07-16",
-    "count": 3
+    "count": 4
   },
   "ZK-IXD": {
     "first_seen": "2026-07-16",
@@ -729,7 +729,7 @@
   },
   "ZK-OXC": {
     "first_seen": "2026-07-16",
-    "count": 3
+    "count": 4
   },
   "ZK-OKP": {
     "first_seen": "2026-07-16",
@@ -872,6 +872,14 @@
     "count": 2
   },
   "ZK-NFI": {
+    "first_seen": "2026-07-16",
+    "count": 2
+  },
+  "VH-VFI": {
+    "first_seen": "2026-07-16",
+    "count": 1
+  },
+  "CC-BGC": {
     "first_seen": "2026-07-16",
     "count": 1
   }
