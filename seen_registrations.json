@@ -301,7 +301,7 @@
   },
   "ZK-IXO": {
     "first_seen": "2026-07-15",
-    "count": 2
+    "count": 3
   },
   "ZK-MVE": {
     "first_seen": "2026-07-15",
@@ -656,6 +656,10 @@
     "count": 1
   },
   "ZK-NEE": {
+    "first_seen": "2026-07-16",
+    "count": 1
+  },
+  "ZK-HMR": {
     "first_seen": "2026-07-16",
     "count": 1
   }
