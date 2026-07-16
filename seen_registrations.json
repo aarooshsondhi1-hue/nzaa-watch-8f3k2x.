@@ -505,7 +505,7 @@
   },
   "ZK-OXA": {
     "first_seen": "2026-07-16",
-    "count": 1
+    "count": 2
   },
   "VH-VFL": {
     "first_seen": "2026-07-16",
@@ -516,6 +516,10 @@
     "count": 1
   },
   "ZK-HTX": {
+    "first_seen": "2026-07-16",
+    "count": 1
+  },
+  "ZK-ILS": {
     "first_seen": "2026-07-16",
     "count": 1
   }
