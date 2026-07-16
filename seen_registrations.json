@@ -5,7 +5,7 @@
   },
   "VH-VZI": {
     "first_seen": "2026-07-15",
-    "count": 4
+    "count": 5
   },
   "ZK-NZH": {
     "first_seen": "2026-07-15",
@@ -784,6 +784,10 @@
     "count": 2
   },
   "ZK-NHF": {
+    "first_seen": "2026-07-16",
+    "count": 1
+  },
+  "NZ3401": {
     "first_seen": "2026-07-16",
     "count": 1
   }
