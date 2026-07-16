@@ -818,5 +818,9 @@
   "ZK-AHB": {
     "first_seen": "2026-07-16",
     "count": 1
+  },
+  "ZK-PAT": {
+    "first_seen": "2026-07-16",
+    "count": 1
   }
 }
