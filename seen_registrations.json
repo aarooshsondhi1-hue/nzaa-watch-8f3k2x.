@@ -217,7 +217,7 @@
   },
   "ZK-OXG": {
     "first_seen": "2026-07-15",
-    "count": 4
+    "count": 5
   },
   "ZK-OXE": {
     "first_seen": "2026-07-15",
@@ -577,7 +577,7 @@
   },
   "VH-VZW": {
     "first_seen": "2026-07-16",
-    "count": 1
+    "count": 2
   },
   "VH-ZNF": {
     "first_seen": "2026-07-16",
@@ -684,6 +684,10 @@
     "count": 1
   },
   "ZK-TOD": {
+    "first_seen": "2026-07-16",
+    "count": 1
+  },
+  "ZK-HAF": {
     "first_seen": "2026-07-16",
     "count": 1
   }
