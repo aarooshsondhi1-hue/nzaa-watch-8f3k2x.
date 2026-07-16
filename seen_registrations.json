@@ -353,11 +353,11 @@
   },
   "F-ONUI": {
     "first_seen": "2026-07-15",
-    "count": 2
+    "count": 3
   },
   "VH-VZE": {
     "first_seen": "2026-07-15",
-    "count": 1
+    "count": 2
   },
   "DQ-FJW": {
     "first_seen": "2026-07-15",
@@ -396,6 +396,14 @@
     "count": 1
   },
   "ZK-ILY": {
+    "first_seen": "2026-07-16",
+    "count": 1
+  },
+  "ZK-LFW": {
+    "first_seen": "2026-07-16",
+    "count": 1
+  },
+  "ZK-HES": {
     "first_seen": "2026-07-16",
     "count": 1
   }
