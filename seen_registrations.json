@@ -5,7 +5,7 @@
   },
   "VH-VZI": {
     "first_seen": "2026-07-15",
-    "count": 2
+    "count": 3
   },
   "ZK-NZH": {
     "first_seen": "2026-07-15",
@@ -53,7 +53,7 @@
   },
   "ZK-NZE": {
     "first_seen": "2026-07-15",
-    "count": 4
+    "count": 5
   },
   "VH-VZL": {
     "first_seen": "2026-07-15",
@@ -129,7 +129,7 @@
   },
   "ZK-OKR": {
     "first_seen": "2026-07-15",
-    "count": 2
+    "count": 3
   },
   "ZK-NZN": {
     "first_seen": "2026-07-15",
@@ -165,7 +165,7 @@
   },
   "ZK-OJR": {
     "first_seen": "2026-07-15",
-    "count": 6
+    "count": 7
   },
   "ZK-NEA": {
     "first_seen": "2026-07-15",
@@ -197,7 +197,7 @@
   },
   "ZK-OXD": {
     "first_seen": "2026-07-15",
-    "count": 4
+    "count": 5
   },
   "ZK-OXI": {
     "first_seen": "2026-07-15",
@@ -229,7 +229,7 @@
   },
   "ZK-NZL": {
     "first_seen": "2026-07-15",
-    "count": 2
+    "count": 3
   },
   "ZK-NYG": {
     "first_seen": "2026-07-15",
@@ -421,7 +421,7 @@
   },
   "VH-VFH": {
     "first_seen": "2026-07-16",
-    "count": 4
+    "count": 5
   },
   "VH-VZR": {
     "first_seen": "2026-07-16",
@@ -501,7 +501,7 @@
   },
   "ZK-OXK": {
     "first_seen": "2026-07-16",
-    "count": 3
+    "count": 4
   },
   "ZK-OXA": {
     "first_seen": "2026-07-16",
@@ -645,7 +645,7 @@
   },
   "ZK-KRA": {
     "first_seen": "2026-07-16",
-    "count": 2
+    "count": 3
   },
   "ZK-NEF": {
     "first_seen": "2026-07-16",
@@ -701,7 +701,7 @@
   },
   "ZK-NNC": {
     "first_seen": "2026-07-16",
-    "count": 1
+    "count": 2
   },
   "ZK-MVK": {
     "first_seen": "2026-07-16",
@@ -713,9 +713,25 @@
   },
   "VH-XZB": {
     "first_seen": "2026-07-16",
-    "count": 1
+    "count": 2
   },
   "ZK-IPC": {
+    "first_seen": "2026-07-16",
+    "count": 1
+  },
+  "H4-SAL": {
+    "first_seen": "2026-07-16",
+    "count": 1
+  },
+  "ZK-NZM": {
+    "first_seen": "2026-07-16",
+    "count": 1
+  },
+  "ZK-OXC": {
+    "first_seen": "2026-07-16",
+    "count": 1
+  },
+  "ZK-OKP": {
     "first_seen": "2026-07-16",
     "count": 1
   }
