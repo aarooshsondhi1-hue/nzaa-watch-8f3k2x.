@@ -17,7 +17,7 @@
   },
   "ZK-NNG": {
     "first_seen": "2026-07-15",
-    "count": 1
+    "count": 2
   },
   "A7-BEK": {
     "first_seen": "2026-07-15",
@@ -69,7 +69,7 @@
   },
   "ZK-NNF": {
     "first_seen": "2026-07-15",
-    "count": 4
+    "count": 5
   },
   "ZK-NZR": {
     "first_seen": "2026-07-15",
@@ -832,6 +832,10 @@
     "count": 1
   },
   "ZK-NHA": {
+    "first_seen": "2026-07-16",
+    "count": 1
+  },
+  "VH-XZE": {
     "first_seen": "2026-07-16",
     "count": 1
   }
