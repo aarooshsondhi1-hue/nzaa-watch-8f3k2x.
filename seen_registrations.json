@@ -181,7 +181,7 @@
   },
   "ZK-OXB": {
     "first_seen": "2026-07-15",
-    "count": 3
+    "count": 4
   },
   "ZK-HNZ": {
     "first_seen": "2026-07-15",
@@ -349,7 +349,7 @@
   },
   "ZK-JGP": {
     "first_seen": "2026-07-15",
-    "count": 1
+    "count": 2
   },
   "F-ONUI": {
     "first_seen": "2026-07-15",
@@ -608,6 +608,14 @@
     "count": 1
   },
   "ZK-MVV": {
+    "first_seen": "2026-07-16",
+    "count": 1
+  },
+  "VH-A5C": {
+    "first_seen": "2026-07-16",
+    "count": 1
+  },
+  "ZK-EHA": {
     "first_seen": "2026-07-16",
     "count": 1
   }
