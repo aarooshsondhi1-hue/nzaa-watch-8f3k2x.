@@ -917,7 +917,7 @@
   },
   "A6-EUI": {
     "first_seen": "2026-07-16",
-    "count": 1
+    "count": 2
   },
   "ZK-NZD": {
     "first_seen": "2026-07-16",
@@ -932,6 +932,10 @@
     "count": 1
   },
   "ZK-NFO": {
+    "first_seen": "2026-07-16",
+    "count": 1
+  },
+  "ZK-MVD": {
     "first_seen": "2026-07-16",
     "count": 1
   }
