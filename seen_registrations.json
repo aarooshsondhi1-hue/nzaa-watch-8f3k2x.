@@ -281,7 +281,7 @@
   },
   "VH-VGN": {
     "first_seen": "2026-07-15",
-    "count": 2
+    "count": 3
   },
   "ZK-MVL": {
     "first_seen": "2026-07-15",
@@ -409,7 +409,7 @@
   },
   "ZK-MVM": {
     "first_seen": "2026-07-16",
-    "count": 1
+    "count": 2
   },
   "VH-VFD": {
     "first_seen": "2026-07-16",
@@ -592,6 +592,10 @@
     "count": 1
   },
   "ZK-JMR": {
+    "first_seen": "2026-07-16",
+    "count": 1
+  },
+  "ZK-ITF": {
     "first_seen": "2026-07-16",
     "count": 1
   }
