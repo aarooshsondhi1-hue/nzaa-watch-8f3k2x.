@@ -930,5 +930,9 @@
   "ZK-INP": {
     "first_seen": "2026-07-16",
     "count": 1
+  },
+  "ZK-NFO": {
+    "first_seen": "2026-07-16",
+    "count": 1
   }
 }
