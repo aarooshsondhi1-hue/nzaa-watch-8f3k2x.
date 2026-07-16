@@ -125,7 +125,7 @@
   },
   "ZK-OKU": {
     "first_seen": "2026-07-15",
-    "count": 2
+    "count": 3
   },
   "ZK-OKR": {
     "first_seen": "2026-07-15",
@@ -777,7 +777,7 @@
   },
   "VH-RAN": {
     "first_seen": "2026-07-16",
-    "count": 1
+    "count": 2
   },
   "ZK-OXJ": {
     "first_seen": "2026-07-16",
@@ -788,6 +788,10 @@
     "count": 3
   },
   "NZ3401": {
+    "first_seen": "2026-07-16",
+    "count": 1
+  },
+  "ZK-IPJ": {
     "first_seen": "2026-07-16",
     "count": 1
   }
