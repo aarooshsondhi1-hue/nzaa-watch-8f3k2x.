@@ -205,7 +205,7 @@
   },
   "ZK-OKO": {
     "first_seen": "2026-07-15",
-    "count": 1
+    "count": 2
   },
   "ZK-OKS": {
     "first_seen": "2026-07-15",
@@ -265,7 +265,7 @@
   },
   "H4-OTA": {
     "first_seen": "2026-07-15",
-    "count": 2
+    "count": 3
   },
   "ZK-MVZ": {
     "first_seen": "2026-07-15",
@@ -709,7 +709,7 @@
   },
   "ZK-ICB": {
     "first_seen": "2026-07-16",
-    "count": 1
+    "count": 2
   },
   "VH-XZB": {
     "first_seen": "2026-07-16",
@@ -744,6 +744,10 @@
     "count": 2
   },
   "ZK-MVF": {
+    "first_seen": "2026-07-16",
+    "count": 1
+  },
+  "NZ7571": {
     "first_seen": "2026-07-16",
     "count": 1
   }
