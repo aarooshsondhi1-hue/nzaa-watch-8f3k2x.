@@ -942,5 +942,13 @@
   "ZK-IFS": {
     "first_seen": "2026-07-16",
     "count": 1
+  },
+  "ZK-NYE": {
+    "first_seen": "2026-07-16",
+    "count": 1
+  },
+  "ZK-ITX": {
+    "first_seen": "2026-07-16",
+    "count": 1
   }
 }
