@@ -873,13 +873,17 @@
   },
   "ZK-NFI": {
     "first_seen": "2026-07-16",
-    "count": 2
+    "count": 3
   },
   "VH-VFI": {
     "first_seen": "2026-07-16",
     "count": 1
   },
   "CC-BGC": {
+    "first_seen": "2026-07-16",
+    "count": 1
+  },
+  "ZK-LTQ": {
     "first_seen": "2026-07-16",
     "count": 1
   }
