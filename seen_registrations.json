@@ -261,7 +261,7 @@
   },
   "ZK-MVH": {
     "first_seen": "2026-07-15",
-    "count": 3
+    "count": 4
   },
   "H4-OTA": {
     "first_seen": "2026-07-15",
@@ -285,7 +285,7 @@
   },
   "ZK-MVL": {
     "first_seen": "2026-07-15",
-    "count": 1
+    "count": 2
   },
   "ZK-NEP": {
     "first_seen": "2026-07-15",
@@ -653,13 +653,25 @@
   },
   "B-7365": {
     "first_seen": "2026-07-16",
-    "count": 1
+    "count": 2
   },
   "ZK-NEE": {
     "first_seen": "2026-07-16",
     "count": 1
   },
   "ZK-HMR": {
+    "first_seen": "2026-07-16",
+    "count": 1
+  },
+  "B-324S": {
+    "first_seen": "2026-07-16",
+    "count": 1
+  },
+  "ZK-NEB": {
+    "first_seen": "2026-07-16",
+    "count": 1
+  },
+  "ZK-MVJ": {
     "first_seen": "2026-07-16",
     "count": 1
   }
