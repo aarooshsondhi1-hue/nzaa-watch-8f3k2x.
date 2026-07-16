@@ -417,7 +417,7 @@
   },
   "ZK-MVU": {
     "first_seen": "2026-07-16",
-    "count": 1
+    "count": 2
   },
   "VH-VFH": {
     "first_seen": "2026-07-16",
@@ -437,7 +437,7 @@
   },
   "ZK-NEK": {
     "first_seen": "2026-07-16",
-    "count": 1
+    "count": 2
   },
   "ZK-TAU": {
     "first_seen": "2026-07-16",
@@ -512,6 +512,10 @@
     "count": 1
   },
   "ZK-OKQ": {
+    "first_seen": "2026-07-16",
+    "count": 1
+  },
+  "ZK-HTX": {
     "first_seen": "2026-07-16",
     "count": 1
   }
