@@ -429,7 +429,7 @@
   },
   "VH-ZNK": {
     "first_seen": "2026-07-16",
-    "count": 3
+    "count": 4
   },
   "VH-EBP": {
     "first_seen": "2026-07-16",
@@ -681,7 +681,7 @@
   },
   "B-7349": {
     "first_seen": "2026-07-16",
-    "count": 3
+    "count": 4
   },
   "ZK-TOD": {
     "first_seen": "2026-07-16",
@@ -1201,6 +1201,6 @@
   },
   "B-227L": {
     "first_seen": "2026-07-17",
-    "count": 1
+    "count": 2
   }
 }
