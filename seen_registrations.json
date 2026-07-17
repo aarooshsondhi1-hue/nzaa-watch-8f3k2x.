@@ -181,7 +181,7 @@
   },
   "ZK-OXB": {
     "first_seen": "2026-07-15",
-    "count": 8
+    "count": 9
   },
   "ZK-HNZ": {
     "first_seen": "2026-07-15",
@@ -257,7 +257,7 @@
   },
   "ZK-SDD": {
     "first_seen": "2026-07-15",
-    "count": 1
+    "count": 2
   },
   "ZK-MVH": {
     "first_seen": "2026-07-15",
@@ -1072,6 +1072,10 @@
     "count": 2
   },
   "ZK-MVR": {
+    "first_seen": "2026-07-17",
+    "count": 1
+  },
+  "ZK-CHE": {
     "first_seen": "2026-07-17",
     "count": 1
   }
