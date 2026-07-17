@@ -145,7 +145,7 @@
   },
   "ZK-NZG": {
     "first_seen": "2026-07-15",
-    "count": 5
+    "count": 6
   },
   "ZK-OXM": {
     "first_seen": "2026-07-15",
@@ -1198,5 +1198,9 @@
   "VH-X3F": {
     "first_seen": "2026-07-17",
     "count": 2
+  },
+  "B-227L": {
+    "first_seen": "2026-07-17",
+    "count": 1
   }
 }
