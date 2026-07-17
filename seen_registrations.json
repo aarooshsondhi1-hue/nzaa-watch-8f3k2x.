@@ -405,7 +405,7 @@
   },
   "ZK-HES": {
     "first_seen": "2026-07-16",
-    "count": 2
+    "count": 3
   },
   "ZK-MVM": {
     "first_seen": "2026-07-16",
@@ -1184,6 +1184,10 @@
     "count": 1
   },
   "HL7208": {
+    "first_seen": "2026-07-17",
+    "count": 1
+  },
+  "DQ-FAD": {
     "first_seen": "2026-07-17",
     "count": 1
   }
