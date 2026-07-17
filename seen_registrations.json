@@ -105,7 +105,7 @@
   },
   "ZK-OKN": {
     "first_seen": "2026-07-15",
-    "count": 3
+    "count": 4
   },
   "VH-EBS": {
     "first_seen": "2026-07-15",
@@ -133,7 +133,7 @@
   },
   "ZK-NZN": {
     "first_seen": "2026-07-15",
-    "count": 4
+    "count": 5
   },
   "ZK-NZK": {
     "first_seen": "2026-07-15",
@@ -141,7 +141,7 @@
   },
   "ZK-OKM": {
     "first_seen": "2026-07-15",
-    "count": 4
+    "count": 5
   },
   "ZK-NZG": {
     "first_seen": "2026-07-15",
@@ -165,7 +165,7 @@
   },
   "ZK-OJR": {
     "first_seen": "2026-07-15",
-    "count": 12
+    "count": 13
   },
   "ZK-NEA": {
     "first_seen": "2026-07-15",
@@ -181,7 +181,7 @@
   },
   "ZK-OXB": {
     "first_seen": "2026-07-15",
-    "count": 9
+    "count": 10
   },
   "ZK-HNZ": {
     "first_seen": "2026-07-15",
@@ -209,7 +209,7 @@
   },
   "ZK-OKS": {
     "first_seen": "2026-07-15",
-    "count": 5
+    "count": 6
   },
   "ZK-MZG": {
     "first_seen": "2026-07-15",
@@ -277,11 +277,11 @@
   },
   "ZK-OJQ": {
     "first_seen": "2026-07-15",
-    "count": 6
+    "count": 7
   },
   "VH-VGN": {
     "first_seen": "2026-07-15",
-    "count": 7
+    "count": 8
   },
   "ZK-MVL": {
     "first_seen": "2026-07-15",
@@ -681,7 +681,7 @@
   },
   "B-7349": {
     "first_seen": "2026-07-16",
-    "count": 2
+    "count": 3
   },
   "ZK-TOD": {
     "first_seen": "2026-07-16",
@@ -757,7 +757,7 @@
   },
   "B-18910": {
     "first_seen": "2026-07-16",
-    "count": 3
+    "count": 4
   },
   "VH-XQU": {
     "first_seen": "2026-07-16",
@@ -769,7 +769,7 @@
   },
   "ZK-NZI": {
     "first_seen": "2026-07-16",
-    "count": 4
+    "count": 5
   },
   "ZK-NEG": {
     "first_seen": "2026-07-16",
@@ -881,7 +881,7 @@
   },
   "CC-BGC": {
     "first_seen": "2026-07-16",
-    "count": 2
+    "count": 3
   },
   "ZK-LTQ": {
     "first_seen": "2026-07-16",
@@ -977,7 +977,7 @@
   },
   "ZK-MCO": {
     "first_seen": "2026-07-16",
-    "count": 5
+    "count": 6
   },
   "ZK-IWE": {
     "first_seen": "2026-07-16",
@@ -1156,6 +1156,10 @@
     "count": 1
   },
   "ZK-OYC": {
+    "first_seen": "2026-07-17",
+    "count": 1
+  },
+  "N217UA": {
     "first_seen": "2026-07-17",
     "count": 1
   }
