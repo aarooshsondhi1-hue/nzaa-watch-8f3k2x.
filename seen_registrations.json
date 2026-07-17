@@ -189,7 +189,7 @@
   },
   "ZK-LTN": {
     "first_seen": "2026-07-15",
-    "count": 1
+    "count": 2
   },
   "HL7209": {
     "first_seen": "2026-07-15",
@@ -817,7 +817,7 @@
   },
   "ZK-AHB": {
     "first_seen": "2026-07-16",
-    "count": 1
+    "count": 2
   },
   "ZK-PAT": {
     "first_seen": "2026-07-16",
@@ -1104,6 +1104,14 @@
     "count": 1
   },
   "ZK-LTX": {
+    "first_seen": "2026-07-17",
+    "count": 1
+  },
+  "ZK-CAA": {
+    "first_seen": "2026-07-17",
+    "count": 1
+  },
+  "ZK-TJL": {
     "first_seen": "2026-07-17",
     "count": 1
   }
