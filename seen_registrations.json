@@ -789,7 +789,7 @@
   },
   "NZ3401": {
     "first_seen": "2026-07-16",
-    "count": 1
+    "count": 2
   },
   "ZK-IPJ": {
     "first_seen": "2026-07-16",
@@ -1228,6 +1228,14 @@
     "count": 1
   },
   "ZK-HTU": {
+    "first_seen": "2026-07-17",
+    "count": 2
+  },
+  "A6-EVJ": {
+    "first_seen": "2026-07-17",
+    "count": 1
+  },
+  "NZ7013": {
     "first_seen": "2026-07-17",
     "count": 1
   }
