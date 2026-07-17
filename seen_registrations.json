@@ -73,7 +73,7 @@
   },
   "ZK-NZR": {
     "first_seen": "2026-07-15",
-    "count": 8
+    "count": 9
   },
   "ZK-NNA": {
     "first_seen": "2026-07-15",
@@ -765,7 +765,7 @@
   },
   "ZK-MVQ": {
     "first_seen": "2026-07-16",
-    "count": 2
+    "count": 3
   },
   "ZK-NZI": {
     "first_seen": "2026-07-16",
@@ -1220,6 +1220,10 @@
     "count": 1
   },
   "ZK-MBZ": {
+    "first_seen": "2026-07-17",
+    "count": 1
+  },
+  "ZK-TZH": {
     "first_seen": "2026-07-17",
     "count": 1
   }
