@@ -297,7 +297,7 @@
   },
   "DQ-FJN": {
     "first_seen": "2026-07-15",
-    "count": 6
+    "count": 7
   },
   "ZK-IXO": {
     "first_seen": "2026-07-15",
@@ -1300,6 +1300,10 @@
     "count": 1
   },
   "ZK-SAX": {
+    "first_seen": "2026-07-18",
+    "count": 1
+  },
+  "ZK-RPM": {
     "first_seen": "2026-07-18",
     "count": 1
   }
