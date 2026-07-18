@@ -73,7 +73,7 @@
   },
   "ZK-NZR": {
     "first_seen": "2026-07-15",
-    "count": 11
+    "count": 12
   },
   "ZK-NNA": {
     "first_seen": "2026-07-15",
@@ -1360,6 +1360,10 @@
     "count": 1
   },
   "VH-X3L": {
+    "first_seen": "2026-07-18",
+    "count": 1
+  },
+  "9V-SFI": {
     "first_seen": "2026-07-18",
     "count": 1
   }
