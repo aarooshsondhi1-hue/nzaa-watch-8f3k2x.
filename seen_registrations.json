@@ -137,7 +137,7 @@
   },
   "ZK-NZK": {
     "first_seen": "2026-07-15",
-    "count": 11
+    "count": 12
   },
   "ZK-OKM": {
     "first_seen": "2026-07-15",
@@ -1354,5 +1354,9 @@
   "DQ-FAH": {
     "first_seen": "2026-07-18",
     "count": 2
+  },
+  "CC-BBI": {
+    "first_seen": "2026-07-18",
+    "count": 1
   }
 }
