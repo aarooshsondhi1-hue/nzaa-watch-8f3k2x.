@@ -133,7 +133,7 @@
   },
   "ZK-NZN": {
     "first_seen": "2026-07-15",
-    "count": 7
+    "count": 8
   },
   "ZK-NZK": {
     "first_seen": "2026-07-15",
@@ -1137,7 +1137,7 @@
   },
   "ZK-IIX": {
     "first_seen": "2026-07-17",
-    "count": 1
+    "count": 2
   },
   "ZK-JSH": {
     "first_seen": "2026-07-17",
@@ -1365,6 +1365,6 @@
   },
   "9V-SFI": {
     "first_seen": "2026-07-18",
-    "count": 1
+    "count": 2
   }
 }
