@@ -845,7 +845,7 @@
   },
   "9M-MNK": {
     "first_seen": "2026-07-16",
-    "count": 2
+    "count": 3
   },
   "VH-VQG": {
     "first_seen": "2026-07-16",
@@ -1344,6 +1344,14 @@
     "count": 2
   },
   "VH-EBV": {
+    "first_seen": "2026-07-18",
+    "count": 1
+  },
+  "A7-BED": {
+    "first_seen": "2026-07-18",
+    "count": 1
+  },
+  "DQ-FAH": {
     "first_seen": "2026-07-18",
     "count": 1
   }
