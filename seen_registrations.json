@@ -713,7 +713,7 @@
   },
   "VH-XZB": {
     "first_seen": "2026-07-16",
-    "count": 8
+    "count": 9
   },
   "ZK-IPC": {
     "first_seen": "2026-07-16",
@@ -1213,7 +1213,7 @@
   },
   "B-1343": {
     "first_seen": "2026-07-17",
-    "count": 2
+    "count": 3
   },
   "ZK-HNO": {
     "first_seen": "2026-07-17",
@@ -1328,6 +1328,14 @@
     "count": 1
   },
   "B-18902": {
+    "first_seen": "2026-07-18",
+    "count": 1
+  },
+  "ZK-IRF": {
+    "first_seen": "2026-07-18",
+    "count": 1
+  },
+  "ZK-PEG": {
     "first_seen": "2026-07-18",
     "count": 1
   }
