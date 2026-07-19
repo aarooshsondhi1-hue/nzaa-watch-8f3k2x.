@@ -697,7 +697,7 @@
   },
   "ZK-OYA": {
     "first_seen": "2026-07-16",
-    "count": 7
+    "count": 8
   },
   "ZK-NNC": {
     "first_seen": "2026-07-16",
@@ -1492,6 +1492,10 @@
     "count": 1
   },
   "VH-VZP": {
+    "first_seen": "2026-07-19",
+    "count": 1
+  },
+  "N892FD": {
     "first_seen": "2026-07-19",
     "count": 1
   }
