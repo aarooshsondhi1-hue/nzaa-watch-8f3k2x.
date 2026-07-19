@@ -1257,7 +1257,7 @@
   },
   "9M-MNI": {
     "first_seen": "2026-07-17",
-    "count": 4
+    "count": 5
   },
   "ZK-HFZ": {
     "first_seen": "2026-07-17",
@@ -1592,6 +1592,10 @@
     "count": 1
   },
   "A6-EVR": {
+    "first_seen": "2026-07-19",
+    "count": 1
+  },
+  "9V-SWT": {
     "first_seen": "2026-07-19",
     "count": 1
   }
