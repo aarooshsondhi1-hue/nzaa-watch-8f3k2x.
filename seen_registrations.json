@@ -857,7 +857,7 @@
   },
   "ZK-SSH": {
     "first_seen": "2026-07-16",
-    "count": 1
+    "count": 2
   },
   "ZK-OKV": {
     "first_seen": "2026-07-16",
@@ -873,7 +873,7 @@
   },
   "ZK-NFI": {
     "first_seen": "2026-07-16",
-    "count": 7
+    "count": 8
   },
   "VH-VFI": {
     "first_seen": "2026-07-16",
@@ -1413,6 +1413,6 @@
   },
   "F-OVAA": {
     "first_seen": "2026-07-18",
-    "count": 2
+    "count": 3
   }
 }
