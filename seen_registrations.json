@@ -889,7 +889,7 @@
   },
   "B-6969": {
     "first_seen": "2026-07-16",
-    "count": 7
+    "count": 8
   },
   "ZK-HLU": {
     "first_seen": "2026-07-16",
@@ -925,7 +925,7 @@
   },
   "ZK-MVA": {
     "first_seen": "2026-07-16",
-    "count": 3
+    "count": 4
   },
   "ZK-INP": {
     "first_seen": "2026-07-16",
@@ -1505,6 +1505,6 @@
   },
   "N371JL": {
     "first_seen": "2026-07-19",
-    "count": 1
+    "count": 2
   }
 }
