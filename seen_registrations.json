@@ -45,7 +45,7 @@
   },
   "ZK-NZQ": {
     "first_seen": "2026-07-15",
-    "count": 13
+    "count": 14
   },
   "ZK-NZC": {
     "first_seen": "2026-07-15",
@@ -701,11 +701,11 @@
   },
   "ZK-NNC": {
     "first_seen": "2026-07-16",
-    "count": 12
+    "count": 13
   },
   "ZK-MVK": {
     "first_seen": "2026-07-16",
-    "count": 6
+    "count": 7
   },
   "ZK-ICB": {
     "first_seen": "2026-07-16",
@@ -1500,6 +1500,10 @@
     "count": 2
   },
   "ZK-UNB": {
+    "first_seen": "2026-07-19",
+    "count": 1
+  },
+  "N371JL": {
     "first_seen": "2026-07-19",
     "count": 1
   }
