@@ -217,7 +217,7 @@
   },
   "ZK-OXG": {
     "first_seen": "2026-07-15",
-    "count": 17
+    "count": 18
   },
   "ZK-OXE": {
     "first_seen": "2026-07-15",
@@ -937,7 +937,7 @@
   },
   "ZK-MVD": {
     "first_seen": "2026-07-16",
-    "count": 5
+    "count": 6
   },
   "ZK-IFS": {
     "first_seen": "2026-07-16",
@@ -1424,6 +1424,10 @@
     "count": 1
   },
   "ZK-GPK": {
+    "first_seen": "2026-07-19",
+    "count": 1
+  },
+  "ZK-CPD": {
     "first_seen": "2026-07-19",
     "count": 1
   }
