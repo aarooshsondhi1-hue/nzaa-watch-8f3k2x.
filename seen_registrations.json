@@ -381,7 +381,7 @@
   },
   "ZK-MZH": {
     "first_seen": "2026-07-16",
-    "count": 7
+    "count": 8
   },
   "ZK-HLA": {
     "first_seen": "2026-07-16",
@@ -1568,6 +1568,14 @@
     "count": 1
   },
   "ZK-HIJ": {
+    "first_seen": "2026-07-19",
+    "count": 1
+  },
+  "ZK-MVC": {
+    "first_seen": "2026-07-19",
+    "count": 1
+  },
+  "N418MC": {
     "first_seen": "2026-07-19",
     "count": 1
   }
