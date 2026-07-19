@@ -69,7 +69,7 @@
   },
   "ZK-NNF": {
     "first_seen": "2026-07-15",
-    "count": 14
+    "count": 15
   },
   "ZK-NZR": {
     "first_seen": "2026-07-15",
@@ -93,7 +93,7 @@
   },
   "VH-OFV": {
     "first_seen": "2026-07-15",
-    "count": 12
+    "count": 13
   },
   "VH-CYK": {
     "first_seen": "2026-07-15",
@@ -121,7 +121,7 @@
   },
   "9V-SWQ": {
     "first_seen": "2026-07-15",
-    "count": 4
+    "count": 5
   },
   "ZK-OKU": {
     "first_seen": "2026-07-15",
@@ -225,7 +225,7 @@
   },
   "VH-VQC": {
     "first_seen": "2026-07-15",
-    "count": 15
+    "count": 16
   },
   "ZK-NZL": {
     "first_seen": "2026-07-15",
@@ -281,7 +281,7 @@
   },
   "VH-VGN": {
     "first_seen": "2026-07-15",
-    "count": 11
+    "count": 12
   },
   "ZK-MVL": {
     "first_seen": "2026-07-15",
@@ -493,7 +493,7 @@
   },
   "ZK-OJS": {
     "first_seen": "2026-07-16",
-    "count": 11
+    "count": 12
   },
   "ZK-NYK": {
     "first_seen": "2026-07-16",
@@ -505,11 +505,11 @@
   },
   "ZK-OXA": {
     "first_seen": "2026-07-16",
-    "count": 7
+    "count": 8
   },
   "VH-VFL": {
     "first_seen": "2026-07-16",
-    "count": 4
+    "count": 5
   },
   "ZK-OKQ": {
     "first_seen": "2026-07-16",
@@ -545,7 +545,7 @@
   },
   "ZK-NHE": {
     "first_seen": "2026-07-16",
-    "count": 10
+    "count": 11
   },
   "ZK-NFB": {
     "first_seen": "2026-07-16",
@@ -849,7 +849,7 @@
   },
   "VH-VQG": {
     "first_seen": "2026-07-16",
-    "count": 12
+    "count": 13
   },
   "B-LRG": {
     "first_seen": "2026-07-16",
@@ -889,7 +889,7 @@
   },
   "B-6969": {
     "first_seen": "2026-07-16",
-    "count": 5
+    "count": 6
   },
   "ZK-HLU": {
     "first_seen": "2026-07-16",
@@ -969,7 +969,7 @@
   },
   "F-ONEA": {
     "first_seen": "2026-07-16",
-    "count": 5
+    "count": 6
   },
   "ZK-HFN": {
     "first_seen": "2026-07-16",
@@ -1069,7 +1069,7 @@
   },
   "VH-EBQ": {
     "first_seen": "2026-07-17",
-    "count": 5
+    "count": 6
   },
   "ZK-MVR": {
     "first_seen": "2026-07-17",
@@ -1169,7 +1169,7 @@
   },
   "VH-VFK": {
     "first_seen": "2026-07-17",
-    "count": 6
+    "count": 7
   },
   "A7-BEW": {
     "first_seen": "2026-07-17",
@@ -1444,6 +1444,18 @@
     "count": 1
   },
   "A7-CHB": {
+    "first_seen": "2026-07-19",
+    "count": 1
+  },
+  "VH-XZO": {
+    "first_seen": "2026-07-19",
+    "count": 1
+  },
+  "VH-VZU": {
+    "first_seen": "2026-07-19",
+    "count": 1
+  },
+  "B-320S": {
     "first_seen": "2026-07-19",
     "count": 1
   }
