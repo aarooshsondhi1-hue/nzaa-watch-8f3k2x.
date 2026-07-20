@@ -705,7 +705,7 @@
   },
   "ZK-MVK": {
     "first_seen": "2026-07-16",
-    "count": 8
+    "count": 9
   },
   "ZK-ICB": {
     "first_seen": "2026-07-16",
@@ -1680,6 +1680,10 @@
     "count": 2
   },
   "B-7878": {
+    "first_seen": "2026-07-20",
+    "count": 1
+  },
+  "ZK-HPD": {
     "first_seen": "2026-07-20",
     "count": 1
   }
