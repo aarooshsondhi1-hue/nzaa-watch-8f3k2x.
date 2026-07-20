@@ -373,7 +373,7 @@
   },
   "ZK-INC": {
     "first_seen": "2026-07-16",
-    "count": 3
+    "count": 4
   },
   "ZK-UFS": {
     "first_seen": "2026-07-16",
@@ -1149,7 +1149,7 @@
   },
   "ZK-MVP": {
     "first_seen": "2026-07-17",
-    "count": 4
+    "count": 5
   },
   "B-18912": {
     "first_seen": "2026-07-17",
@@ -1684,6 +1684,14 @@
     "count": 1
   },
   "ZK-HPD": {
+    "first_seen": "2026-07-20",
+    "count": 1
+  },
+  "N37WX": {
+    "first_seen": "2026-07-20",
+    "count": 1
+  },
+  "ZK-HBJ": {
     "first_seen": "2026-07-20",
     "count": 1
   }
