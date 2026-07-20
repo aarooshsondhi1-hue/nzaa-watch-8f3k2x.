@@ -1733,7 +1733,7 @@
   },
   "9M-MNO": {
     "first_seen": "2026-07-20",
-    "count": 1
+    "count": 2
   },
   "ZK-PEL": {
     "first_seen": "2026-07-20",
@@ -1764,6 +1764,14 @@
     "count": 1
   },
   "DQ-FJV": {
+    "first_seen": "2026-07-20",
+    "count": 1
+  },
+  "9V-SWI": {
+    "first_seen": "2026-07-20",
+    "count": 1
+  },
+  "ZK-CBM": {
     "first_seen": "2026-07-20",
     "count": 1
   }
