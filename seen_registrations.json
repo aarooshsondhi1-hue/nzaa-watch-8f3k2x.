@@ -173,7 +173,7 @@
   },
   "ZK-OXL": {
     "first_seen": "2026-07-15",
-    "count": 22
+    "count": 23
   },
   "VH-VGR": {
     "first_seen": "2026-07-15",
@@ -1678,5 +1678,9 @@
   "9M-MWM": {
     "first_seen": "2026-07-20",
     "count": 2
+  },
+  "B-7878": {
+    "first_seen": "2026-07-20",
+    "count": 1
   }
 }
