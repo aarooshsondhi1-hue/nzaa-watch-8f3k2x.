@@ -9,7 +9,7 @@
   },
   "ZK-NZH": {
     "first_seen": "2026-07-15",
-    "count": 12
+    "count": 13
   },
   "ZK-NNB": {
     "first_seen": "2026-07-15",
@@ -1449,7 +1449,7 @@
   },
   "VH-XZO": {
     "first_seen": "2026-07-19",
-    "count": 5
+    "count": 6
   },
   "VH-VZU": {
     "first_seen": "2026-07-19",
@@ -1644,6 +1644,10 @@
     "count": 1
   },
   "CC-BGA": {
+    "first_seen": "2026-07-20",
+    "count": 1
+  },
+  "B-7369": {
     "first_seen": "2026-07-20",
     "count": 1
   }
