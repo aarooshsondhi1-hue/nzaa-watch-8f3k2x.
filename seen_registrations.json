@@ -9,15 +9,15 @@
   },
   "ZK-NZH": {
     "first_seen": "2026-07-15",
-    "count": 11
+    "count": 12
   },
   "ZK-NNB": {
     "first_seen": "2026-07-15",
-    "count": 15
+    "count": 16
   },
   "ZK-NNG": {
     "first_seen": "2026-07-15",
-    "count": 14
+    "count": 15
   },
   "A7-BEK": {
     "first_seen": "2026-07-15",
@@ -273,7 +273,7 @@
   },
   "ZK-OYB": {
     "first_seen": "2026-07-15",
-    "count": 18
+    "count": 19
   },
   "ZK-OJQ": {
     "first_seen": "2026-07-15",
@@ -493,7 +493,7 @@
   },
   "ZK-OJS": {
     "first_seen": "2026-07-16",
-    "count": 18
+    "count": 19
   },
   "ZK-NYK": {
     "first_seen": "2026-07-16",
@@ -545,7 +545,7 @@
   },
   "ZK-NHE": {
     "first_seen": "2026-07-16",
-    "count": 13
+    "count": 14
   },
   "ZK-NFB": {
     "first_seen": "2026-07-16",
@@ -621,7 +621,7 @@
   },
   "ZK-OAB": {
     "first_seen": "2026-07-16",
-    "count": 19
+    "count": 20
   },
   "ZK-IXD": {
     "first_seen": "2026-07-16",
@@ -669,7 +669,7 @@
   },
   "ZK-NEB": {
     "first_seen": "2026-07-16",
-    "count": 12
+    "count": 13
   },
   "ZK-MVJ": {
     "first_seen": "2026-07-16",
@@ -1636,6 +1636,10 @@
     "count": 1
   },
   "VH-XZP": {
+    "first_seen": "2026-07-20",
+    "count": 2
+  },
+  "9M-MTB": {
     "first_seen": "2026-07-20",
     "count": 1
   }
