@@ -309,7 +309,7 @@
   },
   "ZK-IHZ": {
     "first_seen": "2026-07-15",
-    "count": 7
+    "count": 8
   },
   "ZK-IZW": {
     "first_seen": "2026-07-15",
@@ -1133,7 +1133,7 @@
   },
   "NZ7572": {
     "first_seen": "2026-07-17",
-    "count": 3
+    "count": 4
   },
   "ZK-IIX": {
     "first_seen": "2026-07-17",
@@ -1640,6 +1640,10 @@
     "count": 3
   },
   "9M-MTB": {
+    "first_seen": "2026-07-20",
+    "count": 1
+  },
+  "CC-BGA": {
     "first_seen": "2026-07-20",
     "count": 1
   }
