@@ -389,7 +389,7 @@
   },
   "ZK-HIQ": {
     "first_seen": "2026-07-16",
-    "count": 4
+    "count": 5
   },
   "ZK-NEO": {
     "first_seen": "2026-07-16",
@@ -1632,6 +1632,10 @@
     "count": 1
   },
   "ZK-HZR": {
+    "first_seen": "2026-07-20",
+    "count": 1
+  },
+  "VH-XZP": {
     "first_seen": "2026-07-20",
     "count": 1
   }
