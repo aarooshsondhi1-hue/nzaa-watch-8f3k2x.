@@ -1709,7 +1709,7 @@
   },
   "ZK-IGI": {
     "first_seen": "2026-07-20",
-    "count": 1
+    "count": 2
   },
   "ZK-HTW": {
     "first_seen": "2026-07-20",
@@ -1720,6 +1720,10 @@
     "count": 1
   },
   "ZK-MTI": {
+    "first_seen": "2026-07-20",
+    "count": 1
+  },
+  "ZK-HEU": {
     "first_seen": "2026-07-20",
     "count": 1
   }
