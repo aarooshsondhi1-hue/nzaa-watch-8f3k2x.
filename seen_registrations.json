@@ -401,7 +401,7 @@
   },
   "ZK-LFW": {
     "first_seen": "2026-07-16",
-    "count": 3
+    "count": 4
   },
   "ZK-HES": {
     "first_seen": "2026-07-16",
@@ -409,7 +409,7 @@
   },
   "ZK-MVM": {
     "first_seen": "2026-07-16",
-    "count": 6
+    "count": 7
   },
   "VH-VFD": {
     "first_seen": "2026-07-16",
@@ -913,7 +913,7 @@
   },
   "ZK-MVO": {
     "first_seen": "2026-07-16",
-    "count": 5
+    "count": 6
   },
   "A6-EUI": {
     "first_seen": "2026-07-16",
@@ -1525,7 +1525,7 @@
   },
   "DQ-FAE": {
     "first_seen": "2026-07-19",
-    "count": 2
+    "count": 3
   },
   "A6-EFO": {
     "first_seen": "2026-07-19",
