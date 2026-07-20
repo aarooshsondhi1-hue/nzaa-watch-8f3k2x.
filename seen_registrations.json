@@ -1233,7 +1233,7 @@
   },
   "A6-EVJ": {
     "first_seen": "2026-07-17",
-    "count": 5
+    "count": 6
   },
   "NZ7013": {
     "first_seen": "2026-07-17",
@@ -1732,6 +1732,10 @@
     "count": 1
   },
   "9M-MNO": {
+    "first_seen": "2026-07-20",
+    "count": 1
+  },
+  "ZK-PEL": {
     "first_seen": "2026-07-20",
     "count": 1
   }
