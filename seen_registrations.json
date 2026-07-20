@@ -485,7 +485,7 @@
   },
   "ZK-NER": {
     "first_seen": "2026-07-16",
-    "count": 2
+    "count": 3
   },
   "ZK-CBZ": {
     "first_seen": "2026-07-16",
@@ -733,7 +733,7 @@
   },
   "ZK-OKP": {
     "first_seen": "2026-07-16",
-    "count": 12
+    "count": 13
   },
   "ZK-IRB": {
     "first_seen": "2026-07-16",
@@ -1125,7 +1125,7 @@
   },
   "ZK-HBZ": {
     "first_seen": "2026-07-17",
-    "count": 5
+    "count": 6
   },
   "ZK-SXC": {
     "first_seen": "2026-07-17",
@@ -1653,6 +1653,6 @@
   },
   "B-7882": {
     "first_seen": "2026-07-20",
-    "count": 1
+    "count": 2
   }
 }
