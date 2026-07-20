@@ -541,7 +541,7 @@
   },
   "ZK-HCF": {
     "first_seen": "2026-07-16",
-    "count": 1
+    "count": 2
   },
   "ZK-NHE": {
     "first_seen": "2026-07-16",
@@ -1273,7 +1273,7 @@
   },
   "VH-ZNJ": {
     "first_seen": "2026-07-18",
-    "count": 5
+    "count": 6
   },
   "ZK-TNZ": {
     "first_seen": "2026-07-18",
@@ -1692,6 +1692,10 @@
     "count": 1
   },
   "ZK-HBJ": {
+    "first_seen": "2026-07-20",
+    "count": 1
+  },
+  "ZK-HEE": {
     "first_seen": "2026-07-20",
     "count": 1
   }
