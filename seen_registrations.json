@@ -525,7 +525,7 @@
   },
   "ZK-MDX": {
     "first_seen": "2026-07-16",
-    "count": 8
+    "count": 9
   },
   "ZK-NYF": {
     "first_seen": "2026-07-16",
@@ -1581,7 +1581,7 @@
   },
   "ZK-SXL": {
     "first_seen": "2026-07-19",
-    "count": 1
+    "count": 2
   },
   "ZK-RSQ": {
     "first_seen": "2026-07-19",
@@ -1876,6 +1876,10 @@
     "count": 1
   },
   "B-LRV": {
+    "first_seen": "2026-07-21",
+    "count": 1
+  },
+  "ZK-ELC": {
     "first_seen": "2026-07-21",
     "count": 1
   }
