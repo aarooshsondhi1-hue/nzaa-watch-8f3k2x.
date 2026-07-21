@@ -1509,7 +1509,7 @@
   },
   "VH-VGF": {
     "first_seen": "2026-07-19",
-    "count": 9
+    "count": 10
   },
   "N27015": {
     "first_seen": "2026-07-19",
@@ -1784,6 +1784,10 @@
     "count": 1
   },
   "NZ4803": {
+    "first_seen": "2026-07-21",
+    "count": 1
+  },
+  "ZK-LTS": {
     "first_seen": "2026-07-21",
     "count": 1
   }
