@@ -717,7 +717,7 @@
   },
   "ZK-IPC": {
     "first_seen": "2026-07-16",
-    "count": 5
+    "count": 6
   },
   "H4-SAL": {
     "first_seen": "2026-07-16",
@@ -1377,7 +1377,7 @@
   },
   "ZK-IBH": {
     "first_seen": "2026-07-18",
-    "count": 2
+    "count": 3
   },
   "ZK-HQD": {
     "first_seen": "2026-07-18",
@@ -1872,6 +1872,10 @@
     "count": 2
   },
   "9M-MNJ": {
+    "first_seen": "2026-07-21",
+    "count": 1
+  },
+  "B-LRV": {
     "first_seen": "2026-07-21",
     "count": 1
   }
