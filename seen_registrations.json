@@ -709,7 +709,7 @@
   },
   "ZK-ICB": {
     "first_seen": "2026-07-16",
-    "count": 5
+    "count": 6
   },
   "VH-XZB": {
     "first_seen": "2026-07-16",
@@ -1617,7 +1617,7 @@
   },
   "ZK-NZF": {
     "first_seen": "2026-07-20",
-    "count": 3
+    "count": 4
   },
   "N968FA": {
     "first_seen": "2026-07-20",
@@ -1864,6 +1864,10 @@
     "count": 1
   },
   "ZK-DGY": {
+    "first_seen": "2026-07-21",
+    "count": 1
+  },
+  "ZK-HXP": {
     "first_seen": "2026-07-21",
     "count": 1
   }
