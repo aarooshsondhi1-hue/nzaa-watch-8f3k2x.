@@ -273,7 +273,7 @@
   },
   "ZK-OYB": {
     "first_seen": "2026-07-15",
-    "count": 23
+    "count": 24
   },
   "ZK-OJQ": {
     "first_seen": "2026-07-15",
@@ -1457,7 +1457,7 @@
   },
   "B-320S": {
     "first_seen": "2026-07-19",
-    "count": 5
+    "count": 6
   },
   "B-2022": {
     "first_seen": "2026-07-19",
@@ -1812,6 +1812,10 @@
     "count": 1
   },
   "ZK-IGK": {
+    "first_seen": "2026-07-21",
+    "count": 1
+  },
+  "N952CA": {
     "first_seen": "2026-07-21",
     "count": 1
   }
