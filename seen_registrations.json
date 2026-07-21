@@ -437,7 +437,7 @@
   },
   "ZK-NEK": {
     "first_seen": "2026-07-16",
-    "count": 11
+    "count": 12
   },
   "ZK-TAU": {
     "first_seen": "2026-07-16",
@@ -1389,7 +1389,7 @@
   },
   "A6-EUK": {
     "first_seen": "2026-07-18",
-    "count": 3
+    "count": 4
   },
   "ZK-MZC": {
     "first_seen": "2026-07-18",
@@ -1869,6 +1869,6 @@
   },
   "ZK-HXP": {
     "first_seen": "2026-07-21",
-    "count": 1
+    "count": 2
   }
 }
