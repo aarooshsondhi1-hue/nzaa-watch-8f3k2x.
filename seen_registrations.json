@@ -13,7 +13,7 @@
   },
   "ZK-NNB": {
     "first_seen": "2026-07-15",
-    "count": 18
+    "count": 19
   },
   "ZK-NNG": {
     "first_seen": "2026-07-15",
@@ -389,7 +389,7 @@
   },
   "ZK-HIQ": {
     "first_seen": "2026-07-16",
-    "count": 5
+    "count": 6
   },
   "ZK-NEO": {
     "first_seen": "2026-07-16",
@@ -1824,6 +1824,10 @@
     "count": 1
   },
   "B-2005": {
+    "first_seen": "2026-07-21",
+    "count": 2
+  },
+  "VH-VQH": {
     "first_seen": "2026-07-21",
     "count": 1
   }
