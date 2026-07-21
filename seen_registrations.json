@@ -237,7 +237,7 @@
   },
   "ZK-ZZA": {
     "first_seen": "2026-07-15",
-    "count": 3
+    "count": 4
   },
   "B-207U": {
     "first_seen": "2026-07-15",
@@ -1145,7 +1145,7 @@
   },
   "ZK-IKJ": {
     "first_seen": "2026-07-17",
-    "count": 3
+    "count": 4
   },
   "ZK-MVP": {
     "first_seen": "2026-07-17",
@@ -1816,6 +1816,10 @@
     "count": 1
   },
   "N952CA": {
+    "first_seen": "2026-07-21",
+    "count": 1
+  },
+  "ZK-IAV": {
     "first_seen": "2026-07-21",
     "count": 1
   }
