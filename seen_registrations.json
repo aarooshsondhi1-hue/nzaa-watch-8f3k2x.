@@ -105,7 +105,7 @@
   },
   "ZK-OKN": {
     "first_seen": "2026-07-15",
-    "count": 16
+    "count": 17
   },
   "VH-EBS": {
     "first_seen": "2026-07-15",
@@ -437,7 +437,7 @@
   },
   "ZK-NEK": {
     "first_seen": "2026-07-16",
-    "count": 13
+    "count": 14
   },
   "ZK-TAU": {
     "first_seen": "2026-07-16",
@@ -1926,5 +1926,9 @@
   "B-7368": {
     "first_seen": "2026-07-22",
     "count": 3
+  },
+  "B-1539": {
+    "first_seen": "2026-07-22",
+    "count": 1
   }
 }
