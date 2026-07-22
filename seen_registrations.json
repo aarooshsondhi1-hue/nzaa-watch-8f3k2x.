@@ -425,7 +425,7 @@
   },
   "VH-VZR": {
     "first_seen": "2026-07-16",
-    "count": 8
+    "count": 9
   },
   "VH-ZNK": {
     "first_seen": "2026-07-16",
@@ -1405,7 +1405,7 @@
   },
   "B-LRA": {
     "first_seen": "2026-07-18",
-    "count": 4
+    "count": 5
   },
   "DQ-FJU": {
     "first_seen": "2026-07-18",
@@ -1968,6 +1968,10 @@
     "count": 2
   },
   "VH-OYX": {
+    "first_seen": "2026-07-22",
+    "count": 1
+  },
+  "9M-MNN": {
     "first_seen": "2026-07-22",
     "count": 1
   }
