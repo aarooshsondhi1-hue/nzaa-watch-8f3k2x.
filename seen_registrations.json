@@ -253,7 +253,7 @@
   },
   "ZK-NED": {
     "first_seen": "2026-07-15",
-    "count": 14
+    "count": 15
   },
   "ZK-SDD": {
     "first_seen": "2026-07-15",
@@ -1965,6 +1965,6 @@
   },
   "A6-EVN": {
     "first_seen": "2026-07-22",
-    "count": 1
+    "count": 2
   }
 }
