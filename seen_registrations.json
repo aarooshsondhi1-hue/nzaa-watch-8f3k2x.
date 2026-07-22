@@ -629,7 +629,7 @@
   },
   "ZK-HKX": {
     "first_seen": "2026-07-16",
-    "count": 4
+    "count": 5
   },
   "ZK-MZF": {
     "first_seen": "2026-07-16",
@@ -1409,7 +1409,7 @@
   },
   "DQ-FJU": {
     "first_seen": "2026-07-18",
-    "count": 3
+    "count": 4
   },
   "F-OVAA": {
     "first_seen": "2026-07-18",
@@ -1976,6 +1976,10 @@
     "count": 2
   },
   "ZK-PMJ": {
+    "first_seen": "2026-07-22",
+    "count": 1
+  },
+  "ZK-HUT": {
     "first_seen": "2026-07-22",
     "count": 1
   }
