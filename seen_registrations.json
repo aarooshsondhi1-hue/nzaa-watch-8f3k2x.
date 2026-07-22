@@ -117,7 +117,7 @@
   },
   "VH-ZNG": {
     "first_seen": "2026-07-15",
-    "count": 5
+    "count": 6
   },
   "9V-SWQ": {
     "first_seen": "2026-07-15",
@@ -505,7 +505,7 @@
   },
   "ZK-OXA": {
     "first_seen": "2026-07-16",
-    "count": 23
+    "count": 24
   },
   "VH-VFL": {
     "first_seen": "2026-07-16",
@@ -1912,6 +1912,10 @@
     "count": 2
   },
   "ZK-MLN": {
+    "first_seen": "2026-07-22",
+    "count": 1
+  },
+  "VH-VZO": {
     "first_seen": "2026-07-22",
     "count": 1
   }
