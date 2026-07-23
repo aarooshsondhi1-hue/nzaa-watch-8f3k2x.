@@ -1205,7 +1205,7 @@
   },
   "ZK-MVI": {
     "first_seen": "2026-07-17",
-    "count": 12
+    "count": 13
   },
   "NZ7014": {
     "first_seen": "2026-07-17",
@@ -1949,7 +1949,7 @@
   },
   "VH-VGH": {
     "first_seen": "2026-07-22",
-    "count": 5
+    "count": 6
   },
   "B-1469": {
     "first_seen": "2026-07-22",
@@ -1996,6 +1996,14 @@
     "count": 1
   },
   "ZK-ICE": {
+    "first_seen": "2026-07-23",
+    "count": 1
+  },
+  "VH-ZNA": {
+    "first_seen": "2026-07-23",
+    "count": 1
+  },
+  "ZK-HBR": {
     "first_seen": "2026-07-23",
     "count": 1
   }
