@@ -265,7 +265,7 @@
   },
   "H4-OTA": {
     "first_seen": "2026-07-15",
-    "count": 11
+    "count": 12
   },
   "ZK-MVZ": {
     "first_seen": "2026-07-15",
@@ -717,7 +717,7 @@
   },
   "ZK-IPC": {
     "first_seen": "2026-07-16",
-    "count": 6
+    "count": 7
   },
   "H4-SAL": {
     "first_seen": "2026-07-16",
@@ -773,7 +773,7 @@
   },
   "ZK-NEG": {
     "first_seen": "2026-07-16",
-    "count": 6
+    "count": 7
   },
   "VH-RAN": {
     "first_seen": "2026-07-16",
@@ -825,7 +825,7 @@
   },
   "VH-XZK": {
     "first_seen": "2026-07-16",
-    "count": 12
+    "count": 13
   },
   "VH-VZC": {
     "first_seen": "2026-07-16",
