@@ -1617,7 +1617,7 @@
   },
   "ZK-NZF": {
     "first_seen": "2026-07-20",
-    "count": 10
+    "count": 11
   },
   "N968FA": {
     "first_seen": "2026-07-20",
@@ -2024,6 +2024,10 @@
     "count": 2
   },
   "ZK-KOL": {
+    "first_seen": "2026-07-23",
+    "count": 1
+  },
+  "ZK-JVC": {
     "first_seen": "2026-07-23",
     "count": 1
   }
