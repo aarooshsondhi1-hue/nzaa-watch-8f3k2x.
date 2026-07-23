@@ -137,7 +137,7 @@
   },
   "ZK-NZK": {
     "first_seen": "2026-07-15",
-    "count": 21
+    "count": 22
   },
   "ZK-OKM": {
     "first_seen": "2026-07-15",
@@ -1561,7 +1561,7 @@
   },
   "ZK-IUU": {
     "first_seen": "2026-07-19",
-    "count": 3
+    "count": 4
   },
   "ZK-JSK": {
     "first_seen": "2026-07-19",
@@ -2066,5 +2066,9 @@
   "A6-EUE": {
     "first_seen": "2026-07-23",
     "count": 2
+  },
+  "ZK-EGK": {
+    "first_seen": "2026-07-23",
+    "count": 1
   }
 }
