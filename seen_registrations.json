@@ -525,7 +525,7 @@
   },
   "ZK-MDX": {
     "first_seen": "2026-07-16",
-    "count": 11
+    "count": 12
   },
   "ZK-NYF": {
     "first_seen": "2026-07-16",
@@ -677,7 +677,7 @@
   },
   "NZ3611": {
     "first_seen": "2026-07-16",
-    "count": 3
+    "count": 4
   },
   "B-7349": {
     "first_seen": "2026-07-16",
@@ -2022,5 +2022,9 @@
   "VH-VGU": {
     "first_seen": "2026-07-23",
     "count": 2
+  },
+  "ZK-KOL": {
+    "first_seen": "2026-07-23",
+    "count": 1
   }
 }
