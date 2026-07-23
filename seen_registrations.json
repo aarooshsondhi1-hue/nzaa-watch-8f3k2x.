@@ -725,7 +725,7 @@
   },
   "ZK-NZM": {
     "first_seen": "2026-07-16",
-    "count": 25
+    "count": 26
   },
   "ZK-OXC": {
     "first_seen": "2026-07-16",
@@ -2050,5 +2050,9 @@
   "VH-ULW": {
     "first_seen": "2026-07-23",
     "count": 2
+  },
+  "9V-SWP": {
+    "first_seen": "2026-07-23",
+    "count": 1
   }
 }
