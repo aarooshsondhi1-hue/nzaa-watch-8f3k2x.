@@ -489,7 +489,7 @@
   },
   "ZK-CBZ": {
     "first_seen": "2026-07-16",
-    "count": 2
+    "count": 3
   },
   "ZK-OJS": {
     "first_seen": "2026-07-16",
@@ -2008,6 +2008,10 @@
     "count": 2
   },
   "VH-EBR": {
+    "first_seen": "2026-07-23",
+    "count": 1
+  },
+  "ZK-RXD": {
     "first_seen": "2026-07-23",
     "count": 1
   }
