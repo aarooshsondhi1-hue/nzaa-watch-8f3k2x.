@@ -1053,7 +1053,7 @@
   },
   "ZK-JMG": {
     "first_seen": "2026-07-17",
-    "count": 1
+    "count": 2
   },
   "ZK-HDT": {
     "first_seen": "2026-07-17",
@@ -1509,7 +1509,7 @@
   },
   "VH-VGF": {
     "first_seen": "2026-07-19",
-    "count": 17
+    "count": 18
   },
   "N27015": {
     "first_seen": "2026-07-19",
@@ -2021,6 +2021,6 @@
   },
   "VH-VGU": {
     "first_seen": "2026-07-23",
-    "count": 1
+    "count": 2
   }
 }
