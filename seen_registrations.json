@@ -1393,7 +1393,7 @@
   },
   "ZK-MZC": {
     "first_seen": "2026-07-18",
-    "count": 7
+    "count": 8
   },
   "VH-OYP": {
     "first_seen": "2026-07-18",
@@ -2052,6 +2052,10 @@
     "count": 2
   },
   "9V-SWP": {
+    "first_seen": "2026-07-23",
+    "count": 1
+  },
+  "ZK-MCS": {
     "first_seen": "2026-07-23",
     "count": 1
   }
