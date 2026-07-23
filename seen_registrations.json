@@ -401,7 +401,7 @@
   },
   "ZK-LFW": {
     "first_seen": "2026-07-16",
-    "count": 6
+    "count": 7
   },
   "ZK-HES": {
     "first_seen": "2026-07-16",
@@ -977,7 +977,7 @@
   },
   "ZK-MCO": {
     "first_seen": "2026-07-16",
-    "count": 10
+    "count": 11
   },
   "ZK-IWE": {
     "first_seen": "2026-07-16",
@@ -1753,7 +1753,7 @@
   },
   "ZK-IOX": {
     "first_seen": "2026-07-20",
-    "count": 1
+    "count": 2
   },
   "VH-OLQ": {
     "first_seen": "2026-07-20",
@@ -2076,6 +2076,10 @@
     "count": 1
   },
   "ZK-IPO": {
+    "first_seen": "2026-07-23",
+    "count": 1
+  },
+  "ZK-HMT": {
     "first_seen": "2026-07-23",
     "count": 1
   }
