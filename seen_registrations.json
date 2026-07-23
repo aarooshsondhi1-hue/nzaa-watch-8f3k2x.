@@ -25,7 +25,7 @@
   },
   "ZK-TXE": {
     "first_seen": "2026-07-15",
-    "count": 14
+    "count": 15
   },
   "A6-EWL": {
     "first_seen": "2026-07-15",
@@ -2040,6 +2040,10 @@
     "count": 3
   },
   "B-LRU": {
+    "first_seen": "2026-07-23",
+    "count": 1
+  },
+  "VH-VQK": {
     "first_seen": "2026-07-23",
     "count": 1
   }
