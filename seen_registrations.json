@@ -389,7 +389,7 @@
   },
   "ZK-HIQ": {
     "first_seen": "2026-07-16",
-    "count": 7
+    "count": 8
   },
   "ZK-NEO": {
     "first_seen": "2026-07-16",
@@ -585,7 +585,7 @@
   },
   "ZK-UAT": {
     "first_seen": "2026-07-16",
-    "count": 10
+    "count": 11
   },
   "ZK-HYF": {
     "first_seen": "2026-07-16",
@@ -2065,6 +2065,6 @@
   },
   "A6-EUE": {
     "first_seen": "2026-07-23",
-    "count": 1
+    "count": 2
   }
 }
