@@ -329,7 +329,7 @@
   },
   "ZK-NET": {
     "first_seen": "2026-07-15",
-    "count": 14
+    "count": 15
   },
   "A6-EVS": {
     "first_seen": "2026-07-15",
@@ -2118,5 +2118,9 @@
   "CC-BGM": {
     "first_seen": "2026-07-24",
     "count": 3
+  },
+  "ZK-FDS": {
+    "first_seen": "2026-07-24",
+    "count": 1
   }
 }
