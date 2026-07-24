@@ -673,7 +673,7 @@
   },
   "ZK-MVJ": {
     "first_seen": "2026-07-16",
-    "count": 13
+    "count": 14
   },
   "NZ3611": {
     "first_seen": "2026-07-16",
@@ -2088,6 +2088,10 @@
     "count": 1
   },
   "VH-XZC": {
+    "first_seen": "2026-07-24",
+    "count": 1
+  },
+  "ZK-IKO": {
     "first_seen": "2026-07-24",
     "count": 1
   }
