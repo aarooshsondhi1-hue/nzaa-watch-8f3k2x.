@@ -805,7 +805,7 @@
   },
   "ZK-NEU": {
     "first_seen": "2026-07-16",
-    "count": 12
+    "count": 13
   },
   "ZK-VXM": {
     "first_seen": "2026-07-16",
@@ -2148,6 +2148,10 @@
     "count": 1
   },
   "B-7880": {
+    "first_seen": "2026-07-24",
+    "count": 1
+  },
+  "N974MT": {
     "first_seen": "2026-07-24",
     "count": 1
   }
