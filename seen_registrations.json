@@ -833,7 +833,7 @@
   },
   "ZK-NHA": {
     "first_seen": "2026-07-16",
-    "count": 28
+    "count": 29
   },
   "VH-XZE": {
     "first_seen": "2026-07-16",
@@ -2137,6 +2137,6 @@
   },
   "VH-ZNB": {
     "first_seen": "2026-07-24",
-    "count": 1
+    "count": 2
   }
 }
