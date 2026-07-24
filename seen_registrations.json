@@ -621,7 +621,7 @@
   },
   "ZK-OAB": {
     "first_seen": "2026-07-16",
-    "count": 37
+    "count": 38
   },
   "ZK-IXD": {
     "first_seen": "2026-07-16",
@@ -2132,6 +2132,10 @@
     "count": 2
   },
   "DQ-FAB": {
+    "first_seen": "2026-07-24",
+    "count": 1
+  },
+  "VH-ZNB": {
     "first_seen": "2026-07-24",
     "count": 1
   }
