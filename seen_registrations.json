@@ -13,7 +13,7 @@
   },
   "ZK-NNB": {
     "first_seen": "2026-07-15",
-    "count": 34
+    "count": 35
   },
   "ZK-NNG": {
     "first_seen": "2026-07-15",
@@ -2166,5 +2166,9 @@
   "B-7877": {
     "first_seen": "2026-07-25",
     "count": 2
+  },
+  "ZK-NXJ": {
+    "first_seen": "2026-07-25",
+    "count": 1
   }
 }
