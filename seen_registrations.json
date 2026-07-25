@@ -37,7 +37,7 @@
   },
   "VH-VZK": {
     "first_seen": "2026-07-15",
-    "count": 14
+    "count": 15
   },
   "B-16336": {
     "first_seen": "2026-07-15",
@@ -701,7 +701,7 @@
   },
   "ZK-NNC": {
     "first_seen": "2026-07-16",
-    "count": 31
+    "count": 32
   },
   "ZK-MVK": {
     "first_seen": "2026-07-16",
@@ -2169,6 +2169,6 @@
   },
   "ZK-NXJ": {
     "first_seen": "2026-07-25",
-    "count": 1
+    "count": 2
   }
 }
