@@ -2297,9 +2297,13 @@
   },
   "A6-EVG": {
     "first_seen": "2026-07-26",
-    "count": 1
+    "count": 2
   },
   "ZK-TAN": {
+    "first_seen": "2026-07-26",
+    "count": 1
+  },
+  "ZK-NES": {
     "first_seen": "2026-07-26",
     "count": 1
   }
