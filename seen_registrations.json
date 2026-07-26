@@ -69,7 +69,7 @@
   },
   "ZK-NNF": {
     "first_seen": "2026-07-15",
-    "count": 23
+    "count": 24
   },
   "ZK-NZR": {
     "first_seen": "2026-07-15",
@@ -225,7 +225,7 @@
   },
   "VH-VQC": {
     "first_seen": "2026-07-15",
-    "count": 43
+    "count": 44
   },
   "ZK-NZL": {
     "first_seen": "2026-07-15",
@@ -673,7 +673,7 @@
   },
   "ZK-MVJ": {
     "first_seen": "2026-07-16",
-    "count": 19
+    "count": 20
   },
   "NZ3611": {
     "first_seen": "2026-07-16",
@@ -2216,6 +2216,10 @@
     "count": 1
   },
   "B-2020": {
+    "first_seen": "2026-07-26",
+    "count": 1
+  },
+  "ZK-HTM": {
     "first_seen": "2026-07-26",
     "count": 1
   }
