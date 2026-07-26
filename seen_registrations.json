@@ -2290,5 +2290,9 @@
   "ZK-IBQ": {
     "first_seen": "2026-07-26",
     "count": 2
+  },
+  "ZK-HQM": {
+    "first_seen": "2026-07-26",
+    "count": 1
   }
 }
