@@ -305,7 +305,7 @@
   },
   "ZK-MVE": {
     "first_seen": "2026-07-15",
-    "count": 16
+    "count": 17
   },
   "ZK-IHZ": {
     "first_seen": "2026-07-15",
@@ -913,7 +913,7 @@
   },
   "ZK-MVO": {
     "first_seen": "2026-07-16",
-    "count": 14
+    "count": 15
   },
   "A6-EUI": {
     "first_seen": "2026-07-16",
@@ -2289,6 +2289,6 @@
   },
   "ZK-IBQ": {
     "first_seen": "2026-07-26",
-    "count": 1
+    "count": 2
   }
 }
