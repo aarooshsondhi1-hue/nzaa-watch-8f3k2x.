@@ -285,7 +285,7 @@
   },
   "ZK-MVL": {
     "first_seen": "2026-07-15",
-    "count": 18
+    "count": 19
   },
   "ZK-NEP": {
     "first_seen": "2026-07-15",
@@ -2268,6 +2268,10 @@
     "count": 2
   },
   "N79011": {
+    "first_seen": "2026-07-26",
+    "count": 1
+  },
+  "HL8575": {
     "first_seen": "2026-07-26",
     "count": 1
   }
