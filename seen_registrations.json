@@ -337,7 +337,7 @@
   },
   "ZK-MVW": {
     "first_seen": "2026-07-15",
-    "count": 15
+    "count": 16
   },
   "ZK-NEJ": {
     "first_seen": "2026-07-15",
@@ -2169,7 +2169,7 @@
   },
   "ZK-NXJ": {
     "first_seen": "2026-07-25",
-    "count": 2
+    "count": 3
   },
   "VH-X3B": {
     "first_seen": "2026-07-25",
@@ -2249,6 +2249,6 @@
   },
   "B-18907": {
     "first_seen": "2026-07-26",
-    "count": 2
+    "count": 3
   }
 }
