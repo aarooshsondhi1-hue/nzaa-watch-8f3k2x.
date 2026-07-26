@@ -1873,7 +1873,7 @@
   },
   "9M-MNJ": {
     "first_seen": "2026-07-21",
-    "count": 4
+    "count": 5
   },
   "B-LRV": {
     "first_seen": "2026-07-21",
@@ -2285,7 +2285,7 @@
   },
   "ZK-IRO": {
     "first_seen": "2026-07-26",
-    "count": 1
+    "count": 2
   },
   "ZK-IBQ": {
     "first_seen": "2026-07-26",
@@ -2305,6 +2305,6 @@
   },
   "ZK-NES": {
     "first_seen": "2026-07-26",
-    "count": 1
+    "count": 2
   }
 }
