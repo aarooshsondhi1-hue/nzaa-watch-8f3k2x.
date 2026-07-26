@@ -2222,5 +2222,9 @@
   "ZK-HTM": {
     "first_seen": "2026-07-26",
     "count": 1
+  },
+  "ZK-DOS": {
+    "first_seen": "2026-07-26",
+    "count": 1
   }
 }
