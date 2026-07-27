@@ -225,7 +225,7 @@
   },
   "VH-VQC": {
     "first_seen": "2026-07-15",
-    "count": 47
+    "count": 48
   },
   "ZK-NZL": {
     "first_seen": "2026-07-15",
@@ -505,7 +505,7 @@
   },
   "ZK-OXA": {
     "first_seen": "2026-07-16",
-    "count": 44
+    "count": 45
   },
   "VH-VFL": {
     "first_seen": "2026-07-16",
@@ -673,7 +673,7 @@
   },
   "ZK-MVJ": {
     "first_seen": "2026-07-16",
-    "count": 20
+    "count": 21
   },
   "NZ3611": {
     "first_seen": "2026-07-16",
@@ -701,7 +701,7 @@
   },
   "ZK-NNC": {
     "first_seen": "2026-07-16",
-    "count": 37
+    "count": 38
   },
   "ZK-MVK": {
     "first_seen": "2026-07-16",
@@ -781,7 +781,7 @@
   },
   "ZK-OXJ": {
     "first_seen": "2026-07-16",
-    "count": 36
+    "count": 37
   },
   "ZK-NHF": {
     "first_seen": "2026-07-16",
@@ -1029,7 +1029,7 @@
   },
   "VH-ZNN": {
     "first_seen": "2026-07-17",
-    "count": 8
+    "count": 9
   },
   "ZK-ILR": {
     "first_seen": "2026-07-17",
@@ -1273,7 +1273,7 @@
   },
   "VH-ZNJ": {
     "first_seen": "2026-07-18",
-    "count": 8
+    "count": 9
   },
   "ZK-TNZ": {
     "first_seen": "2026-07-18",
@@ -1469,7 +1469,7 @@
   },
   "VH-VZT": {
     "first_seen": "2026-07-19",
-    "count": 7
+    "count": 8
   },
   "ZK-NYD": {
     "first_seen": "2026-07-19",
@@ -1669,7 +1669,7 @@
   },
   "VH-XZD": {
     "first_seen": "2026-07-20",
-    "count": 14
+    "count": 15
   },
   "VH-VZQ": {
     "first_seen": "2026-07-20",
@@ -1949,7 +1949,7 @@
   },
   "VH-VGH": {
     "first_seen": "2026-07-22",
-    "count": 18
+    "count": 19
   },
   "B-1469": {
     "first_seen": "2026-07-22",
@@ -2085,7 +2085,7 @@
   },
   "B-30C0": {
     "first_seen": "2026-07-24",
-    "count": 3
+    "count": 4
   },
   "VH-XZC": {
     "first_seen": "2026-07-24",
@@ -2313,7 +2313,7 @@
   },
   "B-LQA": {
     "first_seen": "2026-07-26",
-    "count": 1
+    "count": 2
   },
   "ZK-HQQ": {
     "first_seen": "2026-07-26",
@@ -2321,6 +2321,6 @@
   },
   "9V-SNB": {
     "first_seen": "2026-07-26",
-    "count": 1
+    "count": 2
   }
 }
