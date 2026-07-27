@@ -373,7 +373,7 @@
   },
   "ZK-INC": {
     "first_seen": "2026-07-16",
-    "count": 10
+    "count": 11
   },
   "ZK-UFS": {
     "first_seen": "2026-07-16",
@@ -2412,6 +2412,10 @@
     "count": 1
   },
   "ZK-LTG": {
+    "first_seen": "2026-07-27",
+    "count": 1
+  },
+  "ZK-YUG": {
     "first_seen": "2026-07-27",
     "count": 1
   }
