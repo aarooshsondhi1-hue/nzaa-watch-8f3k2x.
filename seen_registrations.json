@@ -2117,7 +2117,7 @@
   },
   "CC-BGM": {
     "first_seen": "2026-07-24",
-    "count": 3
+    "count": 4
   },
   "ZK-FDS": {
     "first_seen": "2026-07-24",
@@ -2404,6 +2404,10 @@
     "count": 3
   },
   "VH-VGJ": {
+    "first_seen": "2026-07-27",
+    "count": 1
+  },
+  "B-1467": {
     "first_seen": "2026-07-27",
     "count": 1
   }
