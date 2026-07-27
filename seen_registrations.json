@@ -69,7 +69,7 @@
   },
   "ZK-NNF": {
     "first_seen": "2026-07-15",
-    "count": 27
+    "count": 28
   },
   "ZK-NZR": {
     "first_seen": "2026-07-15",
@@ -709,7 +709,7 @@
   },
   "ZK-ICB": {
     "first_seen": "2026-07-16",
-    "count": 8
+    "count": 9
   },
   "VH-XZB": {
     "first_seen": "2026-07-16",
@@ -2372,6 +2372,10 @@
     "count": 2
   },
   "NZ3404": {
+    "first_seen": "2026-07-27",
+    "count": 1
+  },
+  "NZ3402": {
     "first_seen": "2026-07-27",
     "count": 1
   }
