@@ -821,7 +821,7 @@
   },
   "ZK-PAT": {
     "first_seen": "2026-07-16",
-    "count": 16
+    "count": 17
   },
   "VH-XZK": {
     "first_seen": "2026-07-16",
@@ -2496,6 +2496,10 @@
     "count": 1
   },
   "VH-X3A": {
+    "first_seen": "2026-07-28",
+    "count": 1
+  },
+  "NZ3403": {
     "first_seen": "2026-07-28",
     "count": 1
   }
