@@ -2509,7 +2509,7 @@
   },
   "A6-EVL": {
     "first_seen": "2026-07-28",
-    "count": 2
+    "count": 3
   },
   "ZK-OXF": {
     "first_seen": "2026-07-28",
@@ -2540,6 +2540,10 @@
     "count": 1
   },
   "VH-OYC": {
+    "first_seen": "2026-07-28",
+    "count": 1
+  },
+  "ZK-ITH": {
     "first_seen": "2026-07-28",
     "count": 1
   }
