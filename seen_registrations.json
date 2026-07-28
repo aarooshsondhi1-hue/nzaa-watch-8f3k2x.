@@ -169,7 +169,7 @@
   },
   "ZK-NEA": {
     "first_seen": "2026-07-15",
-    "count": 16
+    "count": 17
   },
   "ZK-OXL": {
     "first_seen": "2026-07-15",
@@ -2077,7 +2077,7 @@
   },
   "ZK-IPO": {
     "first_seen": "2026-07-23",
-    "count": 5
+    "count": 6
   },
   "ZK-HMT": {
     "first_seen": "2026-07-23",
@@ -2480,6 +2480,10 @@
     "count": 1
   },
   "VH-XZM": {
+    "first_seen": "2026-07-28",
+    "count": 1
+  },
+  "B-2001": {
     "first_seen": "2026-07-28",
     "count": 1
   }
