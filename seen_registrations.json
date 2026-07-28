@@ -445,7 +445,7 @@
   },
   "ZK-MVN": {
     "first_seen": "2026-07-16",
-    "count": 21
+    "count": 22
   },
   "ZK-MZA": {
     "first_seen": "2026-07-16",
@@ -2405,7 +2405,7 @@
   },
   "VH-VGJ": {
     "first_seen": "2026-07-27",
-    "count": 4
+    "count": 5
   },
   "B-1467": {
     "first_seen": "2026-07-27",
@@ -2472,6 +2472,10 @@
     "count": 1
   },
   "ZK-HXN": {
+    "first_seen": "2026-07-28",
+    "count": 1
+  },
+  "ZK-ICT": {
     "first_seen": "2026-07-28",
     "count": 1
   }
