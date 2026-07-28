@@ -293,7 +293,7 @@
   },
   "ZK-NEM": {
     "first_seen": "2026-07-15",
-    "count": 22
+    "count": 23
   },
   "DQ-FJN": {
     "first_seen": "2026-07-15",
@@ -2524,6 +2524,10 @@
     "count": 1
   },
   "ZK-EMD": {
+    "first_seen": "2026-07-28",
+    "count": 1
+  },
+  "ZK-FPZ": {
     "first_seen": "2026-07-28",
     "count": 1
   }
