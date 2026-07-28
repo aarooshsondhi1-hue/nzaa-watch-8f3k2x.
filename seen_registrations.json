@@ -725,7 +725,7 @@
   },
   "ZK-NZM": {
     "first_seen": "2026-07-16",
-    "count": 40
+    "count": 41
   },
   "ZK-OXC": {
     "first_seen": "2026-07-16",
@@ -773,7 +773,7 @@
   },
   "ZK-NEG": {
     "first_seen": "2026-07-16",
-    "count": 13
+    "count": 14
   },
   "VH-RAN": {
     "first_seen": "2026-07-16",
@@ -2508,6 +2508,10 @@
     "count": 3
   },
   "A6-EVL": {
+    "first_seen": "2026-07-28",
+    "count": 1
+  },
+  "ZK-OXF": {
     "first_seen": "2026-07-28",
     "count": 1
   }
