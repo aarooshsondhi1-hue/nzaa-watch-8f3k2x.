@@ -833,7 +833,7 @@
   },
   "ZK-NHA": {
     "first_seen": "2026-07-16",
-    "count": 41
+    "count": 42
   },
   "VH-XZE": {
     "first_seen": "2026-07-16",
@@ -1101,7 +1101,7 @@
   },
   "ZK-NFA": {
     "first_seen": "2026-07-17",
-    "count": 17
+    "count": 18
   },
   "ZK-LTX": {
     "first_seen": "2026-07-17",
@@ -2464,6 +2464,10 @@
     "count": 1
   },
   "VH-VZZ": {
+    "first_seen": "2026-07-28",
+    "count": 1
+  },
+  "VH-EBD": {
     "first_seen": "2026-07-28",
     "count": 1
   }
