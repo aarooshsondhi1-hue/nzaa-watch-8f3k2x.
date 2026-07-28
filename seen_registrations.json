@@ -2550,5 +2550,9 @@
   "ZK-IND": {
     "first_seen": "2026-07-28",
     "count": 1
+  },
+  "ZK-HFS": {
+    "first_seen": "2026-07-28",
+    "count": 1
   }
 }
