@@ -2401,7 +2401,7 @@
   },
   "VH-VZH": {
     "first_seen": "2026-07-27",
-    "count": 5
+    "count": 6
   },
   "VH-VGJ": {
     "first_seen": "2026-07-27",
@@ -2492,6 +2492,10 @@
     "count": 1
   },
   "ZK-FLH": {
+    "first_seen": "2026-07-28",
+    "count": 1
+  },
+  "VH-X3A": {
     "first_seen": "2026-07-28",
     "count": 1
   }
