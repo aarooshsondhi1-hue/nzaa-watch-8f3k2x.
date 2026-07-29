@@ -2265,7 +2265,7 @@
   },
   "VH-X3C": {
     "first_seen": "2026-07-26",
-    "count": 7
+    "count": 8
   },
   "N79011": {
     "first_seen": "2026-07-26",
@@ -2588,6 +2588,10 @@
     "count": 1
   },
   "ZK-UPS": {
+    "first_seen": "2026-07-29",
+    "count": 1
+  },
+  "ZK-NGS": {
     "first_seen": "2026-07-29",
     "count": 1
   }
