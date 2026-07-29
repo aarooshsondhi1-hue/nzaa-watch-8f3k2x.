@@ -137,7 +137,7 @@
   },
   "ZK-NZK": {
     "first_seen": "2026-07-15",
-    "count": 35
+    "count": 36
   },
   "ZK-OKM": {
     "first_seen": "2026-07-15",
@@ -645,7 +645,7 @@
   },
   "ZK-KRA": {
     "first_seen": "2026-07-16",
-    "count": 34
+    "count": 35
   },
   "ZK-NEF": {
     "first_seen": "2026-07-16",
@@ -2652,6 +2652,10 @@
     "count": 2
   },
   "B-1540": {
+    "first_seen": "2026-07-29",
+    "count": 1
+  },
+  "ZK-MTY": {
     "first_seen": "2026-07-29",
     "count": 1
   }
