@@ -25,7 +25,7 @@
   },
   "ZK-TXE": {
     "first_seen": "2026-07-15",
-    "count": 25
+    "count": 26
   },
   "A6-EWL": {
     "first_seen": "2026-07-15",
@@ -301,7 +301,7 @@
   },
   "ZK-IXO": {
     "first_seen": "2026-07-15",
-    "count": 19
+    "count": 20
   },
   "ZK-MVE": {
     "first_seen": "2026-07-15",
@@ -2633,6 +2633,6 @@
   },
   "A7-BEM": {
     "first_seen": "2026-07-29",
-    "count": 2
+    "count": 3
   }
 }
