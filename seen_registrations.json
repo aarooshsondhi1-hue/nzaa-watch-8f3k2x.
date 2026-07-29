@@ -221,7 +221,7 @@
   },
   "ZK-OXE": {
     "first_seen": "2026-07-15",
-    "count": 45
+    "count": 46
   },
   "VH-VQC": {
     "first_seen": "2026-07-15",
@@ -309,7 +309,7 @@
   },
   "ZK-IHZ": {
     "first_seen": "2026-07-15",
-    "count": 18
+    "count": 19
   },
   "ZK-IZW": {
     "first_seen": "2026-07-15",
@@ -2644,6 +2644,10 @@
     "count": 1
   },
   "N76010": {
+    "first_seen": "2026-07-29",
+    "count": 1
+  },
+  "HL8392": {
     "first_seen": "2026-07-29",
     "count": 1
   }
