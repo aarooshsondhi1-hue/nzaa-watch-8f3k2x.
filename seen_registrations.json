@@ -1137,7 +1137,7 @@
   },
   "ZK-IIX": {
     "first_seen": "2026-07-17",
-    "count": 5
+    "count": 6
   },
   "ZK-JSH": {
     "first_seen": "2026-07-17",
@@ -2660,6 +2660,18 @@
     "count": 1
   },
   "A6-EVM": {
+    "first_seen": "2026-07-29",
+    "count": 2
+  },
+  "ZK-VRV": {
+    "first_seen": "2026-07-29",
+    "count": 1
+  },
+  "ZK-LDY": {
+    "first_seen": "2026-07-29",
+    "count": 1
+  },
+  "ZK-TZG": {
     "first_seen": "2026-07-29",
     "count": 1
   }
