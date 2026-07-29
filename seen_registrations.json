@@ -573,7 +573,7 @@
   },
   "VH-OFS": {
     "first_seen": "2026-07-16",
-    "count": 29
+    "count": 30
   },
   "VH-VZW": {
     "first_seen": "2026-07-16",
@@ -1505,7 +1505,7 @@
   },
   "N371JL": {
     "first_seen": "2026-07-19",
-    "count": 6
+    "count": 7
   },
   "VH-VGF": {
     "first_seen": "2026-07-19",
@@ -2608,6 +2608,10 @@
     "count": 1
   },
   "ZK-DNX": {
+    "first_seen": "2026-07-29",
+    "count": 1
+  },
+  "ZK-HOY": {
     "first_seen": "2026-07-29",
     "count": 1
   }
