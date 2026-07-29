@@ -2089,7 +2089,7 @@
   },
   "VH-XZC": {
     "first_seen": "2026-07-24",
-    "count": 7
+    "count": 8
   },
   "ZK-IKO": {
     "first_seen": "2026-07-24",
@@ -2634,5 +2634,9 @@
   "A7-BEM": {
     "first_seen": "2026-07-29",
     "count": 3
+  },
+  "A6-EFT": {
+    "first_seen": "2026-07-29",
+    "count": 1
   }
 }
