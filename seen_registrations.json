@@ -133,7 +133,7 @@
   },
   "ZK-NZN": {
     "first_seen": "2026-07-15",
-    "count": 29
+    "count": 30
   },
   "ZK-NZK": {
     "first_seen": "2026-07-15",
@@ -201,7 +201,7 @@
   },
   "ZK-OXI": {
     "first_seen": "2026-07-15",
-    "count": 22
+    "count": 23
   },
   "ZK-OKO": {
     "first_seen": "2026-07-15",
@@ -1657,7 +1657,7 @@
   },
   "VH-XZG": {
     "first_seen": "2026-07-20",
-    "count": 18
+    "count": 19
   },
   "A7-BES": {
     "first_seen": "2026-07-20",
@@ -2616,6 +2616,10 @@
     "count": 1
   },
   "ZK-KWK": {
+    "first_seen": "2026-07-29",
+    "count": 1
+  },
+  "ZK-PIZ": {
     "first_seen": "2026-07-29",
     "count": 1
   }
