@@ -725,7 +725,7 @@
   },
   "ZK-NZM": {
     "first_seen": "2026-07-16",
-    "count": 43
+    "count": 44
   },
   "ZK-OXC": {
     "first_seen": "2026-07-16",
@@ -769,7 +769,7 @@
   },
   "ZK-NZI": {
     "first_seen": "2026-07-16",
-    "count": 39
+    "count": 40
   },
   "ZK-NEG": {
     "first_seen": "2026-07-16",
@@ -2620,6 +2620,10 @@
     "count": 1
   },
   "ZK-PIZ": {
+    "first_seen": "2026-07-29",
+    "count": 1
+  },
+  "ZK-HKG": {
     "first_seen": "2026-07-29",
     "count": 1
   }
