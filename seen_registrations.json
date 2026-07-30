@@ -65,7 +65,7 @@
   },
   "ZK-NND": {
     "first_seen": "2026-07-15",
-    "count": 49
+    "count": 50
   },
   "ZK-NNF": {
     "first_seen": "2026-07-15",
@@ -2694,5 +2694,9 @@
   "B-2003": {
     "first_seen": "2026-07-30",
     "count": 3
+  },
+  "VH-VZF": {
+    "first_seen": "2026-07-30",
+    "count": 1
   }
 }
