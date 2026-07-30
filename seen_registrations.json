@@ -197,7 +197,7 @@
   },
   "ZK-OXD": {
     "first_seen": "2026-07-15",
-    "count": 59
+    "count": 60
   },
   "ZK-OXI": {
     "first_seen": "2026-07-15",
@@ -1657,7 +1657,7 @@
   },
   "VH-XZG": {
     "first_seen": "2026-07-20",
-    "count": 19
+    "count": 20
   },
   "A7-BES": {
     "first_seen": "2026-07-20",
@@ -2714,5 +2714,9 @@
   "VH-VGA": {
     "first_seen": "2026-07-30",
     "count": 3
+  },
+  "B-7302": {
+    "first_seen": "2026-07-30",
+    "count": 1
   }
 }
