@@ -669,7 +669,7 @@
   },
   "ZK-NEB": {
     "first_seen": "2026-07-16",
-    "count": 22
+    "count": 23
   },
   "ZK-MVJ": {
     "first_seen": "2026-07-16",
@@ -705,7 +705,7 @@
   },
   "ZK-MVK": {
     "first_seen": "2026-07-16",
-    "count": 25
+    "count": 26
   },
   "ZK-ICB": {
     "first_seen": "2026-07-16",
@@ -2697,6 +2697,6 @@
   },
   "VH-VZF": {
     "first_seen": "2026-07-30",
-    "count": 1
+    "count": 2
   }
 }
