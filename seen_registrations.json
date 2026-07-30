@@ -493,7 +493,7 @@
   },
   "ZK-OJS": {
     "first_seen": "2026-07-16",
-    "count": 57
+    "count": 58
   },
   "ZK-NYK": {
     "first_seen": "2026-07-16",
@@ -2157,7 +2157,7 @@
   },
   "9M-MNG": {
     "first_seen": "2026-07-24",
-    "count": 5
+    "count": 6
   },
   "VH-OYF": {
     "first_seen": "2026-07-24",
@@ -2213,7 +2213,7 @@
   },
   "ZK-MTA": {
     "first_seen": "2026-07-26",
-    "count": 1
+    "count": 2
   },
   "B-2020": {
     "first_seen": "2026-07-26",
@@ -2685,6 +2685,6 @@
   },
   "VH-EBM": {
     "first_seen": "2026-07-30",
-    "count": 2
+    "count": 3
   }
 }
