@@ -45,7 +45,7 @@
   },
   "ZK-NZQ": {
     "first_seen": "2026-07-15",
-    "count": 43
+    "count": 44
   },
   "ZK-NZC": {
     "first_seen": "2026-07-15",
@@ -2698,5 +2698,9 @@
   "VH-VZF": {
     "first_seen": "2026-07-30",
     "count": 2
+  },
+  "B-18903": {
+    "first_seen": "2026-07-30",
+    "count": 1
   }
 }
