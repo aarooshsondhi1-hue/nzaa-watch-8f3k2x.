@@ -525,7 +525,7 @@
   },
   "ZK-MDX": {
     "first_seen": "2026-07-16",
-    "count": 22
+    "count": 23
   },
   "ZK-NYF": {
     "first_seen": "2026-07-16",
@@ -873,7 +873,7 @@
   },
   "ZK-NFI": {
     "first_seen": "2026-07-16",
-    "count": 26
+    "count": 27
   },
   "VH-VFI": {
     "first_seen": "2026-07-16",
@@ -2693,6 +2693,6 @@
   },
   "B-2003": {
     "first_seen": "2026-07-30",
-    "count": 2
+    "count": 3
   }
 }
