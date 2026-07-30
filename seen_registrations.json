@@ -277,7 +277,7 @@
   },
   "ZK-OJQ": {
     "first_seen": "2026-07-15",
-    "count": 62
+    "count": 63
   },
   "VH-VGN": {
     "first_seen": "2026-07-15",
@@ -2724,6 +2724,10 @@
     "count": 2
   },
   "VH-OYW": {
+    "first_seen": "2026-07-30",
+    "count": 1
+  },
+  "VH-VFP": {
     "first_seen": "2026-07-30",
     "count": 1
   }
