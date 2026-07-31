@@ -1181,7 +1181,7 @@
   },
   "VH-XZA": {
     "first_seen": "2026-07-17",
-    "count": 20
+    "count": 21
   },
   "HL7208": {
     "first_seen": "2026-07-17",
@@ -2161,7 +2161,7 @@
   },
   "VH-OYF": {
     "first_seen": "2026-07-24",
-    "count": 5
+    "count": 6
   },
   "B-7877": {
     "first_seen": "2026-07-25",
@@ -2774,5 +2774,9 @@
   "B-LRB": {
     "first_seen": "2026-07-31",
     "count": 2
+  },
+  "A6-EVP": {
+    "first_seen": "2026-07-31",
+    "count": 1
   }
 }
