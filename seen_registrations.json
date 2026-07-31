@@ -2305,7 +2305,7 @@
   },
   "ZK-NES": {
     "first_seen": "2026-07-26",
-    "count": 9
+    "count": 10
   },
   "ZK-DJU": {
     "first_seen": "2026-07-26",
@@ -2741,6 +2741,6 @@
   },
   "VH-OFJ": {
     "first_seen": "2026-07-31",
-    "count": 1
+    "count": 2
   }
 }
