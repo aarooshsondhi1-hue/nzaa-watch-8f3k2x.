@@ -969,7 +969,7 @@
   },
   "F-ONEA": {
     "first_seen": "2026-07-16",
-    "count": 14
+    "count": 15
   },
   "ZK-HFN": {
     "first_seen": "2026-07-16",
@@ -2541,7 +2541,7 @@
   },
   "VH-OYC": {
     "first_seen": "2026-07-28",
-    "count": 2
+    "count": 3
   },
   "ZK-ITH": {
     "first_seen": "2026-07-28",
@@ -2812,6 +2812,10 @@
     "count": 1
   },
   "ZK-RHW": {
+    "first_seen": "2026-08-01",
+    "count": 1
+  },
+  "ZK-NUC": {
     "first_seen": "2026-08-01",
     "count": 1
   }
