@@ -337,7 +337,7 @@
   },
   "ZK-MVW": {
     "first_seen": "2026-07-15",
-    "count": 26
+    "count": 27
   },
   "ZK-NEJ": {
     "first_seen": "2026-07-15",
@@ -857,7 +857,7 @@
   },
   "ZK-SSH": {
     "first_seen": "2026-07-16",
-    "count": 3
+    "count": 4
   },
   "ZK-OKV": {
     "first_seen": "2026-07-16",
@@ -893,7 +893,7 @@
   },
   "ZK-HLU": {
     "first_seen": "2026-07-16",
-    "count": 9
+    "count": 10
   },
   "ZK-NYM": {
     "first_seen": "2026-07-16",
@@ -2778,5 +2778,9 @@
   "A6-EVP": {
     "first_seen": "2026-07-31",
     "count": 3
+  },
+  "ZK-MTL": {
+    "first_seen": "2026-08-01",
+    "count": 1
   }
 }
