@@ -2321,7 +2321,7 @@
   },
   "9V-SNB": {
     "first_seen": "2026-07-26",
-    "count": 7
+    "count": 8
   },
   "ZK-IZB": {
     "first_seen": "2026-07-27",
@@ -2824,6 +2824,10 @@
     "count": 1
   },
   "VH-A5E": {
+    "first_seen": "2026-08-01",
+    "count": 1
+  },
+  "ZK-CRT": {
     "first_seen": "2026-08-01",
     "count": 1
   }
