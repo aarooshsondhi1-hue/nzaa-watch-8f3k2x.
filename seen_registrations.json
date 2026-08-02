@@ -645,7 +645,7 @@
   },
   "ZK-KRA": {
     "first_seen": "2026-07-16",
-    "count": 46
+    "count": 47
   },
   "ZK-NEF": {
     "first_seen": "2026-07-16",
@@ -2868,6 +2868,10 @@
     "count": 1
   },
   "ZK-HIS": {
+    "first_seen": "2026-08-02",
+    "count": 1
+  },
+  "N873FD": {
     "first_seen": "2026-08-02",
     "count": 1
   }
