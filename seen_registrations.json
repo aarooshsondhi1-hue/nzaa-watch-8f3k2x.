@@ -1,7 +1,7 @@
 {
   "DQ-FAF": {
     "first_seen": "2026-07-15",
-    "count": 25
+    "count": 26
   },
   "VH-VZI": {
     "first_seen": "2026-07-15",
@@ -569,7 +569,7 @@
   },
   "VH-VZS": {
     "first_seen": "2026-07-16",
-    "count": 15
+    "count": 16
   },
   "VH-OFS": {
     "first_seen": "2026-07-16",
@@ -2885,6 +2885,6 @@
   },
   "A7-BAG": {
     "first_seen": "2026-08-02",
-    "count": 1
+    "count": 2
   }
 }
