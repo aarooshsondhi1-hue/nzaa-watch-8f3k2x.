@@ -1197,7 +1197,7 @@
   },
   "VH-X3F": {
     "first_seen": "2026-07-17",
-    "count": 20
+    "count": 21
   },
   "B-227L": {
     "first_seen": "2026-07-17",
@@ -2848,6 +2848,10 @@
     "count": 1
   },
   "ZK-LDG": {
+    "first_seen": "2026-08-02",
+    "count": 1
+  },
+  "ZK-NAO": {
     "first_seen": "2026-08-02",
     "count": 1
   }
