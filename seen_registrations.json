@@ -1393,7 +1393,7 @@
   },
   "ZK-MZC": {
     "first_seen": "2026-07-18",
-    "count": 19
+    "count": 20
   },
   "VH-OYP": {
     "first_seen": "2026-07-18",
@@ -2856,6 +2856,14 @@
     "count": 1
   },
   "VH-XZF": {
+    "first_seen": "2026-08-02",
+    "count": 1
+  },
+  "ZK-TRD": {
+    "first_seen": "2026-08-02",
+    "count": 1
+  },
+  "ZK-JKA": {
     "first_seen": "2026-08-02",
     "count": 1
   }
