@@ -1861,7 +1861,7 @@
   },
   "ZK-HWW": {
     "first_seen": "2026-07-21",
-    "count": 6
+    "count": 7
   },
   "ZK-DGY": {
     "first_seen": "2026-07-21",
@@ -1869,7 +1869,7 @@
   },
   "ZK-HXP": {
     "first_seen": "2026-07-21",
-    "count": 3
+    "count": 4
   },
   "9M-MNJ": {
     "first_seen": "2026-07-21",
@@ -2892,6 +2892,10 @@
     "count": 2
   },
   "ZK-ITI": {
+    "first_seen": "2026-08-02",
+    "count": 1
+  },
+  "ZK-HTS": {
     "first_seen": "2026-08-02",
     "count": 1
   }
