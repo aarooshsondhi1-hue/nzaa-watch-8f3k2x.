@@ -17,7 +17,7 @@
   },
   "ZK-NNG": {
     "first_seen": "2026-07-15",
-    "count": 58
+    "count": 59
   },
   "A7-BEK": {
     "first_seen": "2026-07-15",
@@ -349,7 +349,7 @@
   },
   "ZK-JGP": {
     "first_seen": "2026-07-15",
-    "count": 21
+    "count": 22
   },
   "F-ONUI": {
     "first_seen": "2026-07-15",
@@ -2966,5 +2966,9 @@
   "HL8391": {
     "first_seen": "2026-08-03",
     "count": 2
+  },
+  "A6-EVC": {
+    "first_seen": "2026-08-03",
+    "count": 1
   }
 }
