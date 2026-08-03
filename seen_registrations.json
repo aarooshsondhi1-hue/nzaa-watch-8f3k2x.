@@ -177,7 +177,7 @@
   },
   "VH-VGR": {
     "first_seen": "2026-07-15",
-    "count": 33
+    "count": 34
   },
   "ZK-OXB": {
     "first_seen": "2026-07-15",
@@ -1169,7 +1169,7 @@
   },
   "VH-VFK": {
     "first_seen": "2026-07-17",
-    "count": 56
+    "count": 57
   },
   "A7-BEW": {
     "first_seen": "2026-07-17",
@@ -2933,6 +2933,6 @@
   },
   "VH-ZND": {
     "first_seen": "2026-08-03",
-    "count": 2
+    "count": 3
   }
 }
