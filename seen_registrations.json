@@ -153,7 +153,7 @@
   },
   "B-7898": {
     "first_seen": "2026-07-15",
-    "count": 3
+    "count": 4
   },
   "NZ4801": {
     "first_seen": "2026-07-15",
@@ -2956,6 +2956,10 @@
     "count": 3
   },
   "VH-VFU": {
+    "first_seen": "2026-08-03",
+    "count": 2
+  },
+  "CC-BGD": {
     "first_seen": "2026-08-03",
     "count": 1
   }
