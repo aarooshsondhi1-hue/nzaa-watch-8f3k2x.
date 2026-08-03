@@ -669,7 +669,7 @@
   },
   "ZK-NEB": {
     "first_seen": "2026-07-16",
-    "count": 27
+    "count": 28
   },
   "ZK-MVJ": {
     "first_seen": "2026-07-16",
@@ -2929,10 +2929,14 @@
   },
   "B-30EA": {
     "first_seen": "2026-08-03",
-    "count": 2
+    "count": 3
   },
   "VH-ZND": {
     "first_seen": "2026-08-03",
     "count": 3
+  },
+  "ZK-EFA": {
+    "first_seen": "2026-08-03",
+    "count": 1
   }
 }
