@@ -585,7 +585,7 @@
   },
   "ZK-UAT": {
     "first_seen": "2026-07-16",
-    "count": 24
+    "count": 25
   },
   "ZK-HYF": {
     "first_seen": "2026-07-16",
@@ -2777,7 +2777,7 @@
   },
   "A6-EVP": {
     "first_seen": "2026-07-31",
-    "count": 4
+    "count": 5
   },
   "ZK-MTL": {
     "first_seen": "2026-08-01",
