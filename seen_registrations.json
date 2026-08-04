@@ -69,7 +69,7 @@
   },
   "ZK-NNF": {
     "first_seen": "2026-07-15",
-    "count": 47
+    "count": 48
   },
   "ZK-NZR": {
     "first_seen": "2026-07-15",
@@ -2976,6 +2976,10 @@
     "count": 1
   },
   "ZK-IHT": {
+    "first_seen": "2026-08-04",
+    "count": 1
+  },
+  "B-2025": {
     "first_seen": "2026-08-04",
     "count": 1
   }
