@@ -697,7 +697,7 @@
   },
   "ZK-OYA": {
     "first_seen": "2026-07-16",
-    "count": 46
+    "count": 47
   },
   "ZK-NNC": {
     "first_seen": "2026-07-16",
@@ -2457,7 +2457,7 @@
   },
   "B-30A9": {
     "first_seen": "2026-07-28",
-    "count": 5
+    "count": 6
   },
   "VH-ZNM": {
     "first_seen": "2026-07-28",
@@ -2972,6 +2972,10 @@
     "count": 2
   },
   "ZK-EDZ": {
+    "first_seen": "2026-08-04",
+    "count": 1
+  },
+  "ZK-IHT": {
     "first_seen": "2026-08-04",
     "count": 1
   }
