@@ -185,7 +185,7 @@
   },
   "ZK-HNZ": {
     "first_seen": "2026-07-15",
-    "count": 4
+    "count": 5
   },
   "ZK-LTN": {
     "first_seen": "2026-07-15",
@@ -773,7 +773,7 @@
   },
   "ZK-NEG": {
     "first_seen": "2026-07-16",
-    "count": 27
+    "count": 28
   },
   "VH-RAN": {
     "first_seen": "2026-07-16",
@@ -1101,7 +1101,7 @@
   },
   "ZK-NFA": {
     "first_seen": "2026-07-17",
-    "count": 22
+    "count": 23
   },
   "ZK-LTX": {
     "first_seen": "2026-07-17",
