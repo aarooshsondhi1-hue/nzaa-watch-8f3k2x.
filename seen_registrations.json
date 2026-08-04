@@ -445,7 +445,7 @@
   },
   "ZK-MVN": {
     "first_seen": "2026-07-16",
-    "count": 36
+    "count": 37
   },
   "ZK-MZA": {
     "first_seen": "2026-07-16",
@@ -657,7 +657,7 @@
   },
   "ZK-NEE": {
     "first_seen": "2026-07-16",
-    "count": 22
+    "count": 23
   },
   "ZK-HMR": {
     "first_seen": "2026-07-16",
@@ -2996,6 +2996,10 @@
     "count": 1
   },
   "ZK-HAP": {
+    "first_seen": "2026-08-04",
+    "count": 1
+  },
+  "NZ3305": {
     "first_seen": "2026-08-04",
     "count": 1
   }
