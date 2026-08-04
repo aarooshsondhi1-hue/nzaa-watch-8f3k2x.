@@ -481,7 +481,7 @@
   },
   "ZK-HAL": {
     "first_seen": "2026-07-16",
-    "count": 6
+    "count": 7
   },
   "ZK-NER": {
     "first_seen": "2026-07-16",
@@ -1205,7 +1205,7 @@
   },
   "ZK-MVI": {
     "first_seen": "2026-07-17",
-    "count": 27
+    "count": 28
   },
   "NZ7014": {
     "first_seen": "2026-07-17",
