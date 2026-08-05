@@ -537,7 +537,7 @@
   },
   "ZK-HQC": {
     "first_seen": "2026-07-16",
-    "count": 21
+    "count": 22
   },
   "ZK-HCF": {
     "first_seen": "2026-07-16",
@@ -3080,6 +3080,10 @@
     "count": 1
   },
   "F-OTOA": {
+    "first_seen": "2026-08-05",
+    "count": 1
+  },
+  "N812RB": {
     "first_seen": "2026-08-05",
     "count": 1
   }
