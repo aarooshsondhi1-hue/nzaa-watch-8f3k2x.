@@ -1785,7 +1785,7 @@
   },
   "NZ4803": {
     "first_seen": "2026-07-21",
-    "count": 2
+    "count": 3
   },
   "ZK-LTS": {
     "first_seen": "2026-07-21",
@@ -3064,6 +3064,10 @@
     "count": 2
   },
   "NZ1407": {
+    "first_seen": "2026-08-05",
+    "count": 1
+  },
+  "ZK-HOW": {
     "first_seen": "2026-08-05",
     "count": 1
   }
