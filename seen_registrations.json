@@ -1881,7 +1881,7 @@
   },
   "ZK-ELC": {
     "first_seen": "2026-07-21",
-    "count": 1
+    "count": 2
   },
   "ZK-HVK": {
     "first_seen": "2026-07-21",
@@ -3068,6 +3068,10 @@
     "count": 1
   },
   "ZK-HOW": {
+    "first_seen": "2026-08-05",
+    "count": 1
+  },
+  "ZK-JQP": {
     "first_seen": "2026-08-05",
     "count": 1
   }
