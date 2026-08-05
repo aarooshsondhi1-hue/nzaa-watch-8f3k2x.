@@ -1361,7 +1361,7 @@
   },
   "VH-X3L": {
     "first_seen": "2026-07-18",
-    "count": 26
+    "count": 27
   },
   "9V-SFI": {
     "first_seen": "2026-07-18",
@@ -2501,7 +2501,7 @@
   },
   "NZ3403": {
     "first_seen": "2026-07-28",
-    "count": 3
+    "count": 4
   },
   "A7-BAC": {
     "first_seen": "2026-07-28",
@@ -3014,5 +3014,9 @@
   "VH-ZNE": {
     "first_seen": "2026-08-05",
     "count": 2
+  },
+  "NZ3618": {
+    "first_seen": "2026-08-05",
+    "count": 1
   }
 }
