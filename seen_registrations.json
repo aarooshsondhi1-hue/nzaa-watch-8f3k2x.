@@ -1773,7 +1773,7 @@
   },
   "ZK-CBM": {
     "first_seen": "2026-07-20",
-    "count": 2
+    "count": 3
   },
   "ZK-IRS": {
     "first_seen": "2026-07-20",
@@ -2157,7 +2157,7 @@
   },
   "9M-MNG": {
     "first_seen": "2026-07-24",
-    "count": 11
+    "count": 12
   },
   "VH-OYF": {
     "first_seen": "2026-07-24",
@@ -3076,6 +3076,10 @@
     "count": 1
   },
   "ZK-IUL": {
+    "first_seen": "2026-08-05",
+    "count": 1
+  },
+  "F-OTOA": {
     "first_seen": "2026-08-05",
     "count": 1
   }
