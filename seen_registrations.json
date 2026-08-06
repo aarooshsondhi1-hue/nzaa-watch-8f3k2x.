@@ -2305,7 +2305,7 @@
   },
   "ZK-NES": {
     "first_seen": "2026-07-26",
-    "count": 22
+    "count": 23
   },
   "ZK-DJU": {
     "first_seen": "2026-07-26",
@@ -3132,6 +3132,10 @@
     "count": 1
   },
   "ZK-HGK": {
+    "first_seen": "2026-08-06",
+    "count": 1
+  },
+  "ZK-EBQ": {
     "first_seen": "2026-08-06",
     "count": 1
   }
