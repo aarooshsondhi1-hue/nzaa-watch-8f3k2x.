@@ -525,7 +525,7 @@
   },
   "ZK-MDX": {
     "first_seen": "2026-07-16",
-    "count": 35
+    "count": 36
   },
   "ZK-NYF": {
     "first_seen": "2026-07-16",
@@ -3242,5 +3242,9 @@
   "HL8390": {
     "first_seen": "2026-08-07",
     "count": 2
+  },
+  "ZK-JBU": {
+    "first_seen": "2026-08-07",
+    "count": 1
   }
 }
