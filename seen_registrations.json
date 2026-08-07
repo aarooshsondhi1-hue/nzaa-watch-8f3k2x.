@@ -349,7 +349,7 @@
   },
   "ZK-JGP": {
     "first_seen": "2026-07-15",
-    "count": 30
+    "count": 31
   },
   "F-ONUI": {
     "first_seen": "2026-07-15",
@@ -821,7 +821,7 @@
   },
   "ZK-PAT": {
     "first_seen": "2026-07-16",
-    "count": 27
+    "count": 28
   },
   "VH-XZK": {
     "first_seen": "2026-07-16",
@@ -3214,5 +3214,9 @@
   "CC-BBD": {
     "first_seen": "2026-08-07",
     "count": 2
+  },
+  "ZK-NZJ": {
+    "first_seen": "2026-08-07",
+    "count": 1
   }
 }
