@@ -405,7 +405,7 @@
   },
   "ZK-HES": {
     "first_seen": "2026-07-16",
-    "count": 14
+    "count": 15
   },
   "ZK-MVM": {
     "first_seen": "2026-07-16",
@@ -421,7 +421,7 @@
   },
   "VH-VFH": {
     "first_seen": "2026-07-16",
-    "count": 40
+    "count": 41
   },
   "VH-VZR": {
     "first_seen": "2026-07-16",
@@ -2501,7 +2501,7 @@
   },
   "NZ3403": {
     "first_seen": "2026-07-28",
-    "count": 4
+    "count": 5
   },
   "A7-BAC": {
     "first_seen": "2026-07-28",
@@ -3184,6 +3184,10 @@
     "count": 1
   },
   "ZK-LTU": {
+    "first_seen": "2026-08-07",
+    "count": 1
+  },
+  "ZK-BWN": {
     "first_seen": "2026-08-07",
     "count": 1
   }
