@@ -493,7 +493,7 @@
   },
   "ZK-OJS": {
     "first_seen": "2026-07-16",
-    "count": 77
+    "count": 78
   },
   "ZK-NYK": {
     "first_seen": "2026-07-16",
@@ -913,7 +913,7 @@
   },
   "ZK-MVO": {
     "first_seen": "2026-07-16",
-    "count": 33
+    "count": 34
   },
   "A6-EUI": {
     "first_seen": "2026-07-16",
@@ -3229,6 +3229,6 @@
   },
   "B-20C6": {
     "first_seen": "2026-08-07",
-    "count": 1
+    "count": 2
   }
 }
