@@ -1205,7 +1205,7 @@
   },
   "ZK-MVI": {
     "first_seen": "2026-07-17",
-    "count": 34
+    "count": 35
   },
   "NZ7014": {
     "first_seen": "2026-07-17",
@@ -1469,7 +1469,7 @@
   },
   "VH-VZT": {
     "first_seen": "2026-07-19",
-    "count": 19
+    "count": 20
   },
   "ZK-NYD": {
     "first_seen": "2026-07-19",
@@ -3156,6 +3156,10 @@
     "count": 1
   },
   "ZK-XLR": {
+    "first_seen": "2026-08-07",
+    "count": 1
+  },
+  "ZK-HZW": {
     "first_seen": "2026-08-07",
     "count": 1
   }
