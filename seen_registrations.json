@@ -2741,7 +2741,7 @@
   },
   "VH-OFJ": {
     "first_seen": "2026-07-31",
-    "count": 2
+    "count": 3
   },
   "ZK-PLK": {
     "first_seen": "2026-07-31",
@@ -3252,6 +3252,10 @@
     "count": 2
   },
   "ZK-CVI": {
+    "first_seen": "2026-08-07",
+    "count": 1
+  },
+  "9V-SWM": {
     "first_seen": "2026-08-07",
     "count": 1
   }
