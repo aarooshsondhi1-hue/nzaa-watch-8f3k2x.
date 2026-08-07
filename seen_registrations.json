@@ -209,7 +209,7 @@
   },
   "ZK-OKS": {
     "first_seen": "2026-07-15",
-    "count": 51
+    "count": 52
   },
   "ZK-MZG": {
     "first_seen": "2026-07-15",
@@ -3201,10 +3201,18 @@
   },
   "B-8217": {
     "first_seen": "2026-08-07",
-    "count": 1
+    "count": 2
   },
   "B-1135": {
     "first_seen": "2026-08-07",
     "count": 2
+  },
+  "ZK-JRG": {
+    "first_seen": "2026-08-07",
+    "count": 1
+  },
+  "CC-BBD": {
+    "first_seen": "2026-08-07",
+    "count": 1
   }
 }
