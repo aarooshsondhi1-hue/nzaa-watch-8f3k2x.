@@ -369,7 +369,7 @@
   },
   "ZK-HQO": {
     "first_seen": "2026-07-16",
-    "count": 19
+    "count": 20
   },
   "ZK-INC": {
     "first_seen": "2026-07-16",
@@ -441,7 +441,7 @@
   },
   "ZK-TAU": {
     "first_seen": "2026-07-16",
-    "count": 24
+    "count": 25
   },
   "ZK-MVN": {
     "first_seen": "2026-07-16",
@@ -1601,7 +1601,7 @@
   },
   "VH-XZH": {
     "first_seen": "2026-07-19",
-    "count": 15
+    "count": 16
   },
   "ZK-ECJ": {
     "first_seen": "2026-07-19",
@@ -3280,6 +3280,10 @@
     "count": 1
   },
   "B-2002": {
+    "first_seen": "2026-08-08",
+    "count": 1
+  },
+  "ZK-JSB": {
     "first_seen": "2026-08-08",
     "count": 1
   }
