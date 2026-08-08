@@ -2181,7 +2181,7 @@
   },
   "B-LQD": {
     "first_seen": "2026-07-25",
-    "count": 8
+    "count": 9
   },
   "9V-SFQ": {
     "first_seen": "2026-07-25",
@@ -3081,7 +3081,7 @@
   },
   "F-OTOA": {
     "first_seen": "2026-08-05",
-    "count": 2
+    "count": 3
   },
   "N812RB": {
     "first_seen": "2026-08-05",
@@ -3317,6 +3317,6 @@
   },
   "VH-OYT": {
     "first_seen": "2026-08-08",
-    "count": 1
+    "count": 2
   }
 }
