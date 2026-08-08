@@ -1873,7 +1873,7 @@
   },
   "9M-MNJ": {
     "first_seen": "2026-07-21",
-    "count": 13
+    "count": 14
   },
   "B-LRV": {
     "first_seen": "2026-07-21",
@@ -3300,6 +3300,10 @@
     "count": 2
   },
   "ZK-CIZ": {
+    "first_seen": "2026-08-08",
+    "count": 1
+  },
+  "A7-BAM": {
     "first_seen": "2026-08-08",
     "count": 1
   }
