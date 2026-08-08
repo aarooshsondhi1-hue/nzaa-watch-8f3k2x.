@@ -873,7 +873,7 @@
   },
   "ZK-NFI": {
     "first_seen": "2026-07-16",
-    "count": 32
+    "count": 33
   },
   "VH-VFI": {
     "first_seen": "2026-07-16",
@@ -969,7 +969,7 @@
   },
   "F-ONEA": {
     "first_seen": "2026-07-16",
-    "count": 21
+    "count": 22
   },
   "ZK-HFN": {
     "first_seen": "2026-07-16",
@@ -3312,6 +3312,10 @@
     "count": 2
   },
   "9M-MNH": {
+    "first_seen": "2026-08-08",
+    "count": 1
+  },
+  "VH-OYT": {
     "first_seen": "2026-08-08",
     "count": 1
   }
