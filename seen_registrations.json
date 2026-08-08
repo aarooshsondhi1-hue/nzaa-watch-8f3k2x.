@@ -285,7 +285,7 @@
   },
   "ZK-MVL": {
     "first_seen": "2026-07-15",
-    "count": 37
+    "count": 38
   },
   "ZK-NEP": {
     "first_seen": "2026-07-15",
@@ -2457,7 +2457,7 @@
   },
   "B-30A9": {
     "first_seen": "2026-07-28",
-    "count": 7
+    "count": 8
   },
   "VH-ZNM": {
     "first_seen": "2026-07-28",
@@ -3276,6 +3276,10 @@
     "count": 1
   },
   "ZK-TZL": {
+    "first_seen": "2026-08-08",
+    "count": 1
+  },
+  "B-2002": {
     "first_seen": "2026-08-08",
     "count": 1
   }
