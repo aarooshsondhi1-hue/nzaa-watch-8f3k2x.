@@ -693,7 +693,7 @@
   },
   "ZK-CIT": {
     "first_seen": "2026-07-16",
-    "count": 40
+    "count": 41
   },
   "ZK-OYA": {
     "first_seen": "2026-07-16",
@@ -3320,6 +3320,10 @@
     "count": 3
   },
   "B-30F0": {
+    "first_seen": "2026-08-09",
+    "count": 1
+  },
+  "VH-OYQ": {
     "first_seen": "2026-08-09",
     "count": 1
   }
