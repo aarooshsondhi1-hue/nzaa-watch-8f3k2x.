@@ -181,7 +181,7 @@
   },
   "ZK-OXB": {
     "first_seen": "2026-07-15",
-    "count": 95
+    "count": 96
   },
   "ZK-HNZ": {
     "first_seen": "2026-07-15",
@@ -621,7 +621,7 @@
   },
   "ZK-OAB": {
     "first_seen": "2026-07-16",
-    "count": 84
+    "count": 85
   },
   "ZK-IXD": {
     "first_seen": "2026-07-16",
@@ -745,7 +745,7 @@
   },
   "ZK-MVF": {
     "first_seen": "2026-07-16",
-    "count": 27
+    "count": 28
   },
   "NZ7571": {
     "first_seen": "2026-07-16",
@@ -3317,6 +3317,6 @@
   },
   "VH-OYT": {
     "first_seen": "2026-08-08",
-    "count": 2
+    "count": 3
   }
 }
