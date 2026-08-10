@@ -245,7 +245,7 @@
   },
   "ZK-MZB": {
     "first_seen": "2026-07-15",
-    "count": 35
+    "count": 36
   },
   "ZK-HEA": {
     "first_seen": "2026-07-15",
@@ -1981,7 +1981,7 @@
   },
   "ZK-HUT": {
     "first_seen": "2026-07-22",
-    "count": 5
+    "count": 6
   },
   "ZK-IWW": {
     "first_seen": "2026-07-23",
@@ -3377,6 +3377,6 @@
   },
   "A6-EVE": {
     "first_seen": "2026-08-10",
-    "count": 1
+    "count": 2
   }
 }
