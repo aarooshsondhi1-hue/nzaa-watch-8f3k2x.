@@ -169,7 +169,7 @@
   },
   "ZK-NEA": {
     "first_seen": "2026-07-15",
-    "count": 37
+    "count": 38
   },
   "ZK-OXL": {
     "first_seen": "2026-07-15",
@@ -3348,6 +3348,10 @@
     "count": 2
   },
   "NZ3307": {
+    "first_seen": "2026-08-10",
+    "count": 1
+  },
+  "ZK-HKB": {
     "first_seen": "2026-08-10",
     "count": 1
   }
