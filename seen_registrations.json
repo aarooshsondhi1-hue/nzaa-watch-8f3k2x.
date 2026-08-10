@@ -2453,7 +2453,7 @@
   },
   "ZK-BKV": {
     "first_seen": "2026-07-28",
-    "count": 3
+    "count": 4
   },
   "B-30A9": {
     "first_seen": "2026-07-28",
@@ -3378,5 +3378,9 @@
   "A6-EVE": {
     "first_seen": "2026-08-10",
     "count": 2
+  },
+  "VH-OYD": {
+    "first_seen": "2026-08-10",
+    "count": 1
   }
 }
