@@ -737,7 +737,7 @@
   },
   "ZK-IRB": {
     "first_seen": "2026-07-16",
-    "count": 27
+    "count": 28
   },
   "ZK-MVX": {
     "first_seen": "2026-07-16",
@@ -1181,7 +1181,7 @@
   },
   "VH-XZA": {
     "first_seen": "2026-07-17",
-    "count": 34
+    "count": 35
   },
   "HL7208": {
     "first_seen": "2026-07-17",
@@ -1509,7 +1509,7 @@
   },
   "VH-VGF": {
     "first_seen": "2026-07-19",
-    "count": 67
+    "count": 68
   },
   "N27015": {
     "first_seen": "2026-07-19",
@@ -3346,5 +3346,9 @@
   "HL8538": {
     "first_seen": "2026-08-09",
     "count": 2
+  },
+  "NZ3307": {
+    "first_seen": "2026-08-10",
+    "count": 1
   }
 }
