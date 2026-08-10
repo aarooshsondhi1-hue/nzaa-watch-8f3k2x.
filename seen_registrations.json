@@ -1525,7 +1525,7 @@
   },
   "DQ-FAE": {
     "first_seen": "2026-07-19",
-    "count": 5
+    "count": 6
   },
   "A6-EFO": {
     "first_seen": "2026-07-19",
@@ -3357,6 +3357,6 @@
   },
   "A7-BEN": {
     "first_seen": "2026-08-10",
-    "count": 1
+    "count": 2
   }
 }
