@@ -477,7 +477,7 @@
   },
   "ZK-XAT": {
     "first_seen": "2026-07-16",
-    "count": 39
+    "count": 40
   },
   "ZK-HAL": {
     "first_seen": "2026-07-16",
@@ -577,7 +577,7 @@
   },
   "VH-VZW": {
     "first_seen": "2026-07-16",
-    "count": 24
+    "count": 25
   },
   "VH-ZNF": {
     "first_seen": "2026-07-16",
@@ -3408,6 +3408,10 @@
     "count": 1
   },
   "ZK-IFY": {
+    "first_seen": "2026-08-11",
+    "count": 1
+  },
+  "N146EX": {
     "first_seen": "2026-08-11",
     "count": 1
   }
