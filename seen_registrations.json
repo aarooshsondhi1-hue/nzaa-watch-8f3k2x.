@@ -525,7 +525,7 @@
   },
   "ZK-MDX": {
     "first_seen": "2026-07-16",
-    "count": 41
+    "count": 42
   },
   "ZK-NYF": {
     "first_seen": "2026-07-16",
@@ -1217,7 +1217,7 @@
   },
   "ZK-HNO": {
     "first_seen": "2026-07-17",
-    "count": 14
+    "count": 15
   },
   "ZK-MBZ": {
     "first_seen": "2026-07-17",
@@ -3418,5 +3418,9 @@
   "B-309W": {
     "first_seen": "2026-08-11",
     "count": 2
+  },
+  "CC-BGG": {
+    "first_seen": "2026-08-11",
+    "count": 1
   }
 }
