@@ -549,7 +549,7 @@
   },
   "ZK-NFB": {
     "first_seen": "2026-07-16",
-    "count": 41
+    "count": 42
   },
   "ZK-IRR": {
     "first_seen": "2026-07-16",
@@ -3385,6 +3385,10 @@
   },
   "ZK-HHG": {
     "first_seen": "2026-08-10",
+    "count": 1
+  },
+  "ZK-VCE": {
+    "first_seen": "2026-08-11",
     "count": 1
   }
 }
