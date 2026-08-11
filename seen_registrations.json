@@ -369,7 +369,7 @@
   },
   "ZK-HQO": {
     "first_seen": "2026-07-16",
-    "count": 22
+    "count": 23
   },
   "ZK-INC": {
     "first_seen": "2026-07-16",
@@ -717,7 +717,7 @@
   },
   "ZK-IPC": {
     "first_seen": "2026-07-16",
-    "count": 26
+    "count": 27
   },
   "H4-SAL": {
     "first_seen": "2026-07-16",
@@ -2021,7 +2021,7 @@
   },
   "VH-VGU": {
     "first_seen": "2026-07-23",
-    "count": 8
+    "count": 9
   },
   "ZK-KOL": {
     "first_seen": "2026-07-23",
@@ -3400,6 +3400,10 @@
     "count": 1
   },
   "NZ4804": {
+    "first_seen": "2026-08-11",
+    "count": 1
+  },
+  "ZK-HMD": {
     "first_seen": "2026-08-11",
     "count": 1
   }
