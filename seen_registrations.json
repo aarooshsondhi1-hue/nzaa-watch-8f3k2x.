@@ -2157,7 +2157,7 @@
   },
   "9M-MNG": {
     "first_seen": "2026-07-24",
-    "count": 13
+    "count": 14
   },
   "VH-OYF": {
     "first_seen": "2026-07-24",
@@ -2721,7 +2721,7 @@
   },
   "A6-EVQ": {
     "first_seen": "2026-07-30",
-    "count": 7
+    "count": 8
   },
   "VH-OYW": {
     "first_seen": "2026-07-30",
@@ -3436,6 +3436,10 @@
     "count": 1
   },
   "ZK-LTH": {
+    "first_seen": "2026-08-11",
+    "count": 1
+  },
+  "VH-OFP": {
     "first_seen": "2026-08-11",
     "count": 1
   }
