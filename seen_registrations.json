@@ -1625,7 +1625,7 @@
   },
   "VH-VZY": {
     "first_seen": "2026-07-20",
-    "count": 10
+    "count": 11
   },
   "ZK-IWA": {
     "first_seen": "2026-07-20",
@@ -3456,6 +3456,10 @@
     "count": 1
   },
   "VH-T29": {
+    "first_seen": "2026-08-12",
+    "count": 1
+  },
+  "N77999": {
     "first_seen": "2026-08-12",
     "count": 1
   }
