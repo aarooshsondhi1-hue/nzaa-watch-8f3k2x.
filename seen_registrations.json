@@ -3486,5 +3486,9 @@
   "ZK-LFI": {
     "first_seen": "2026-08-12",
     "count": 1
+  },
+  "A6-EFV": {
+    "first_seen": "2026-08-12",
+    "count": 1
   }
 }
