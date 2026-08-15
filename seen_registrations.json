@@ -3522,5 +3522,9 @@
   "VH-VFO": {
     "first_seen": "2026-08-15",
     "count": 1
+  },
+  "CC-BBE": {
+    "first_seen": "2026-08-15",
+    "count": 1
   }
 }
