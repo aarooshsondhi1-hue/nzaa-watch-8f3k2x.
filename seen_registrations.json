@@ -25,7 +25,7 @@
   },
   "ZK-TXE": {
     "first_seen": "2026-07-15",
-    "count": 51
+    "count": 52
   },
   "A6-EWL": {
     "first_seen": "2026-07-15",
@@ -3429,7 +3429,7 @@
   },
   "VH-OFQ": {
     "first_seen": "2026-08-11",
-    "count": 9
+    "count": 10
   },
   "ZK-FIS": {
     "first_seen": "2026-08-11",
@@ -3518,5 +3518,9 @@
   "B-1342": {
     "first_seen": "2026-08-14",
     "count": 2
+  },
+  "VH-VFO": {
+    "first_seen": "2026-08-15",
+    "count": 1
   }
 }
