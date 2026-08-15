@@ -65,7 +65,7 @@
   },
   "ZK-NND": {
     "first_seen": "2026-07-15",
-    "count": 85
+    "count": 86
   },
   "ZK-NNF": {
     "first_seen": "2026-07-15",
@@ -201,7 +201,7 @@
   },
   "ZK-OXI": {
     "first_seen": "2026-07-15",
-    "count": 60
+    "count": 61
   },
   "ZK-OKO": {
     "first_seen": "2026-07-15",
@@ -713,7 +713,7 @@
   },
   "VH-XZB": {
     "first_seen": "2026-07-16",
-    "count": 27
+    "count": 28
   },
   "ZK-IPC": {
     "first_seen": "2026-07-16",
@@ -1449,7 +1449,7 @@
   },
   "VH-XZO": {
     "first_seen": "2026-07-19",
-    "count": 17
+    "count": 18
   },
   "VH-VZU": {
     "first_seen": "2026-07-19",
@@ -1509,7 +1509,7 @@
   },
   "VH-VGF": {
     "first_seen": "2026-07-19",
-    "count": 78
+    "count": 79
   },
   "N27015": {
     "first_seen": "2026-07-19",
@@ -1625,7 +1625,7 @@
   },
   "VH-VZY": {
     "first_seen": "2026-07-20",
-    "count": 14
+    "count": 15
   },
   "ZK-IWA": {
     "first_seen": "2026-07-20",
@@ -1669,7 +1669,7 @@
   },
   "VH-XZD": {
     "first_seen": "2026-07-20",
-    "count": 31
+    "count": 32
   },
   "VH-VZQ": {
     "first_seen": "2026-07-20",
@@ -1765,7 +1765,7 @@
   },
   "DQ-FJV": {
     "first_seen": "2026-07-20",
-    "count": 18
+    "count": 19
   },
   "9V-SWI": {
     "first_seen": "2026-07-20",
@@ -2053,7 +2053,7 @@
   },
   "9V-SWP": {
     "first_seen": "2026-07-23",
-    "count": 5
+    "count": 6
   },
   "ZK-MCS": {
     "first_seen": "2026-07-23",
@@ -2497,7 +2497,7 @@
   },
   "VH-X3A": {
     "first_seen": "2026-07-28",
-    "count": 35
+    "count": 36
   },
   "NZ3403": {
     "first_seen": "2026-07-28",
@@ -2713,7 +2713,7 @@
   },
   "VH-VGA": {
     "first_seen": "2026-07-30",
-    "count": 20
+    "count": 21
   },
   "B-7302": {
     "first_seen": "2026-07-30",
@@ -2773,7 +2773,7 @@
   },
   "B-LRB": {
     "first_seen": "2026-07-31",
-    "count": 7
+    "count": 8
   },
   "A6-EVP": {
     "first_seen": "2026-07-31",
@@ -3301,7 +3301,7 @@
   },
   "ZK-CIZ": {
     "first_seen": "2026-08-08",
-    "count": 13
+    "count": 14
   },
   "A7-BAM": {
     "first_seen": "2026-08-08",
@@ -3517,6 +3517,6 @@
   },
   "B-1342": {
     "first_seen": "2026-08-14",
-    "count": 1
+    "count": 2
   }
 }
