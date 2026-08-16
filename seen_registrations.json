@@ -1401,7 +1401,7 @@
   },
   "VH-VZA": {
     "first_seen": "2026-07-18",
-    "count": 20
+    "count": 21
   },
   "B-LRA": {
     "first_seen": "2026-07-18",
@@ -3536,6 +3536,10 @@
     "count": 1
   },
   "HL8535": {
+    "first_seen": "2026-08-16",
+    "count": 1
+  },
+  "B-209D": {
     "first_seen": "2026-08-16",
     "count": 1
   }
