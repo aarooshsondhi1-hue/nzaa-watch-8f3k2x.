@@ -1257,7 +1257,7 @@
   },
   "9M-MNI": {
     "first_seen": "2026-07-17",
-    "count": 10
+    "count": 11
   },
   "ZK-HFZ": {
     "first_seen": "2026-07-17",
@@ -3540,6 +3540,10 @@
     "count": 1
   },
   "B-209D": {
+    "first_seen": "2026-08-16",
+    "count": 1
+  },
+  "VH-X3E": {
     "first_seen": "2026-08-16",
     "count": 1
   }
