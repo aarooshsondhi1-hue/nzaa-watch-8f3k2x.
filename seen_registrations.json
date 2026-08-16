@@ -733,7 +733,7 @@
   },
   "ZK-OKP": {
     "first_seen": "2026-07-16",
-    "count": 57
+    "count": 58
   },
   "ZK-IRB": {
     "first_seen": "2026-07-16",
@@ -3544,6 +3544,10 @@
     "count": 1
   },
   "VH-X3E": {
+    "first_seen": "2026-08-16",
+    "count": 1
+  },
+  "VH-OIR": {
     "first_seen": "2026-08-16",
     "count": 1
   }
