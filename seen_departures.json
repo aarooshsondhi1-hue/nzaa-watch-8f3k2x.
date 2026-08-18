@@ -67,6 +67,11 @@
     "NZ448",
     "NZ7",
     "PHA72",
-    "ANZ172L"
+    "ANZ172L",
+    "QR914",
+    "NZ288",
+    "NZ570",
+    "JQ240",
+    "unknown flight"
   ]
 }
