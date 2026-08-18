@@ -173,7 +173,7 @@
   },
   "ZK-OXL": {
     "first_seen": "2026-07-15",
-    "count": 105
+    "count": 106
   },
   "VH-VGR": {
     "first_seen": "2026-07-15",
@@ -1401,7 +1401,7 @@
   },
   "VH-VZA": {
     "first_seen": "2026-07-18",
-    "count": 22
+    "count": 23
   },
   "B-LRA": {
     "first_seen": "2026-07-18",
@@ -3574,5 +3574,9 @@
   "VH-EBO": {
     "first_seen": "2026-08-17",
     "count": 2
+  },
+  "VH-VYZ": {
+    "first_seen": "2026-08-18",
+    "count": 1
   }
 }
