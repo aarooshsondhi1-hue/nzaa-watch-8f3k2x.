@@ -2173,7 +2173,7 @@
   },
   "VH-X3B": {
     "first_seen": "2026-07-25",
-    "count": 7
+    "count": 8
   },
   "A7-BFJ": {
     "first_seen": "2026-07-25",
@@ -3489,7 +3489,7 @@
   },
   "A6-EFV": {
     "first_seen": "2026-08-12",
-    "count": 2
+    "count": 3
   },
   "VH-EBJ": {
     "first_seen": "2026-08-13",
@@ -3620,6 +3620,10 @@
     "count": 2
   },
   "N78003": {
+    "first_seen": "2026-08-23",
+    "count": 1
+  },
+  "HL8577": {
     "first_seen": "2026-08-23",
     "count": 1
   }
