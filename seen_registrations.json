@@ -13,7 +13,7 @@
   },
   "ZK-NNB": {
     "first_seen": "2026-07-15",
-    "count": 102
+    "count": 103
   },
   "ZK-NNG": {
     "first_seen": "2026-07-15",
@@ -165,7 +165,7 @@
   },
   "ZK-OJR": {
     "first_seen": "2026-07-15",
-    "count": 119
+    "count": 120
   },
   "ZK-NEA": {
     "first_seen": "2026-07-15",
@@ -197,7 +197,7 @@
   },
   "ZK-OXD": {
     "first_seen": "2026-07-15",
-    "count": 112
+    "count": 113
   },
   "ZK-OXI": {
     "first_seen": "2026-07-15",
@@ -357,7 +357,7 @@
   },
   "VH-VZE": {
     "first_seen": "2026-07-15",
-    "count": 18
+    "count": 19
   },
   "DQ-FJW": {
     "first_seen": "2026-07-15",
@@ -545,7 +545,7 @@
   },
   "ZK-NHE": {
     "first_seen": "2026-07-16",
-    "count": 23
+    "count": 24
   },
   "ZK-NFB": {
     "first_seen": "2026-07-16",
@@ -569,7 +569,7 @@
   },
   "VH-VZS": {
     "first_seen": "2026-07-16",
-    "count": 34
+    "count": 35
   },
   "VH-OFS": {
     "first_seen": "2026-07-16",
@@ -621,7 +621,7 @@
   },
   "ZK-OAB": {
     "first_seen": "2026-07-16",
-    "count": 106
+    "count": 107
   },
   "ZK-IXD": {
     "first_seen": "2026-07-16",
@@ -1409,7 +1409,7 @@
   },
   "DQ-FJU": {
     "first_seen": "2026-07-18",
-    "count": 23
+    "count": 24
   },
   "F-OVAA": {
     "first_seen": "2026-07-18",
@@ -1657,7 +1657,7 @@
   },
   "VH-XZG": {
     "first_seen": "2026-07-20",
-    "count": 33
+    "count": 34
   },
   "A7-BES": {
     "first_seen": "2026-07-20",
@@ -2085,7 +2085,7 @@
   },
   "B-30C0": {
     "first_seen": "2026-07-24",
-    "count": 12
+    "count": 13
   },
   "VH-XZC": {
     "first_seen": "2026-07-24",
@@ -2857,7 +2857,7 @@
   },
   "VH-XZF": {
     "first_seen": "2026-08-02",
-    "count": 13
+    "count": 14
   },
   "ZK-TRD": {
     "first_seen": "2026-08-02",
@@ -3597,7 +3597,7 @@
   },
   "VH-VFF": {
     "first_seen": "2026-08-21",
-    "count": 9
+    "count": 10
   },
   "N74007": {
     "first_seen": "2026-08-21",
@@ -3677,18 +3677,22 @@
   },
   "B-LRL": {
     "first_seen": "2026-08-26",
-    "count": 1
+    "count": 2
   },
   "9V-SWJ": {
     "first_seen": "2026-08-26",
-    "count": 1
+    "count": 2
   },
   "VH-VFV": {
     "first_seen": "2026-08-26",
-    "count": 1
+    "count": 2
   },
   "A6-EVD": {
     "first_seen": "2026-08-26",
+    "count": 1
+  },
+  "F-OMUA": {
+    "first_seen": "2026-08-27",
     "count": 1
   }
 }
