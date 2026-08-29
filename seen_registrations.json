@@ -3525,7 +3525,7 @@
   },
   "CC-BBE": {
     "first_seen": "2026-08-15",
-    "count": 2
+    "count": 3
   },
   "9V-SWL": {
     "first_seen": "2026-08-16",
@@ -3720,6 +3720,10 @@
     "count": 1
   },
   "A6-EUW": {
+    "first_seen": "2026-08-29",
+    "count": 1
+  },
+  "N874FD": {
     "first_seen": "2026-08-29",
     "count": 1
   }
