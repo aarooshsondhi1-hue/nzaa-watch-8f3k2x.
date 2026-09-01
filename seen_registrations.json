@@ -1873,7 +1873,7 @@
   },
   "9M-MNJ": {
     "first_seen": "2026-07-21",
-    "count": 22
+    "count": 23
   },
   "B-LRV": {
     "first_seen": "2026-07-21",
@@ -3589,7 +3589,7 @@
   },
   "VH-OYU": {
     "first_seen": "2026-08-20",
-    "count": 3
+    "count": 4
   },
   "B-LQH": {
     "first_seen": "2026-08-21",
@@ -3752,6 +3752,10 @@
     "count": 1
   },
   "CC-BGJ": {
+    "first_seen": "2026-09-01",
+    "count": 1
+  },
+  "B-LRE": {
     "first_seen": "2026-09-01",
     "count": 1
   }
