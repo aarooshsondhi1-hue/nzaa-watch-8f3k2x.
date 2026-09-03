@@ -133,7 +133,7 @@
   },
   "ZK-NZN": {
     "first_seen": "2026-07-15",
-    "count": 83
+    "count": 84
   },
   "ZK-NZK": {
     "first_seen": "2026-07-15",
@@ -3769,6 +3769,10 @@
   },
   "N228UA": {
     "first_seen": "2026-09-02",
+    "count": 1
+  },
+  "CC-BGN": {
+    "first_seen": "2026-09-03",
     "count": 1
   }
 }
