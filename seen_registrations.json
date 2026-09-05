@@ -5,7 +5,7 @@
   },
   "VH-VZI": {
     "first_seen": "2026-07-15",
-    "count": 21
+    "count": 22
   },
   "ZK-NZH": {
     "first_seen": "2026-07-15",
@@ -197,7 +197,7 @@
   },
   "ZK-OXD": {
     "first_seen": "2026-07-15",
-    "count": 128
+    "count": 129
   },
   "ZK-OXI": {
     "first_seen": "2026-07-15",
@@ -221,7 +221,7 @@
   },
   "ZK-OXE": {
     "first_seen": "2026-07-15",
-    "count": 118
+    "count": 119
   },
   "VH-VQC": {
     "first_seen": "2026-07-15",
@@ -977,7 +977,7 @@
   },
   "ZK-MCO": {
     "first_seen": "2026-07-16",
-    "count": 39
+    "count": 40
   },
   "ZK-IWE": {
     "first_seen": "2026-07-16",
@@ -1021,7 +1021,7 @@
   },
   "B-30F9": {
     "first_seen": "2026-07-17",
-    "count": 11
+    "count": 12
   },
   "9V-SWY": {
     "first_seen": "2026-07-17",
@@ -1509,7 +1509,7 @@
   },
   "VH-VGF": {
     "first_seen": "2026-07-19",
-    "count": 114
+    "count": 115
   },
   "N27015": {
     "first_seen": "2026-07-19",
@@ -2425,7 +2425,7 @@
   },
   "VH-OFU": {
     "first_seen": "2026-07-27",
-    "count": 39
+    "count": 40
   },
   "ZK-HDU": {
     "first_seen": "2026-07-27",
@@ -2561,7 +2561,7 @@
   },
   "VH-ZNL": {
     "first_seen": "2026-07-29",
-    "count": 8
+    "count": 9
   },
   "ZK-HOC": {
     "first_seen": "2026-07-29",
@@ -3013,7 +3013,7 @@
   },
   "VH-ZNE": {
     "first_seen": "2026-08-05",
-    "count": 3
+    "count": 4
   },
   "NZ3618": {
     "first_seen": "2026-08-05",
@@ -3301,7 +3301,7 @@
   },
   "ZK-CIZ": {
     "first_seen": "2026-08-08",
-    "count": 45
+    "count": 46
   },
   "A7-BAM": {
     "first_seen": "2026-08-08",
@@ -3597,7 +3597,7 @@
   },
   "VH-VFF": {
     "first_seen": "2026-08-21",
-    "count": 26
+    "count": 27
   },
   "N74007": {
     "first_seen": "2026-08-21",
@@ -3789,10 +3789,14 @@
   },
   "B-1133": {
     "first_seen": "2026-09-04",
-    "count": 1
+    "count": 2
   },
   "A6-EUT": {
     "first_seen": "2026-09-04",
+    "count": 1
+  },
+  "B-LRQ": {
+    "first_seen": "2026-09-05",
     "count": 1
   }
 }
