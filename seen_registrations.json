@@ -137,7 +137,7 @@
   },
   "ZK-NZK": {
     "first_seen": "2026-07-15",
-    "count": 87
+    "count": 88
   },
   "ZK-OKM": {
     "first_seen": "2026-07-15",
@@ -3213,7 +3213,7 @@
   },
   "CC-BBD": {
     "first_seen": "2026-08-07",
-    "count": 2
+    "count": 3
   },
   "ZK-NZJ": {
     "first_seen": "2026-08-07",
@@ -3836,6 +3836,10 @@
     "count": 1
   },
   "9V-SFO": {
+    "first_seen": "2026-09-12",
+    "count": 1
+  },
+  "N842FD": {
     "first_seen": "2026-09-12",
     "count": 1
   }
