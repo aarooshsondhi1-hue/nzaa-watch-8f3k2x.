@@ -3581,7 +3581,7 @@
   },
   "9V-SWV": {
     "first_seen": "2026-08-19",
-    "count": 1
+    "count": 2
   },
   "A6-EUR": {
     "first_seen": "2026-08-19",
@@ -3832,6 +3832,10 @@
     "count": 1
   },
   "VH-OYK": {
+    "first_seen": "2026-09-12",
+    "count": 1
+  },
+  "9V-SFO": {
     "first_seen": "2026-09-12",
     "count": 1
   }
