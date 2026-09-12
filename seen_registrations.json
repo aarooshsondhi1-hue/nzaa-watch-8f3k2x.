@@ -761,7 +761,7 @@
   },
   "VH-XQU": {
     "first_seen": "2026-07-16",
-    "count": 32
+    "count": 33
   },
   "ZK-MVQ": {
     "first_seen": "2026-07-16",
@@ -3685,7 +3685,7 @@
   },
   "VH-VFV": {
     "first_seen": "2026-08-26",
-    "count": 3
+    "count": 4
   },
   "A6-EVD": {
     "first_seen": "2026-08-26",
@@ -3828,6 +3828,10 @@
     "count": 2
   },
   "A6-EVI": {
+    "first_seen": "2026-09-12",
+    "count": 1
+  },
+  "VH-OYK": {
     "first_seen": "2026-09-12",
     "count": 1
   }
