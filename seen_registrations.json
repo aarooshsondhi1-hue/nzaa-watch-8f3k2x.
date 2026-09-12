@@ -17,7 +17,7 @@
   },
   "ZK-NNG": {
     "first_seen": "2026-07-15",
-    "count": 106
+    "count": 107
   },
   "A7-BEK": {
     "first_seen": "2026-07-15",
@@ -277,7 +277,7 @@
   },
   "ZK-OJQ": {
     "first_seen": "2026-07-15",
-    "count": 128
+    "count": 129
   },
   "VH-VGN": {
     "first_seen": "2026-07-15",
@@ -501,7 +501,7 @@
   },
   "ZK-OXK": {
     "first_seen": "2026-07-16",
-    "count": 136
+    "count": 137
   },
   "ZK-OXA": {
     "first_seen": "2026-07-16",
@@ -621,7 +621,7 @@
   },
   "ZK-OAB": {
     "first_seen": "2026-07-16",
-    "count": 123
+    "count": 124
   },
   "ZK-IXD": {
     "first_seen": "2026-07-16",
@@ -729,7 +729,7 @@
   },
   "ZK-OXC": {
     "first_seen": "2026-07-16",
-    "count": 136
+    "count": 137
   },
   "ZK-OKP": {
     "first_seen": "2026-07-16",
@@ -837,7 +837,7 @@
   },
   "VH-XZE": {
     "first_seen": "2026-07-16",
-    "count": 25
+    "count": 26
   },
   "ZK-FXL": {
     "first_seen": "2026-07-16",
@@ -1021,7 +1021,7 @@
   },
   "B-30F9": {
     "first_seen": "2026-07-17",
-    "count": 12
+    "count": 13
   },
   "9V-SWY": {
     "first_seen": "2026-07-17",
@@ -2561,7 +2561,7 @@
   },
   "VH-ZNL": {
     "first_seen": "2026-07-29",
-    "count": 10
+    "count": 11
   },
   "ZK-HOC": {
     "first_seen": "2026-07-29",
@@ -2717,7 +2717,7 @@
   },
   "B-7302": {
     "first_seen": "2026-07-30",
-    "count": 4
+    "count": 5
   },
   "A6-EVQ": {
     "first_seen": "2026-07-30",
@@ -2729,7 +2729,7 @@
   },
   "VH-VFP": {
     "first_seen": "2026-07-30",
-    "count": 14
+    "count": 15
   },
   "9V-SWB": {
     "first_seen": "2026-07-30",
@@ -2857,7 +2857,7 @@
   },
   "VH-XZF": {
     "first_seen": "2026-08-02",
-    "count": 20
+    "count": 21
   },
   "ZK-TRD": {
     "first_seen": "2026-08-02",
@@ -3573,7 +3573,7 @@
   },
   "VH-EBO": {
     "first_seen": "2026-08-17",
-    "count": 7
+    "count": 8
   },
   "VH-VYZ": {
     "first_seen": "2026-08-18",
@@ -3813,6 +3813,10 @@
   },
   "HL8734": {
     "first_seen": "2026-09-06",
+    "count": 1
+  },
+  "VH-VGT": {
+    "first_seen": "2026-09-12",
     "count": 1
   }
 }
