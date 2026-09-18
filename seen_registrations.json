@@ -845,7 +845,7 @@
   },
   "9M-MNK": {
     "first_seen": "2026-07-16",
-    "count": 9
+    "count": 10
   },
   "VH-VQG": {
     "first_seen": "2026-07-16",
@@ -3888,6 +3888,10 @@
     "count": 1
   },
   "HL8082": {
+    "first_seen": "2026-09-18",
+    "count": 1
+  },
+  "B-LQG": {
     "first_seen": "2026-09-18",
     "count": 1
   }
