@@ -65,7 +65,7 @@
   },
   "ZK-NND": {
     "first_seen": "2026-07-15",
-    "count": 117
+    "count": 118
   },
   "ZK-NNF": {
     "first_seen": "2026-07-15",
@@ -225,7 +225,7 @@
   },
   "VH-VQC": {
     "first_seen": "2026-07-15",
-    "count": 109
+    "count": 110
   },
   "ZK-NZL": {
     "first_seen": "2026-07-15",
@@ -357,7 +357,7 @@
   },
   "VH-VZE": {
     "first_seen": "2026-07-15",
-    "count": 23
+    "count": 24
   },
   "DQ-FJW": {
     "first_seen": "2026-07-15",
@@ -493,7 +493,7 @@
   },
   "ZK-OJS": {
     "first_seen": "2026-07-16",
-    "count": 153
+    "count": 154
   },
   "ZK-NYK": {
     "first_seen": "2026-07-16",
@@ -785,7 +785,7 @@
   },
   "ZK-NHF": {
     "first_seen": "2026-07-16",
-    "count": 73
+    "count": 74
   },
   "NZ3401": {
     "first_seen": "2026-07-16",
@@ -877,7 +877,7 @@
   },
   "VH-VFI": {
     "first_seen": "2026-07-16",
-    "count": 74
+    "count": 75
   },
   "CC-BGC": {
     "first_seen": "2026-07-16",
@@ -1013,7 +1013,7 @@
   },
   "DQ-FJT": {
     "first_seen": "2026-07-16",
-    "count": 11
+    "count": 12
   },
   "VH-XZN": {
     "first_seen": "2026-07-16",
@@ -2085,7 +2085,7 @@
   },
   "B-30C0": {
     "first_seen": "2026-07-24",
-    "count": 14
+    "count": 15
   },
   "VH-XZC": {
     "first_seen": "2026-07-24",
@@ -2321,7 +2321,7 @@
   },
   "9V-SNB": {
     "first_seen": "2026-07-26",
-    "count": 35
+    "count": 36
   },
   "ZK-IZB": {
     "first_seen": "2026-07-27",
@@ -2513,7 +2513,7 @@
   },
   "ZK-OXF": {
     "first_seen": "2026-07-28",
-    "count": 109
+    "count": 110
   },
   "ZK-IJT": {
     "first_seen": "2026-07-28",
@@ -3081,7 +3081,7 @@
   },
   "F-OTOA": {
     "first_seen": "2026-08-05",
-    "count": 13
+    "count": 14
   },
   "N812RB": {
     "first_seen": "2026-08-05",
@@ -3821,7 +3821,7 @@
   },
   "VH-X3D": {
     "first_seen": "2026-09-12",
-    "count": 20
+    "count": 21
   },
   "VH-VFQ": {
     "first_seen": "2026-09-12",
@@ -3929,6 +3929,10 @@
   },
   "HL8571": {
     "first_seen": "2026-09-20",
+    "count": 1
+  },
+  "B-LXL": {
+    "first_seen": "2026-09-22",
     "count": 1
   }
 }
