@@ -777,7 +777,7 @@
   },
   "VH-RAN": {
     "first_seen": "2026-07-16",
-    "count": 77
+    "count": 78
   },
   "ZK-OXJ": {
     "first_seen": "2026-07-16",
@@ -3950,5 +3950,9 @@
   "VH-AZ4": {
     "first_seen": "2026-09-24",
     "count": 2
+  },
+  "B-LRR": {
+    "first_seen": "2026-09-24",
+    "count": 1
   }
 }
