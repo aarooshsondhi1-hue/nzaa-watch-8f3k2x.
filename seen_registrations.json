@@ -865,7 +865,7 @@
   },
   "ZK-PAU": {
     "first_seen": "2026-07-16",
-    "count": 31
+    "count": 32
   },
   "N721MS": {
     "first_seen": "2026-07-16",
@@ -2021,7 +2021,7 @@
   },
   "VH-VGU": {
     "first_seen": "2026-07-23",
-    "count": 48
+    "count": 49
   },
   "ZK-KOL": {
     "first_seen": "2026-07-23",
@@ -3949,6 +3949,6 @@
   },
   "VH-AZ4": {
     "first_seen": "2026-09-24",
-    "count": 1
+    "count": 2
   }
 }
