@@ -725,7 +725,7 @@
   },
   "ZK-NZM": {
     "first_seen": "2026-07-16",
-    "count": 110
+    "count": 111
   },
   "ZK-OXC": {
     "first_seen": "2026-07-16",
@@ -2237,7 +2237,7 @@
   },
   "CC-BBA": {
     "first_seen": "2026-07-26",
-    "count": 4
+    "count": 5
   },
   "N872FD": {
     "first_seen": "2026-07-26",
@@ -4004,6 +4004,10 @@
     "count": 1
   },
   "VH-QPJ": {
+    "first_seen": "2026-10-03",
+    "count": 1
+  },
+  "N862FD": {
     "first_seen": "2026-10-03",
     "count": 1
   }
