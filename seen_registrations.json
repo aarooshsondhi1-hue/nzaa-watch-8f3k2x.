@@ -61,11 +61,11 @@
   },
   "ZK-NNE": {
     "first_seen": "2026-07-15",
-    "count": 104
+    "count": 105
   },
   "ZK-NND": {
     "first_seen": "2026-07-15",
-    "count": 137
+    "count": 138
   },
   "ZK-NNF": {
     "first_seen": "2026-07-15",
@@ -221,7 +221,7 @@
   },
   "ZK-OXE": {
     "first_seen": "2026-07-15",
-    "count": 158
+    "count": 159
   },
   "VH-VQC": {
     "first_seen": "2026-07-15",
@@ -281,7 +281,7 @@
   },
   "VH-VGN": {
     "first_seen": "2026-07-15",
-    "count": 32
+    "count": 33
   },
   "ZK-MVL": {
     "first_seen": "2026-07-15",
@@ -621,7 +621,7 @@
   },
   "ZK-OAB": {
     "first_seen": "2026-07-16",
-    "count": 155
+    "count": 156
   },
   "ZK-IXD": {
     "first_seen": "2026-07-16",
@@ -729,7 +729,7 @@
   },
   "ZK-OXC": {
     "first_seen": "2026-07-16",
-    "count": 182
+    "count": 183
   },
   "ZK-OKP": {
     "first_seen": "2026-07-16",
@@ -877,7 +877,7 @@
   },
   "VH-VFI": {
     "first_seen": "2026-07-16",
-    "count": 88
+    "count": 89
   },
   "CC-BGC": {
     "first_seen": "2026-07-16",
@@ -969,7 +969,7 @@
   },
   "F-ONEA": {
     "first_seen": "2026-07-16",
-    "count": 31
+    "count": 32
   },
   "ZK-HFN": {
     "first_seen": "2026-07-16",
@@ -1013,7 +1013,7 @@
   },
   "DQ-FJT": {
     "first_seen": "2026-07-16",
-    "count": 14
+    "count": 15
   },
   "VH-XZN": {
     "first_seen": "2026-07-16",
@@ -1181,7 +1181,7 @@
   },
   "VH-XZA": {
     "first_seen": "2026-07-17",
-    "count": 58
+    "count": 59
   },
   "HL7208": {
     "first_seen": "2026-07-17",
@@ -2321,7 +2321,7 @@
   },
   "9V-SNB": {
     "first_seen": "2026-07-26",
-    "count": 41
+    "count": 42
   },
   "ZK-IZB": {
     "first_seen": "2026-07-27",
@@ -2929,7 +2929,7 @@
   },
   "B-30EA": {
     "first_seen": "2026-08-03",
-    "count": 11
+    "count": 12
   },
   "VH-ZND": {
     "first_seen": "2026-08-03",
@@ -3013,7 +3013,7 @@
   },
   "VH-ZNE": {
     "first_seen": "2026-08-05",
-    "count": 6
+    "count": 7
   },
   "NZ3618": {
     "first_seen": "2026-08-05",
@@ -3797,7 +3797,7 @@
   },
   "B-LRQ": {
     "first_seen": "2026-09-05",
-    "count": 3
+    "count": 4
   },
   "9V-SFN": {
     "first_seen": "2026-09-05",
