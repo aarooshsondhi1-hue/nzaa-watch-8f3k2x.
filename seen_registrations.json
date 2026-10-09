@@ -1625,7 +1625,7 @@
   },
   "VH-VZY": {
     "first_seen": "2026-07-20",
-    "count": 32
+    "count": 33
   },
   "ZK-IWA": {
     "first_seen": "2026-07-20",
@@ -2273,7 +2273,7 @@
   },
   "HL8575": {
     "first_seen": "2026-07-26",
-    "count": 2
+    "count": 3
   },
   "ZK-ULL": {
     "first_seen": "2026-07-26",
@@ -4041,6 +4041,10 @@
   },
   "B-1128": {
     "first_seen": "2026-10-07",
+    "count": 1
+  },
+  "A6-EUL": {
+    "first_seen": "2026-10-09",
     "count": 1
   }
 }
