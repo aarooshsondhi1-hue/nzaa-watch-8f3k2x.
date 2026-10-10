@@ -493,7 +493,7 @@
   },
   "ZK-OJS": {
     "first_seen": "2026-07-16",
-    "count": 169
+    "count": 170
   },
   "ZK-NYK": {
     "first_seen": "2026-07-16",
@@ -3773,7 +3773,7 @@
   },
   "CC-BGN": {
     "first_seen": "2026-09-03",
-    "count": 2
+    "count": 3
   },
   "VH-VGO": {
     "first_seen": "2026-09-03",
@@ -4048,6 +4048,10 @@
     "count": 1
   },
   "9V-SNC": {
+    "first_seen": "2026-10-10",
+    "count": 1
+  },
+  "N847FD": {
     "first_seen": "2026-10-10",
     "count": 1
   }
