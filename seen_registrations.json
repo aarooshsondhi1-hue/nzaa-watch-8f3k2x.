@@ -1485,7 +1485,7 @@
   },
   "B-7832": {
     "first_seen": "2026-07-19",
-    "count": 6
+    "count": 7
   },
   "B-18901": {
     "first_seen": "2026-07-19",
@@ -4064,6 +4064,10 @@
     "count": 1
   },
   "VH-OFL": {
+    "first_seen": "2026-10-12",
+    "count": 1
+  },
+  "CC-BBH": {
     "first_seen": "2026-10-12",
     "count": 1
   }
