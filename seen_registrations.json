@@ -137,7 +137,7 @@
   },
   "ZK-NZK": {
     "first_seen": "2026-07-15",
-    "count": 112
+    "count": 113
   },
   "ZK-OKM": {
     "first_seen": "2026-07-15",
@@ -3909,7 +3909,7 @@
   },
   "VH-OYR": {
     "first_seen": "2026-09-19",
-    "count": 9
+    "count": 10
   },
   "VH-YNU": {
     "first_seen": "2026-09-20",
@@ -4081,6 +4081,10 @@
   },
   "A6-EFM": {
     "first_seen": "2026-10-14",
+    "count": 1
+  },
+  "B-LRT": {
+    "first_seen": "2026-10-15",
     "count": 1
   }
 }
