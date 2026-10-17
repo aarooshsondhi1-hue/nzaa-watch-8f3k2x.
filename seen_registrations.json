@@ -345,7 +345,7 @@
   },
   "9M-MNP": {
     "first_seen": "2026-07-15",
-    "count": 25
+    "count": 26
   },
   "ZK-JGP": {
     "first_seen": "2026-07-15",
@@ -4089,6 +4089,10 @@
   },
   "CC-BGB": {
     "first_seen": "2026-10-16",
+    "count": 1
+  },
+  "B-LRK": {
+    "first_seen": "2026-10-17",
     "count": 1
   }
 }
