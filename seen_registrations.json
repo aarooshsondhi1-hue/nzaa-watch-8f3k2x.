@@ -3593,7 +3593,7 @@
   },
   "B-LQH": {
     "first_seen": "2026-08-21",
-    "count": 4
+    "count": 5
   },
   "VH-VFF": {
     "first_seen": "2026-08-21",
@@ -3949,7 +3949,7 @@
   },
   "VH-AZ4": {
     "first_seen": "2026-09-24",
-    "count": 18
+    "count": 19
   },
   "B-LRR": {
     "first_seen": "2026-09-24",
@@ -4128,6 +4128,10 @@
     "count": 1
   },
   "A7-ALY": {
+    "first_seen": "2026-10-22",
+    "count": 1
+  },
+  "ZK-TXH": {
     "first_seen": "2026-10-22",
     "count": 1
   }
