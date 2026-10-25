@@ -73,7 +73,7 @@
   },
   "ZK-NZR": {
     "first_seen": "2026-07-15",
-    "count": 129
+    "count": 130
   },
   "ZK-NNA": {
     "first_seen": "2026-07-15",
@@ -217,7 +217,7 @@
   },
   "ZK-OXG": {
     "first_seen": "2026-07-15",
-    "count": 204
+    "count": 205
   },
   "ZK-OXE": {
     "first_seen": "2026-07-15",
@@ -445,7 +445,7 @@
   },
   "ZK-MVN": {
     "first_seen": "2026-07-16",
-    "count": 48
+    "count": 49
   },
   "ZK-MZA": {
     "first_seen": "2026-07-16",
@@ -509,7 +509,7 @@
   },
   "VH-VFL": {
     "first_seen": "2026-07-16",
-    "count": 46
+    "count": 47
   },
   "ZK-OKQ": {
     "first_seen": "2026-07-16",
@@ -621,7 +621,7 @@
   },
   "ZK-OAB": {
     "first_seen": "2026-07-16",
-    "count": 181
+    "count": 182
   },
   "ZK-IXD": {
     "first_seen": "2026-07-16",
@@ -769,7 +769,7 @@
   },
   "ZK-NZI": {
     "first_seen": "2026-07-16",
-    "count": 126
+    "count": 127
   },
   "ZK-NEG": {
     "first_seen": "2026-07-16",
@@ -833,7 +833,7 @@
   },
   "ZK-NHA": {
     "first_seen": "2026-07-16",
-    "count": 79
+    "count": 80
   },
   "VH-XZE": {
     "first_seen": "2026-07-16",
@@ -861,7 +861,7 @@
   },
   "ZK-OKV": {
     "first_seen": "2026-07-16",
-    "count": 101
+    "count": 102
   },
   "ZK-PAU": {
     "first_seen": "2026-07-16",
@@ -1197,7 +1197,7 @@
   },
   "VH-X3F": {
     "first_seen": "2026-07-17",
-    "count": 22
+    "count": 23
   },
   "B-227L": {
     "first_seen": "2026-07-17",
@@ -2137,7 +2137,7 @@
   },
   "VH-ZNB": {
     "first_seen": "2026-07-24",
-    "count": 19
+    "count": 20
   },
   "B-LQB": {
     "first_seen": "2026-07-24",
@@ -2713,7 +2713,7 @@
   },
   "VH-VGA": {
     "first_seen": "2026-07-30",
-    "count": 82
+    "count": 83
   },
   "B-7302": {
     "first_seen": "2026-07-30",
@@ -2989,7 +2989,7 @@
   },
   "VH-X3J": {
     "first_seen": "2026-08-04",
-    "count": 69
+    "count": 70
   },
   "ZK-IWP": {
     "first_seen": "2026-08-04",
@@ -3125,7 +3125,7 @@
   },
   "B-20AL": {
     "first_seen": "2026-08-06",
-    "count": 7
+    "count": 8
   },
   "ZK-DAN": {
     "first_seen": "2026-08-06",
@@ -3697,7 +3697,7 @@
   },
   "B-18922": {
     "first_seen": "2026-08-27",
-    "count": 10
+    "count": 11
   },
   "B-1368": {
     "first_seen": "2026-08-27",
@@ -4157,6 +4157,14 @@
   },
   "CC-BGX": {
     "first_seen": "2026-10-24",
+    "count": 1
+  },
+  "N849AN": {
+    "first_seen": "2026-10-25",
+    "count": 1
+  },
+  "9V-SWO": {
+    "first_seen": "2026-10-25",
     "count": 1
   }
 }
