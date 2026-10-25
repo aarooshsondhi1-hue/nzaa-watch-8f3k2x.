@@ -229,7 +229,7 @@
   },
   "ZK-NZL": {
     "first_seen": "2026-07-15",
-    "count": 81
+    "count": 82
   },
   "ZK-NYG": {
     "first_seen": "2026-07-15",
@@ -4172,6 +4172,10 @@
     "count": 1
   },
   "9V-SKP": {
+    "first_seen": "2026-10-25",
+    "count": 1
+  },
+  "CC-BBJ": {
     "first_seen": "2026-10-25",
     "count": 1
   }
