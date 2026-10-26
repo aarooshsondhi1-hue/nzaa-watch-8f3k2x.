@@ -509,7 +509,7 @@
   },
   "VH-VFL": {
     "first_seen": "2026-07-16",
-    "count": 49
+    "count": 50
   },
   "ZK-OKQ": {
     "first_seen": "2026-07-16",
@@ -1257,7 +1257,7 @@
   },
   "9M-MNI": {
     "first_seen": "2026-07-17",
-    "count": 20
+    "count": 21
   },
   "ZK-HFZ": {
     "first_seen": "2026-07-17",
@@ -4188,6 +4188,10 @@
     "count": 1
   },
   "N76021": {
+    "first_seen": "2026-10-26",
+    "count": 1
+  },
+  "9V-SKT": {
     "first_seen": "2026-10-26",
     "count": 1
   }
