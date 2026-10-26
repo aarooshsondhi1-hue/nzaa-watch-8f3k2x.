@@ -105,7 +105,7 @@
   },
   "ZK-OKN": {
     "first_seen": "2026-07-15",
-    "count": 116
+    "count": 117
   },
   "VH-EBS": {
     "first_seen": "2026-07-15",
@@ -921,7 +921,7 @@
   },
   "ZK-NZD": {
     "first_seen": "2026-07-16",
-    "count": 26
+    "count": 27
   },
   "ZK-MVA": {
     "first_seen": "2026-07-16",
@@ -3217,7 +3217,7 @@
   },
   "ZK-NZJ": {
     "first_seen": "2026-08-07",
-    "count": 65
+    "count": 66
   },
   "A7-BEV": {
     "first_seen": "2026-08-07",
@@ -4177,10 +4177,14 @@
   },
   "CC-BBJ": {
     "first_seen": "2026-10-25",
-    "count": 1
+    "count": 2
   },
   "N502DN": {
     "first_seen": "2026-10-25",
+    "count": 1
+  },
+  "B-5931": {
+    "first_seen": "2026-10-26",
     "count": 1
   }
 }
