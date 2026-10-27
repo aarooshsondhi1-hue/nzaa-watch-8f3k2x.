@@ -281,7 +281,7 @@
   },
   "VH-VGN": {
     "first_seen": "2026-07-15",
-    "count": 52
+    "count": 53
   },
   "ZK-MVL": {
     "first_seen": "2026-07-15",
@@ -4193,6 +4193,10 @@
   },
   "9V-SKT": {
     "first_seen": "2026-10-26",
+    "count": 1
+  },
+  "N522DZ": {
+    "first_seen": "2026-10-27",
     "count": 1
   }
 }
