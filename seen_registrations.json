@@ -49,7 +49,7 @@
   },
   "ZK-NZC": {
     "first_seen": "2026-07-15",
-    "count": 137
+    "count": 138
   },
   "ZK-NZE": {
     "first_seen": "2026-07-15",
@@ -73,7 +73,7 @@
   },
   "ZK-NZR": {
     "first_seen": "2026-07-15",
-    "count": 133
+    "count": 134
   },
   "ZK-NNA": {
     "first_seen": "2026-07-15",
@@ -133,7 +133,7 @@
   },
   "ZK-NZN": {
     "first_seen": "2026-07-15",
-    "count": 125
+    "count": 126
   },
   "ZK-NZK": {
     "first_seen": "2026-07-15",
@@ -197,7 +197,7 @@
   },
   "ZK-OXD": {
     "first_seen": "2026-07-15",
-    "count": 207
+    "count": 208
   },
   "ZK-OXI": {
     "first_seen": "2026-07-15",
@@ -209,7 +209,7 @@
   },
   "ZK-OKS": {
     "first_seen": "2026-07-15",
-    "count": 95
+    "count": 96
   },
   "ZK-MZG": {
     "first_seen": "2026-07-15",
@@ -217,7 +217,7 @@
   },
   "ZK-OXG": {
     "first_seen": "2026-07-15",
-    "count": 211
+    "count": 212
   },
   "ZK-OXE": {
     "first_seen": "2026-07-15",
@@ -693,7 +693,7 @@
   },
   "ZK-CIT": {
     "first_seen": "2026-07-16",
-    "count": 130
+    "count": 131
   },
   "ZK-OYA": {
     "first_seen": "2026-07-16",
@@ -729,7 +729,7 @@
   },
   "ZK-OXC": {
     "first_seen": "2026-07-16",
-    "count": 225
+    "count": 226
   },
   "ZK-OKP": {
     "first_seen": "2026-07-16",
@@ -805,7 +805,7 @@
   },
   "ZK-NEU": {
     "first_seen": "2026-07-16",
-    "count": 52
+    "count": 53
   },
   "ZK-VXM": {
     "first_seen": "2026-07-16",
@@ -837,7 +837,7 @@
   },
   "VH-XZE": {
     "first_seen": "2026-07-16",
-    "count": 40
+    "count": 41
   },
   "ZK-FXL": {
     "first_seen": "2026-07-16",
@@ -1617,7 +1617,7 @@
   },
   "ZK-NZF": {
     "first_seen": "2026-07-20",
-    "count": 116
+    "count": 117
   },
   "N968FA": {
     "first_seen": "2026-07-20",
@@ -2265,7 +2265,7 @@
   },
   "VH-X3C": {
     "first_seen": "2026-07-26",
-    "count": 37
+    "count": 38
   },
   "N79011": {
     "first_seen": "2026-07-26",
@@ -4232,6 +4232,14 @@
     "count": 1
   },
   "N786UA": {
+    "first_seen": "2026-10-29",
+    "count": 1
+  },
+  "VH-VGZ": {
+    "first_seen": "2026-10-29",
+    "count": 1
+  },
+  "9V-SWG": {
     "first_seen": "2026-10-29",
     "count": 1
   }
