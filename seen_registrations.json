@@ -197,7 +197,7 @@
   },
   "ZK-OXD": {
     "first_seen": "2026-07-15",
-    "count": 218
+    "count": 219
   },
   "ZK-OXI": {
     "first_seen": "2026-07-15",
@@ -4328,6 +4328,10 @@
     "count": 1
   },
   "N226UA": {
+    "first_seen": "2026-11-07",
+    "count": 1
+  },
+  "N889FD": {
     "first_seen": "2026-11-07",
     "count": 1
   }
