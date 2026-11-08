@@ -1577,7 +1577,7 @@
   },
   "N418MC": {
     "first_seen": "2026-07-19",
-    "count": 17
+    "count": 18
   },
   "ZK-SXL": {
     "first_seen": "2026-07-19",
@@ -3313,7 +3313,7 @@
   },
   "9M-MNH": {
     "first_seen": "2026-08-08",
-    "count": 14
+    "count": 15
   },
   "VH-OYT": {
     "first_seen": "2026-08-08",
@@ -4340,6 +4340,10 @@
     "count": 1
   },
   "B-5921": {
+    "first_seen": "2026-11-08",
+    "count": 1
+  },
+  "TF-AKD": {
     "first_seen": "2026-11-08",
     "count": 1
   }
