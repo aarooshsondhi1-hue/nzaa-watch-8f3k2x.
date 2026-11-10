@@ -1365,7 +1365,7 @@
   },
   "9V-SFI": {
     "first_seen": "2026-07-18",
-    "count": 11
+    "count": 12
   },
   "9M-MTH": {
     "first_seen": "2026-07-18",
@@ -3949,7 +3949,7 @@
   },
   "VH-AZ4": {
     "first_seen": "2026-09-24",
-    "count": 26
+    "count": 27
   },
   "B-LRR": {
     "first_seen": "2026-09-24",
@@ -4360,6 +4360,10 @@
     "count": 1
   },
   "N512DN": {
+    "first_seen": "2026-11-10",
+    "count": 1
+  },
+  "A7-BFN": {
     "first_seen": "2026-11-10",
     "count": 1
   }
