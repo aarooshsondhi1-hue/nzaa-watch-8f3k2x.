@@ -97,7 +97,7 @@
   },
   "VH-CYK": {
     "first_seen": "2026-07-15",
-    "count": 41
+    "count": 42
   },
   "VH-VGI": {
     "first_seen": "2026-07-15",
@@ -4384,6 +4384,10 @@
     "count": 1
   },
   "A7-AMG": {
+    "first_seen": "2026-11-12",
+    "count": 1
+  },
+  "9H-VJW": {
     "first_seen": "2026-11-12",
     "count": 1
   }
