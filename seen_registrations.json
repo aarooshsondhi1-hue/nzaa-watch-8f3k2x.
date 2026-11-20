@@ -421,7 +421,7 @@
   },
   "VH-VFH": {
     "first_seen": "2026-07-16",
-    "count": 86
+    "count": 87
   },
   "VH-VZR": {
     "first_seen": "2026-07-16",
@@ -4464,6 +4464,10 @@
     "count": 1
   },
   "HL8573": {
+    "first_seen": "2026-11-20",
+    "count": 1
+  },
+  "9M-MNQ": {
     "first_seen": "2026-11-20",
     "count": 1
   }
