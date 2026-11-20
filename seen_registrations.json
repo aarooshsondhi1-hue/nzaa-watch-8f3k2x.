@@ -229,7 +229,7 @@
   },
   "ZK-NZL": {
     "first_seen": "2026-07-15",
-    "count": 104
+    "count": 105
   },
   "ZK-NYG": {
     "first_seen": "2026-07-15",
@@ -1353,7 +1353,7 @@
   },
   "DQ-FAH": {
     "first_seen": "2026-07-18",
-    "count": 29
+    "count": 30
   },
   "CC-BBI": {
     "first_seen": "2026-07-18",
@@ -4460,6 +4460,10 @@
     "count": 1
   },
   "N77022": {
+    "first_seen": "2026-11-20",
+    "count": 1
+  },
+  "HL8573": {
     "first_seen": "2026-11-20",
     "count": 1
   }
