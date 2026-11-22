@@ -45,7 +45,7 @@
   },
   "ZK-NZQ": {
     "first_seen": "2026-07-15",
-    "count": 152
+    "count": 153
   },
   "ZK-NZC": {
     "first_seen": "2026-07-15",
@@ -1657,7 +1657,7 @@
   },
   "VH-XZG": {
     "first_seen": "2026-07-20",
-    "count": 62
+    "count": 63
   },
   "A7-BES": {
     "first_seen": "2026-07-20",
@@ -3685,7 +3685,7 @@
   },
   "VH-VFV": {
     "first_seen": "2026-08-26",
-    "count": 62
+    "count": 63
   },
   "A6-EVD": {
     "first_seen": "2026-08-26",
@@ -3929,7 +3929,7 @@
   },
   "HL8571": {
     "first_seen": "2026-09-20",
-    "count": 5
+    "count": 6
   },
   "B-LXL": {
     "first_seen": "2026-09-22",
@@ -4516,6 +4516,10 @@
     "count": 1
   },
   "N528DN": {
+    "first_seen": "2026-11-22",
+    "count": 1
+  },
+  "A6-EFZ": {
     "first_seen": "2026-11-22",
     "count": 1
   }
