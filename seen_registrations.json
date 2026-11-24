@@ -3949,7 +3949,7 @@
   },
   "VH-AZ4": {
     "first_seen": "2026-09-24",
-    "count": 32
+    "count": 33
   },
   "B-LRR": {
     "first_seen": "2026-09-24",
@@ -4544,6 +4544,10 @@
     "count": 1
   },
   "B-1168": {
+    "first_seen": "2026-11-24",
+    "count": 1
+  },
+  "A7-BFX": {
     "first_seen": "2026-11-24",
     "count": 1
   }
